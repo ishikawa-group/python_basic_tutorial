@@ -1,5 +1,9 @@
 # Making plot with *matplotlib* library
 
+## loading the library
+```python
+import matplotlib.pyplot as plt
+```
 
 ## limits
 ```python
