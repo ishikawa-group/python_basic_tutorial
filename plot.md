@@ -39,5 +39,8 @@ plt.rcParams['xtick.major.width'] = 1.2
 plt.rcParams['ytick.major.width'] = 1.2
 plt.rcParams['axes.linewidth'] = 1.2
 
+# controling the figure size and dpi
+fig = plt.figure(figsize=(16, 9), dpi=120)
+
 plt.tight_layout()
 ```
