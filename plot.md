@@ -5,6 +5,20 @@
 import matplotlib.pyplot as plt
 ```
 
+## basic example
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.arange(-2*np.pi, 2*np.pi, 0.1)
+y = np.cos(x)
+
+plt.plot(x,y)
+plt.xlabel("x")
+plt.ylabel("f = cos(x)")
+plt.show()
+```
+
 ## limits
 ```python
 plt.xlim([-2, 2])
