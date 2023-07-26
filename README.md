@@ -1,2 +1,2 @@
 # python_introduction
-プログラミングと数値解析応用
+Lecture notes for *Programming and Applied Numerical Analysis? (プログラミングと数値解析応用)*.
