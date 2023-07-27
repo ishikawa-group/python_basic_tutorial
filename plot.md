@@ -1,4 +1,4 @@
-# Making plot with *matplotlib* library
+# Making a plot in python
 * To make a simple plot like line plot, curve plot etc., *matplotlib* is helpful for you.
 * In this chapter, we'll look at the basic usage of matplotlib, then also see a similar library *seaborn* which makes cooler plot.
 
