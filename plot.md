@@ -1,5 +1,8 @@
 # Making plot with *matplotlib* library
+* To make a simple plot like line plot, curve plot etc., *matplotlib* is helpful for you.
+* In this chapter, we'll look at the basic usage of matplotlib, then also see a similar library *seaborn* which makes cooler plot.
 
+# Matplotlib
 ## loading the library
 ```python
 import matplotlib.pyplot as plt
@@ -57,4 +60,10 @@ plt.rcParams['axes.linewidth'] = 1.2
 fig = plt.figure(figsize=(16, 9), dpi=120)
 
 plt.tight_layout()
+```
+
+# seaborn
+## loading the library
+```python
+import seaborn as sns
 ```
