@@ -5,16 +5,16 @@ Lecture notes for *Programming and Applied Numerical Analysis? (プログラミ�
 
 # list
 ## slicing
-,,,
+```python
 　x[start=0 : stop=size : step=1]
-,,,
+```
 
 # iterator
 
 # type
-'''python
+```python
 def greeting(name: str) -> str:
     return 'Hello ' + name
-'''
+```
 
 # numpy
