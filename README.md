@@ -6,7 +6,7 @@ Lecture notes for *Programming and Applied Numerical Analysis? (プログラミ�
 # list
 ## slicing
 ```python
-　x[start=0 : stop=size : step=1]
+x[start=0 : stop=size : step=1]
 ```
 
 # iterator
@@ -14,7 +14,5 @@ Lecture notes for *Programming and Applied Numerical Analysis? (プログラミ�
 # type
 ```python
 def greeting(name: str) -> str:
-    return 'Hello ' + name
+  return 'Hello ' + name
 ```
-
-# numpy
