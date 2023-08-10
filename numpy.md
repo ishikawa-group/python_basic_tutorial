@@ -1,4 +1,5 @@
-# Numpy
+# Numpy and scipy
+## numpy
 * *numpy* is the python library to do numerical procedure. Usually, numerical calculations in your code will be faster if you use numpy.
 * In numpy, **array** is used. You can use multi-dimensional array.
 
@@ -12,3 +13,5 @@ import numpy as np
 ```python
 a = np.zeros(2)
 ```
+
+## scipy

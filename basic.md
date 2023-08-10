@@ -1,4 +1,4 @@
-# Introduction to python programming
+# Python basics
 
 ## Variables and types
 * In python, you have following types
