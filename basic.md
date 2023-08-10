@@ -40,3 +40,56 @@ elif a == 0:
 else:
   print("a is negative")
 ```
+
+## List and tuple
+### List
+* A set of variables can be stored in *list*.
+```python
+float_list  = [1, 2, 3]
+string_list = ["A", "B", "Three"]
+```
+* The elements in the list can be accessed with *index*.
+```python
+float_list[0]  # => 1
+float_list[0] = 0  # replacing the element
+```
+* Note that, **in python, index starts with zero (not one)**; list[0] is the first element and list[1] is the second element.
+* You can obtain the length of the list with `len` function.
+```python
+a = [1, 2, 3]
+len(a)  # => 3
+```
+* You can combine lists as
+```python
+[0, 1, 2] + [3, 4]  # => [0, 1, 2, 3, 4, 5]
+```
+* You can append an element with `append`
+```python
+a = [0, 1]
+a.append(2)
+a  # => [0, 1, 2]
+```
+
+### tuple
+* *Tuple* is similar to list, but different way of treating data set.
+```python
+a = (0, 1, 2)
+```
+* The biggest difference is that you cannot replace the element in tuple afterwards.
+```python
+a = (0, 1, 2)
+a[0] = 10  # => error
+```
+
+## loop over list
+```python
+a = [0, 1, 2]
+for i in a:
+  print(i)
+```
+* You can access the index and the value with `enumerate`.
+```python
+a = [0, 1, 2]
+for i, val in enumerate(a):
+  print(i, val)
+```
