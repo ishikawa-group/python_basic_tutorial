@@ -17,4 +17,48 @@ def say_someting(s):
 say_something("hello")  # => "hello"
 ```
 
-## Scope of variables
+## scope of variables
+* When you define the function, you have to know about the *scope* of variables.
+* The variables defined *inside* the function cannot be used outside the function.
+```python {cmd}
+def hello():
+  i = 10
+  print(i)
+  return
+
+hello()   # => 10
+print(i)  # => not defined
+```
+* This is because `i` in the above funcion is *local variable*.
+* Instead, variables defined outside the function is *global variable* so it can be accessed even inside the function.
+```python {cmd}
+i = 10
+def hello():
+  print(i)
+  return
+
+hello()
+```
+* Note that the same variable name is used both local and global variables, the global variable is used.
+```python {cmd}
+a = 10
+
+def hello():
+  a = 20
+  return
+
+hello()
+print(a)
+```
+* It is safer to use *global* inside the function to access the global variable.
+```python {cmd}
+a = 10
+
+def hello():
+  global a
+  a = 20
+  return
+
+hello()
+print(a)
+```
