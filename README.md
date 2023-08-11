@@ -4,6 +4,9 @@ Lecture notes for *Programming and Applied Numerical Analysis? (プログラミ�
 ## [Basics](basic.md)
 * Basics of python programming.
 
+## [File usage](file.md)
+* How to tread extenal files in python.
+
 ## [Functions](function.md)
 * How to define and use functions.
 
@@ -18,9 +21,6 @@ Lecture notes for *Programming and Applied Numerical Analysis? (プログラミ�
 
 ## [Simple Machine Learning](machine_learning.md)
 * Basics of the machine learning in python.
-
-## [File usage](file.md)
-* How to tread extenal files in python.
 
 ## [Google Colaboratory](google_colab.md)
 * How to use the Google colaboratory in python programming.
