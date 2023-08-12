@@ -130,3 +130,7 @@ for i in range(10):
     print(i)
 ```
 * In this way, the loop after finding `i == 5` is not executed.
+
+## dict
+
+## writing script
