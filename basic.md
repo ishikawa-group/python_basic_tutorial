@@ -109,7 +109,13 @@ for i, val in enumerate(a):
 ```
 
 ## while statement
-*
+* If you want to repeat the procedure based on some condtion, you can use `while` statement
+```python
+a = 10
+while a > 0:
+  print(a)
+  a -= 1
+```
 
 ### continue, break -- the loop control
 * If you want to skip loop at some condition, you can use `continue` statement.
@@ -132,5 +138,29 @@ for i in range(10):
 * In this way, the loop after finding `i == 5` is not executed.
 
 ## dict
+* `dict` is a special type that allows to make *key* and *value* pair.
+```python
+d = {}
+d["Apple"] = 100
+```
+* Here "price" is key and 100 is value. You can access the value by specifying the key.
+```python {cmd}
+d = {}
+d["Apple"] = 100
+print(d["Apple"])
+```
+* You can add the key-value pair to the dict by `update` function.
+```python {cmd}
+d = {}
+d["Apple"] = 100
+d.update({"Banana": 200})
+print(d)
+```
 
 ## writing script
+* In python, you can use *interpreter* mode and *script* mode.
+* In the interpreter mode, you execute the python program with console and write the command to that console.
+* In the script mode, you write some file (e.g. test.py), and execute the file from console like
+```bash
+python test.py
+```

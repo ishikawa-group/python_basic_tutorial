@@ -39,9 +39,13 @@ with open("test.txt", "w") as f:
 ```
 
 ### example: reading text file
-with open("file.txt", "r") as f:
-    f.read()
-    line.split()
+```python {cmd}
+with open("textfile.txt", "r") as f:
+  for line in f:
+    line = line.strip()
+    print(line)
+```
+* `strip` is the function to remove line break.
 
 ## Useful file types
 ### CSV
