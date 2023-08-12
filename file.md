@@ -38,6 +38,11 @@ with open("test.txt", "w") as f:
   f.write("Some string\n")
 ```
 
+### example: reading text file
+with open("file.txt", "r") as f:
+    f.read()
+    line.split()
+
 ## Useful file types
 ### CSV
 * Comma separated values.
