@@ -108,6 +108,9 @@ for i, val in enumerate(a):
   print(i, val)
 ```
 
+## while statement
+*
+
 ### continue, break -- the loop control
 * If you want to skip loop at some condition, you can use `continue` statement.
 ```python {cmd}
