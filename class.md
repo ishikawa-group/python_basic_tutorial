@@ -26,6 +26,7 @@ class SimpleData:
     self.a = a
     self.b = b
 ```
+* Class needs *at least one argument*, so `self` is used for this purpose. It specifies the instance itself, and *should be always included*.
 * `sum` and `set` are methods belonging to `SimpleData`.
 * In `set`, *instance variables* a and b is set.
 
@@ -37,10 +38,27 @@ data1.set(1, 2)
 print(data1.sum())
 ```
 
-### Constructor
-* *Constructor* is the special method, called when the class is instantiated. It should be written like
+### special methods
+1. `__init__`
+* This is called *constructor*, which is the special method called when the class is instantiated. It should be written like
 ```python
 def __init__(self):
   self.a = 0
   self.b = 0
 ```
+
+2. `__call__`
+* This is called when the instance is called like function.
+```python {cmd}
+class Hello:
+  def __init__(self):
+    print("init is called")
+
+  def __call__(self):
+    print("call is called")
+
+hello = Hello()
+hello()
+```
+
+## super
