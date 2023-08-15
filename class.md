@@ -62,3 +62,84 @@ hello()
 ```
 
 ## super
+* basic
+```python {cmd}
+class Person:
+  def __init__(self, name):
+    self.name = name
+    
+  def hello(self):
+    print("I'm %s." % self.name)
+
+class Guiter(Person):
+  def guiter_play(self):
+    print("Playing guiter.")
+
+class Base(Person):
+  def base_play(self):
+    print("Playing base.")
+
+g1 = Guiter("John")
+b1 = Base("Paul")
+
+g1.hello()
+b1.hello()
+```
+* override
+```python {cmd}
+class Person:
+  def __init__(self, name):
+    self.name = name
+    
+  def hello(self):
+    print("I'm %s." % self.name)
+
+class Guiter(Person):
+  def hello(self):
+    print("I'm %s, a guiter player." % self.name)
+
+  def guiter_play(self):
+    print("Playing guiter.")
+
+class Base(Person):
+  def hello(self):
+    print("I'm %s, a base player." % self.name)
+
+  def base_play(self):
+    print("Playing base.")
+
+g1 = Guiter("John")
+b1 = Base("Paul")
+
+g1.hello()
+b1.hello()
+```
+* super
+```python {cmd}
+class Person:
+  def __init__(self, name):
+    self.name = name
+    
+  def hello(self):
+    print("I'm %s." % self.name)
+
+class Guiter(Person):
+  def __init__(self, name, from_UK):
+    super().__init__(name)
+    self._from_UK  = from_UK
+
+  def hello(self):
+    if self._from_UK:
+      print("I'm %s, a guiter player. I'm from UK." % self.name)
+    else:
+      print("I'm %s, a guiter player. I'm not from UK." % self.name)
+  
+  def guiter_play(self):
+    print("Playing guiter")
+
+g1 = Guiter("John Lennon", True)
+g2 = Guiter("John Frusciante", False)
+
+g1.hello()
+g2.hello()
+```
