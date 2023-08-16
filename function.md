@@ -1,14 +1,35 @@
 # function
 * In this lecture, we learn how to define and use function in python.
-* Defining function
+* You can define a function like
 ```python
 def say_hello():
   return "hello"
 ```
-* Usin function
-```python
-say_hello()
+* To use the function,
+```python {cmd}
+def say_hello():
+  return "hello"
+
+s = say_hello()
+print(s)
 ```
+
+* The `return` statement is not mandatory, so you can omit it like
+```python {cmd}
+def say_hello2():
+  print("hello")
+
+say_hello2()
+```
+* But I recommend to write return for safety. If no need return, you can put `None`.
+```python {cmd}
+def say_hello3():
+  print("hello")
+  return None
+
+say_hello3()
+```
+
 * You can pass *argument* to the function, like
 ```python
 def say_someting(s):

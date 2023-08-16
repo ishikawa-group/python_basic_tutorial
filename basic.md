@@ -11,6 +11,34 @@
 | bool    | boolian logical variable | True, False          |
 | complex | complex number           | (1, 2) (=1 + 2j)     |
 
+* So let's define some variable and print it with `print` function.
+```python {cmd}
+a = 123
+b = 1.2
+c = "hello"
+
+print(a)
+print(b)
+print(c)
+```
+* In python, you can define variables in one line as
+```python {cmd}
+a, b = 1, 2
+print(a)
+print(b)
+```
+
+## operator
+* There are several operators in python.
+
+| symbol | meaning   | example                        |
+| ------ | --------- | ------------------------------ |
+| +      | add       | 1 + 2, "hello" + "world"       |
+| /      | divide    | 10/2                           |
+| %      | modulus   | 10/3                           |
+| ==     | identical | a == 1 (returns True or False) |
+|        |           |                                |
+
 ## list and tuple
 * *list* and *tuple* are popular types in python to treat a set of variables.
 
@@ -54,7 +82,7 @@ for i in a:
 #### index slicing
 * You can access the index of list in the following manner: `x[start=0 : stop=size : step=1]`
 * This is called *slicing*, and in the script you do like
-```python
+```python {cmd}
 a = [1]*10
 print(a[:])    # all elements
 print(a[0:9])  # from 0 to 8 (not 9!)
@@ -71,7 +99,10 @@ a = (0, 1, 2)
 a[0] = 10  # => error
 ```
 
-## if statement
+## if ,for, and while
+* There are some control statements in python.
+
+### if statement
 * `if` statement can be written as follows
 ```python
 if a > 0:
@@ -89,7 +120,7 @@ else:
   print("a is negative")
 ```
 
-## for statement
+### for statement
 * In python, the code block is expressed by *indent*.
 * `for` statement can be written as follows:
 ```python
@@ -108,7 +139,7 @@ for i, val in enumerate(a):
   print(i, val)
 ```
 
-## while statement
+### while statement
 * If you want to repeat the procedure based on some condtion, you can use `while` statement
 ```python
 a = 10
@@ -155,6 +186,36 @@ d = {}
 d["Apple"] = 100
 d.update({"Banana": 200})
 print(d)
+```
+
+## printing with format
+* You can print variables etc. with `print` function. There are several ways to do printing.
+```python {cmd}
+name = "John"
+age = 20
+
+print("Hello my name is", name)
+print("Hello my name is %s. My age is %d." % (name, age))
+print("Hello my name is {0:s}. My age is {1:d}.".format(name, age))
+```
+
+| symbol | type        |
+| ------ | ----------- |
+| d      | integer     |
+| s      | string      |
+| f      | float       |
+| e      | exponential |
+
+* By using `format`, you can print as follows.
+```python {cmd}
+a = 1.23
+print("a = {}".format(a))         # simplest
+print("a = {:.2f}".format(a))     # float with 2 decimal points
+print("a = {:10.5f}".format(a))   # 5 decimal points with field length of 10
+print("a = {:<10.5f}".format(a))  # left align
+print("a = {:>10.5f}".format(a))  # right align
+print("a = {:10.5e}".format(a))   # exponential
+print("a = {:+10.5e}".format(a))  # exponential with plus/minus sign
 ```
 
 ## writing script
