@@ -3,12 +3,12 @@
 * You can define a function like
 ```python
 def say_hello():
-  return "hello"
+    return "hello"
 ```
 * To use the function,
 ```python {cmd}
 def say_hello():
-  return "hello"
+    return "hello"
 
 s = say_hello()
 print(s)
@@ -17,25 +17,36 @@ print(s)
 * The `return` statement is not mandatory, so you can omit it like
 ```python {cmd}
 def say_hello2():
-  print("hello")
+    print("hello")
 
 say_hello2()
 ```
 * But I recommend to write return for safety. If no need return, you can put `None`.
 ```python {cmd}
 def say_hello3():
-  print("hello")
-  return None
+    print("hello")
+    return None
 
 say_hello3()
 ```
 
-* You can pass *argument* to the function, like
-```python
-def say_someting(s):
-  return s
+## argument
+* **argument** is the variable that one passes to the function. The function usually do some procedure using that argument. You can pass argument to the function, like
+```python {cmd}
+def say_something(s):
+    print(s)
+    return None
 
-say_something("hello")  # => "hello"
+say_something("hello")
+```
+* You can set the default value for argument like
+```python {cmd}
+def say_something(s="hello"):
+    print(s)
+    return s
+
+say_something("good morning")
+say_something()
 ```
 
 ## scope of variables
@@ -55,8 +66,8 @@ print(i)  # => not defined
 ```python {cmd}
 i = 10
 def hello():
-  print(i)
-  return
+    print(i)
+    return
 
 hello()
 ```
@@ -65,8 +76,8 @@ hello()
 a = 10
 
 def hello():
-  a = 20
-  return
+    a = 20
+    return
 
 hello()
 print(a)
@@ -76,9 +87,9 @@ print(a)
 a = 10
 
 def hello():
-  global a
-  a = 20
-  return
+    global a
+    a = 20
+    return
 
 hello()
 print(a)

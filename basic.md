@@ -31,13 +31,17 @@ print(b)
 ## operator
 * There are several operators in python.
 
-| symbol | meaning   | example                        |
-| ------ | --------- | ------------------------------ |
-| +      | add       | 1 + 2, "hello" + "world"       |
-| /      | divide    | 10/2                           |
-| %      | modulus   | 10/3                           |
-| ==     | identical | a == 1 (returns True or False) |
-|        |           |                                |
+| symbol | meaning                      | example                        |
+| ------ | ---------------------------- | ------------------------------ |
+| +      | add                          | 1 + 2, "hello" + "world"       |
+| /      | divide                       | 10/2                           |
+| %      | modulus                      | 10/3                           |
+| ==     | identical                    | a == 1 (returns True or False) |
+| +=     | replace after addition       | a += 1 means a = a + 1         |
+| -=     | replace after subtract       | a -= 1 means a = a - 1         |
+| *=     | replace after multiplication | a *= 2 means a = a * 2         |
+| /=     | replace after division       | a /= 2 means a = a / 2         |
+|        |                              |                                |
 
 ## list and tuple
 * *list* and *tuple* are popular types in python to treat a set of variables.
@@ -216,6 +220,12 @@ print("a = {:<10.5f}".format(a))  # left align
 print("a = {:>10.5f}".format(a))  # right align
 print("a = {:10.5e}".format(a))   # exponential
 print("a = {:+10.5e}".format(a))  # exponential with plus/minus sign
+```
+* The printing with format can be written in short, as
+```python {cmd}
+a = 1.23
+print(f"a = {a}")
+print(f"a = {a:10.5f}")
 ```
 
 ## writing script

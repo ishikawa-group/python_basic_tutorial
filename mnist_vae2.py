@@ -128,4 +128,3 @@ for i in range(25):
   ax[idx].axis('off');
 
 plt.show()
-

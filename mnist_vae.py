@@ -148,4 +148,3 @@ for x, t in dataloader_valid:
     ax.imshow(y2.cpu().detach().numpy()[-1], "gray")
 
 fig.show()
-

@@ -19,12 +19,10 @@ test_dataset  = torchvision.datasets.MNIST(root="./data",
 batch_size = 256
 
 train_loader = torch.utils.data.DataLoader(dataset=train_dataset,
-                                            batch_size=batch_size,
-                                            shuffle=True)
+                                            batch_size=batch_size, shuffle=True)
 
 test_loader  = torch.utils.data.DataLoader(dataset=test_dataset,
-                                            batch_size=batch_size,
-                                            shuffle=False)
+                                            batch_size=batch_size, shuffle=False)
 
 num_classes = 10
 
@@ -56,22 +54,15 @@ def train_fn(model, train_loader, criterion, optimizer, device="cpu"):
 
     for i, (images, labels) in enumerate(train_loader):
         num_train += len(labels)
-
         images, labels = images.view(-1, 28*28).to(device), labels.to(device)
-
         optimizer.zero_grad()
-
         outputs = model(images)
-
         loss = criterion(outputs, labels)
-
         loss.backward()
-
         optimizer.step()
-
         train_loss += loss.item()
 
-    train_loss = train_loss/num_train
+    train_loss = train_loss / num_train
 
     return train_loss
 
@@ -137,4 +128,3 @@ ax.axis("off")
 ax.set_title(f"True label : {label}, Prediction : {prediction_label}", fontsize=20)
 
 plt.show()
-
