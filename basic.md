@@ -1,5 +1,12 @@
 # Python basics
 
+---
+marp: true
+---
+<!--
+headingDivider: 3
+-->
+
 ## variables and types
 * In python, you have following types
 

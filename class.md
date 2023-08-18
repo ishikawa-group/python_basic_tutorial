@@ -37,6 +37,11 @@ data1 = SimpleData()
 data1.set(1, 2)
 print(data1.sum())
 ```
+* You can access the variables belonging to the object by `.` (dot). This is called an *instance variable*.
+```python
+a1 = SimpleData.a
+b1 = SimpleData.b
+```
 
 ### special methods
 1. `__init__`

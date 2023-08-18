@@ -146,7 +146,47 @@ plt.show()
 ```
 
 # seaborn
-## loading the library
-```python
+* `seaborn` is another visualization library, which is based on matplotlib.
+* seaborn makes cooler plots than matplotlib.
+
+```python {cmd}
 import seaborn as sns
+import matplotlib.pyplot as plt
+
+sns.set(style="darkgrid")
+
+# loading dataset
+iris = sns.load_dataset("iris")
+
+# scatter plot
+sns.scatterplot(data=iris)
+plt.show()
+
+# histogram
+sns.histplot(iris.petal_length)
+plt.show()
+
+# pair plot -- showing all the combination
+sns.pairplot(data=iris)
+plt.show()
+```
+
+# plotly
+* `plotly` enables plotting the interactive plot. The plot is made on the browser, and you can see numerical values when you put mouse pointer on it.
+* To use plotly, you need to load the library first and then make `Figure` object instance. After that, you can add plots to the instance by `add_trace` method.
+
+```python {cmd}
+import numpy as np
+xs = np.linspace(0, 10, 100)
+sins = np.sin(xs)
+randoms = np.random.rand(100)
+
+import plotly.graph_objects as go
+fig = go.Figure()
+# adding scatter plot
+fig.add_trace(go.Scatter(x=xs, y=sins))
+# adding another scatter plot
+fig.add_trace(go.Scatter(x=xs, y=randoms))
+
+fig.show()
 ```
