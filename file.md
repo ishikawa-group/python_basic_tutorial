@@ -49,10 +49,24 @@ with open("textfile.txt", "r") as f:
 
 ## Useful file types
 ### CSV
-* Comma separated values.
+* Comma-Separated Values.
+* CSV file is a text file so you can see and write it directly.
+* You can import and export CSV files by Microsoft Excel.
+* You can use csv library.
 
 ### JSON
-* Java script object notation
+* JavaScript Object Notation.
+* JSON is text-file.
+
+### YAML
+* YALM Ain't Markup Language.
+* YAML is text-file.
+* extension: .yaml
 
 ### pickle
 * binary file for python.
+
+### markdown
+* 
+
+
