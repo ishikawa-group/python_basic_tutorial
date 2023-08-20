@@ -1,7 +1,6 @@
 # Numpy and scipy
 ## numpy
-* *numpy* is the python library to do numerical procedure. Usually, numerical calculations in your code will be faster if you use numpy.
-* In numpy, **array** is used. You can use multi-dimensional array.
+* NumPy is one of the fundamental packages for scientific computing in Python. It contains functionality for multi-dimensional arrays, and also mathematical functions such as linear algebra operations, the Fourier transform, and pseudo-random number generators. Usually, numerical calculations in your code will be faster if you use numpy.
 
 ### Loading library
 ```python
@@ -37,3 +36,10 @@ print(np.argmax(b))
 ```
 
 ## scipy
+* *SciPy* is a python library collecting scientific computing functionalities. It provides advanced linear algebra routines, mathematical function optimization, signal processing, special mathematical functions, and statistical distributions.
+
+## pandas
+* *pandas* is a python library for data processing and analysis. Pandas provides a great range of methods to modify and operate on data; in particular, it allows queries and joins of tables. In pandas, you can use various types (for example, integers, dates, floating-point numbers, and strings) in single table.
+* Another valuable tool provided by pandas is its ability to ingest from a great variety of file formats and data‐ bases, like SQL, Excel files, JSON, and comma-separated values (CSV) files.
+
+* It is built around a data structure called the **DataFrame**.

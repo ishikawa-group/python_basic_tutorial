@@ -1,5 +1,5 @@
 # Making a plot in python
-* To make a simple plot like line plot, curve plot etc., *matplotlib* is helpful for you.
+* *matplotlib* is the scientific plotting library in Python. It provides functions for making visualizations such as line charts, histograms, scatter plots, and so on.
 * In this chapter, we'll look at the basic usage of matplotlib, then also see a similar library *seaborn* which makes cooler plot.
 
 ## matplotlib
