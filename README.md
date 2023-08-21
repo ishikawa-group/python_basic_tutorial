@@ -1,5 +1,6 @@
 # python_introduction
-Lecture notes for *Programming and Applied Numerical Analysis? (プログラミングと数値解析応用)*.
+* Lecture notes for *Programming and Applied Numerical Analysis? (プログラミングと数値解析応用)*.
+* Period: 4Q (Dec.-Feb.)
 
 ## [Basics](basic.md)
 * Basics of python programming.
