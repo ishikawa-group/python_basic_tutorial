@@ -1,6 +1,11 @@
 # python_introduction
 * Lecture notes for *Programming and Applied Numerical Analysis? (プログラミングと数値解析応用)*.
 * Period: 4Q (Dec.-Feb.)
+* Lecture plan
+1. Basic grammar and control of Python: Be able to make simple programs of Python with branch and loops.
+2. Basic structure and numerical calculations: Be able to make programs of Python with list and array, and numerical calculation using NumPy and SciPy.
+3. Function and class: Be able to define and use the function and the class in Python programming.
+4. Machine learning with Python: Be able to do simple machine learning with Python.
 
 ## [Basics](basic.md)
 * Basics of python programming.
