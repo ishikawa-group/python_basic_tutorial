@@ -145,6 +145,21 @@ plt.tight_layout()
 plt.show()
 ```
 
+## Saving figure
+```python {cmd}
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(0, 4*np.pi, 100)
+y = np.sin(x)
+
+fig, ax = plt.subplots()
+
+ax.plot(x, y)
+plt.savefig("sin.png")
+plt.close()
+```
+
 # seaborn
 * `seaborn` is another visualization library, which is based on matplotlib.
 * seaborn makes cooler plots than matplotlib.

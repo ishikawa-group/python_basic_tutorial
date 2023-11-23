@@ -25,15 +25,15 @@ random.seed(manualSeed)
 torch.manual_seed(manualSeed)
 torch.use_deterministic_algorithms(True)
 
-dataroot = "./images2004"
-workers = 0
-batch_size = 128
+dataroot = "./images2006"
+workers = 2
+batch_size = 64  # 128
 image_size = 64
 nc = 3
 nz = 100
 ngf = 64
 ndf = 64
-num_epochs = 40  # 40 -> 1000 iterations
+num_epochs = 400  # 40 -> 1000 iterations
 lr = 1.0e-4
 beta1 = 0.5
 
@@ -56,11 +56,12 @@ real_batch = next(iter(dataloader))
 plt.figure(figsize=(8, 8))
 plt.axis("off")
 plt.title("Training images")
-#plt.imshow(np.transpose(vutils.make_grid(real_batch[0].to(device)[:64], padding=2, normalize=True).cpu(), (1,2,0)))
-# transpose (channel,height,width) -> (height,width,channel)
-# numpy.transpose(a, axes = None): so axes=(0,1,2) does nothing (original)
+
+# -- transpose (channel,height,width) -> (height,width,channel)
+# -- numpy.transpose(a, axes = None): so axes=(0,1,2) does nothing (original)
 plt.imshow(np.transpose(vutils.make_grid(real_batch[0].to(device)[0:64], normalize=True).cpu(), (1,2,0)))
-plt.show()
+#plt.show()
+plt.savefig("true_image.png")
 
 # customize weights initialization called on netG and netD
 # nn.init.normal_ gives normal distribution
@@ -229,8 +230,9 @@ for epoch in range(num_epochs):
         optimizerG.step()
 
         # output training stats
-        if i % 10 == 0:
-            print("[%d/%d][%d/%d]\tLoss_D: %.4f\tLoss_G: %.4f\tD(x): %.4f\tD(G(z)): %.4f / %.4f" % (epoch+1, num_epochs, i, len(dataloader), errD.item(), errG.item(), D_x, D_G_z1, D_G_z2))
+        if i == 0 or i == len(dataloader)-1:
+            print("[%3d/%3d][%2d/%2d]\tLoss_D:%7.3f\tLoss_G:%7.3f\tD(x):%7.3f\tD(G(z)):%7.3f/%7.3f"
+             % (epoch+1, num_epochs, i, len(dataloader)-1, errD.item(), errG.item(), D_x, D_G_z1, D_G_z2))
 
         # save losses for plotting
         G_losses.append(errG.item())
@@ -251,7 +253,8 @@ plt.plot(D_losses, label="D")
 plt.xlabel("Iterations")
 plt.ylabel("Loss")
 plt.legend()
-plt.show()
+#plt.show()
+plt.savefig("loss.png")
 
 # -- capture
 #fig = plt.figure(figsize=(8, 8))
@@ -265,7 +268,7 @@ plt.show()
 real_batch = next(iter(dataloader))
 
 # plot the real images
-plt.figure(figsize=(5, 5))
+plt.figure(figsize=(10, 10))
 plt.subplot(1, 2, 1)
 plt.axis("off")
 plt.title("Real images")
@@ -276,5 +279,6 @@ plt.subplot(1, 2, 2)
 plt.axis("off")
 plt.title("Fake images")
 plt.imshow(np.transpose(img_list[-1], (1, 2, 0)))
-plt.show()
-
+#plt.show()
+plt.savefig("generated.png")
+plt.close()
