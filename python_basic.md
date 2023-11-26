@@ -1,12 +1,5 @@
 # Python basics
 
----
-marp: true
----
-<!--
-headingDivider: 3
--->
-
 ## variables and types
 * In python, you have following types
 
@@ -84,12 +77,14 @@ a = [0, 1]
 a.append(2)
 a  # => [0, 1, 2]
 ```
+
 #### loop over list
 ```python
 a = [0, 1, 2]
 for i in a:
   print(i)
 ```
+
 #### index slicing
 * You can access the index of list in the following manner: `x[start=0 : stop=size : step=1]`
 * This is called *slicing*, and in the script you do like
