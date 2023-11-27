@@ -4,9 +4,9 @@
 * Lecture plan
 
 1. Basic grammar and control of Python
+    * [Environmental setting](./setting.md)
     * [Python basics](./python_basic.md)
     * [File usage](./file.md)
-    * [Environmental setting](./google_colab.md)
 
 2. Basic structure and numerical calculations
     * [Numpy & Scipy](./numpy.md)
