@@ -94,3 +94,12 @@ def hello():
 hello()
 print(a)
 ```
+
+---
+
+Excercise
+
+Define a function called multiply that takes two parameters (a and b) and returns their product.
+Call the function with two integer values and print the result.
+
+---

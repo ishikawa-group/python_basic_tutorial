@@ -148,3 +148,37 @@ g2 = Guiter("John Frusciante", False)
 g1.hello()
 g2.hello()
 ```
+
+---
+
+## Exercise:
+* Create a Car class with the following specifications:
+
+1. Attributes:
+* make: Make of the car (string)
+* model: Model of the car (string)
+* year: Year the car was manufactured (integer)
+
+2. Methods:
+* `__init__`: Constructor method to initialize the attributes.
+* display_info: Method that prints out the make, model, and year of the car.
+* Create an instance of the Car class, set some values for its attributes, and display its information.
+
+Example Solution:
+
+```python
+class Car:
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
+
+    def display_info(self):
+        print(f"Car: {self.year} {self.make} {self.model}")
+
+# Creating an instance of the Car class
+my_car = Car("Toyota", "Corolla", 2020)
+
+# Displaying car information
+my_car.display_info()
+```

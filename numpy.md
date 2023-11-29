@@ -122,3 +122,104 @@ df1 = df1.sort_values(by="Price", ascending=False)  #descending
 df_win = df1[df1["OS"]=="Windows"]
 df_mac = df1[df1["OS"]=="Mac"]
 ```
+
+---
+
+Exercise: Calculate Total Sales
+
+Let's say you have sales data for a week represented as a NumPy array. Calculate the total sales for the week.
+
+```python
+Copy code
+import numpy as np
+
+# Sales data for a week
+sales = np.array([400, 550, 300, 650, 700, 480, 520])
+
+# Calculate total sales for the week
+total_sales = np.sum(sales)
+```
+
+print(f"Total sales for the week: ${total_sales}")
+In this exercise, the NumPy array sales holds the daily sales figures for a week. The np.sum() function is used to calculate the total sales by summing up all the daily sales values. Adjust the sales array with different values to see the total sales for different scenarios.
+
+---
+
+---
+
+Exercise: Numerical Integration
+
+Suppose you want to numerically integrate a function using SciPy's quad function.
+
+python
+Copy code
+from scipy import integrate
+
+# Define the function to integrate
+def my_function(x):
+    return x**2  # Example function: x^2
+
+# Perform numerical integration using quad
+result, _ = integrate.quad(my_function, 0, 4)  # Integrate my_function from 0 to 4
+
+print(f"Result of the integration: {result}")
+In this exercise:
+
+my_function represents the function 
+�
+(
+�
+)
+=
+�
+2
+f(x)=x 
+2
+  that we want to integrate.
+integrate.quad() is used to perform numerical integration using the my_function over the interval [0, 4].
+The result is printed, which represents the numerical integration of the function 
+�
+2
+x 
+2
+  from 0 to 4.
+You can modify the my_function to integrate different functions or adjust the integration limits [0, 4] to see how the numerical integration result changes for various functions and intervals.
+
+---
+
+---
+Exercise: Analyzing Sales Data
+
+Suppose you have sales data in a CSV file (sales_data.csv) containing columns for Date and Sales. Let's load this data into a Pandas DataFrame and perform basic analysis.
+
+python
+Copy code
+import pandas as pd
+
+# Load the sales data into a Pandas DataFrame
+file_path = 'sales_data.csv'  # Replace with your file path
+data = pd.read_csv(file_path)
+
+# Display the first few rows of the DataFrame
+print("First few rows of the data:")
+print(data.head())
+
+# Calculate basic statistics
+total_sales = data['Sales'].sum()
+average_sales = data['Sales'].mean()
+max_sales = data['Sales'].max()
+min_sales = data['Sales'].min()
+
+print(f"\nTotal Sales: ${total_sales}")
+print(f"Average Sales: ${average_sales:.2f}")
+print(f"Maximum Sales: ${max_sales}")
+print(f"Minimum Sales: ${min_sales}")
+In this exercise:
+
+pd.read_csv() is used to load the sales data from a CSV file into a Pandas DataFrame.
+data.head() displays the first few rows of the DataFrame to get an overview of the data.
+Basic statistics such as total sales, average sales, maximum sales, and minimum sales are calculated using Pandas functions like sum(), mean(), max(), and min() on the 'Sales' column of the DataFrame.
+Replace 'sales_data.csv' with the path to your own CSV file containing similar sales data to perform analysis on your dataset. Adjust the column names and calculations according to the structure of your data.
+
+
+---

@@ -1,6 +1,15 @@
 # Python basics
 
-## variables and types
+## Advantage of Python
+* Interpreter: no need to compile, directly executed.
+* Easy: grammar in python is easy.
+* Libraries: a lot of libraries are available.
+
+### The difference between C++ and Python
+* C++: compiled, statically typed, and requires manual memory management, providing high performance and control, suited for performance-critical applications.
+* Python is interpreted, dynamically typed, and has automatic memory management, prioritizing simplicity, versatility, and rapid development over raw performance.
+
+## Variables and types
 * In python, you have following types
 
 | types   | meaning                  | example              |
@@ -31,19 +40,43 @@ print(b)
 ## operator
 * There are several operators in python.
 
-| symbol | meaning                      | example                        |
-| ------ | ---------------------------- | ------------------------------ |
-| +      | add                          | 1 + 2, "hello" + "world"       |
-| /      | divide                       | 10/2                           |
-| %      | modulus                      | 10/3                           |
-| ==     | identical                    | a == 1 (returns True or False) |
-| +=     | replace after addition       | a += 1 means a = a + 1         |
-| -=     | replace after subtract       | a -= 1 means a = a - 1         |
-| *=     | replace after multiplication | a *= 2 means a = a * 2         |
-| /=     | replace after division       | a /= 2 means a = a / 2         |
-|        |                              |                                |
+* Arithmetic operators
 
-## list and tuple
+| symbol | meaning                      | example                            |
+| ------ | ---------------------------- | ---------------------------------- |
+| >      | >                            | **Arithmetic operators**           |
+| +      | add                          | 1 + 2, "hello" + "world"           |
+| /      | divide                       | 10/2                               |
+| %      | modulus                      | 10/3                               |
+| >      | >                            | **Comparison operators**           |
+| ==     | identical                    | a == 1 (returns True or False)     |
+| $\gt$  | greater than                 | a > 1                              |
+| $\lt$  | less than                    | a < 1                              |
+| $\gt$= | greater than or equal        | a >= 1                             |
+| $\lt$= | less than or equal           | a <= 1                             |
+| >      | >                            | **Logical operators**              |
+| and    | logical and                  | a == 1 and b == 2                  |
+| or     | logical or                   | a == 1 or b == 2                   |
+| not    | logical not                  | not a == 1 (returns True or False) |
+| >      | >                            | **Assignment operators**           |
+| +=     | replace after addition       | a += 1 means a = a + 1             |
+| -=     | replace after subtract       | a -= 1 means a = a - 1             |
+| *=     | replace after multiplication | a *= 2 means a = a * 2             |
+| /=     | replace after division       | a /= 2 means a = a / 2             |
+| >      | >                            | **Others**                         |
+| in     | membership operator          | a in ["a", "b", "c"]               |
+| is     | identity operator            | a is 1                             |
+
+---
+
+## Exercise
+1. Create two variables x and y and assign integer values to them.
+2. Perform arithmetic operations (addition, subtraction, multiplication, division, exponentiation, modulo) using these variables.
+3. Print the results of each operation.
+
+---
+
+## List and tuple
 * *list* and *tuple* are popular types in python to treat a set of variables.
 
 ### list
@@ -78,14 +111,14 @@ a.append(2)
 a  # => [0, 1, 2]
 ```
 
-#### loop over list
+#### Loop over list
 ```python
 a = [0, 1, 2]
 for i in a:
   print(i)
 ```
 
-#### index slicing
+#### Index slicing
 * You can access the index of list in the following manner: `x[start=0 : stop=size : step=1]`
 * This is called *slicing*, and in the script you do like
 ```python {cmd}
@@ -94,7 +127,7 @@ print(a[:])    # all elements
 print(a[0:9])  # from 0 to 8 (not 9!)
 ```
 
-### tuple
+### Tuple
 * *Tuple* is similar to list, but different way of treating data set.
 ```python
 a = (0, 1, 2)
@@ -105,7 +138,7 @@ a = (0, 1, 2)
 a[0] = 10  # => error
 ```
 
-## if ,for, and while
+## If ,for, and while
 * There are some control statements in python.
 
 ### if statement
@@ -139,7 +172,7 @@ for i in range(10):
   print(i)
 ```
 * You can access the index and the value of the list with `enumerate` function.
-```python
+```python {cmd}
 a = [0, 1, 2]
 for i, val in enumerate(a):
   print(i, val)
@@ -174,6 +207,15 @@ for i in range(10):
 ```
 * In this way, the loop after finding `i == 5` is not executed.
 
+---
+
+## Exercise
+1. Write a program that checks if x is greater than y.
+If x is greater, print "x is greater than y"; otherwise, print "y is greater than or equal to x".
+2. Create a list containing at least five elements (numbers or strings). Use a for loop to iterate through the list and print each element.
+
+---
+
 ## dict
 * `dict` is a special type that allows to make *key* and *value* pair.
 ```python
@@ -194,7 +236,7 @@ d.update({"Banana": 200})
 print(d)
 ```
 
-## printing with format
+## Printing with format
 * You can print variables etc. with `print` function. There are several ways to do printing.
 ```python {cmd}
 name = "John"
@@ -230,7 +272,7 @@ print(f"a = {a}")
 print(f"a = {a:10.5f}")
 ```
 
-## writing script
+## Writing Python script
 * In python, you can use *interpreter* mode and *script* mode.
 * In the interpreter mode, you execute the python program with console and write the command to that console.
 * In the script mode, you write some file (e.g. test.py), and execute the file from console like
