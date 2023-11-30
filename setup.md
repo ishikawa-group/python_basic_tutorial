@@ -20,14 +20,22 @@
 
 2. Install Dependencies
 ```bash
+sudo apt update
+sudo apt -y upgrade
+```
+then
+```bash
 sudo apt install -y \
-  build-essential \
-  zlib1g-dev \
-  libssl-dev \
-  libbz2-dev \
-  libffi-dev\
-  libreadline-dev \
-  libsqlite3-dev
+    build-essential \
+    libssl-dev \
+    zlib1g-dev \
+    libbz2-dev \
+    libreadline-dev \
+    libsqlite3-dev \
+    libncursesw5-dev \
+    tk-dev \
+    libffi-dev \
+    liblzma-dev
 ```
 
 3. Clone pyenv
@@ -77,8 +85,9 @@ pyenv install --list
 
 2. Choose a version and install it (e.g., Python 3.9.5)
 ```bash
-pyenv install 3.9.5
+pyenv install 3.9.5 --verbose
 ```
+* It will take some time ...
 
 3. Set Global Python Version
 ```bash
