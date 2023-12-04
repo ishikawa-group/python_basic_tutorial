@@ -1,12 +1,16 @@
-# Setting up the python environment
+# Setting up the Python environment
+* To setup the Python programming environment, you need to do following steps:
+    1. Install pyenv
+    2. Install Python
+* Windows and Mac users go different route for step1, while step 2 is common.
 
 ## Installing pyenv
 ### Windows
 1. Install WSL2 (Windows service for linux ver.2); following is an example in Windows 10
-    * Open "Windows Power Shell" or "Terminal" as Administrator.
-    * Type `wsl --set-default-version 2` (for safe)
-    * Type `wsl --install -d Ubuntu`.
-    * After installation is done, open `Ubuntu` in Application.
+    1. Open "Windows Power Shell" or "Terminal" as Administrator.
+    2. Type `wsl --set-default-version 2` (for safe)
+    3. Type `wsl --install -d Ubuntu`.
+    4. After installation is done, open `Ubuntu` in Application.
 
 * When above doesn't work, check "Windows の機能の有効化、または無効化", then "Linux 用 Windows サブシステム", "仮想マシンプラットフォーム" is ON.
 * Note that WSL makes home directory (`/home/your_name`) which is different from the Windows user directory (`C:\Users\your_name`).
@@ -43,18 +47,6 @@ sudo apt install -y \
 git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 ```
 
-4. Update Bash Configuration
-```bash
-echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
-echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
-echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.bashrc
-```
-
-5. Reload Bash Configuration
-```bash
-source ~/.bashrc
-```
-
 ### Mac
 1. Install Homebrew (if not installed)
 ```bash
@@ -65,16 +57,17 @@ source ~/.bashrc
 brew install pyenv
 ```
 
-3. Add pyenv to Shell
-* Add pyenv to your shell's configuration file (.bash_profile, .bashrc, .zshrc, or similar).
+## pyenv configuration
+1. Update Bash Configuration. Execute following three lines.
 ```bash
-echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bash_profile
-echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bash_profile
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
+echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
+echo 'eval "$(pyenv init -)"' >> ~/.bashrc
 ```
 
-4. Restart or Reload Shell Configuration
+2. Reload Bash Configuration
 ```bash
-source ~/.bash_profile
+source ~/.bashrc
 ```
 
 ##  Install Python using pyenv
@@ -120,3 +113,25 @@ python --version
 1. "Runtime" tab.
 2. "Change the type of Runtime".
 3. Choose GPU you want.
+
+---
+
+* Google Colab is a free, cloud-based platform where you can write and run Python code using Jupyter notebooks
+* You can use expensive GPUs (graphical proceccing unit) with Google Cloab for free (with some limitations)
+
+## setup
+1. Sign in with your Google Account (if exists).
+2. Go to Google Colaboratory page in your web browser.
+    * https://colab.research.google.com/notebooks/intro.ipynb
+3. Create a New Notebook
+    * "File(ファイル)" --> "New Notebook(ノートブックを新規作成)" to start a new Python notebook.
+4. Copy your notebook to Google Drive.
+    * Keep your notebook to Google Drive by clicking "Copy to Drive(ドライブにコピー)".
+4. Use the Notebook
+    * "+Code(コード)" will insert the code cell in your notebook.
+    * In a code cell, you can input Python code.
+    * With ">" button, the code will be execured.
+5. Saving and Sharing
+    * "File" --> "Save" will save your notebook to Google Drive.
+    * Click the folder button in left panel then folders are open.
+    * You file is save to "drive" --> "Mydrive" (by default).

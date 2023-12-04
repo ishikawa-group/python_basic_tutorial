@@ -207,6 +207,7 @@ fig.show()
 ```
 
 ---
+
 Exercise: Visualizing Relationships with Pairplot
 
 Let's generate random data for this exercise and use Seaborn's pairplot to visualize relationships between variables.

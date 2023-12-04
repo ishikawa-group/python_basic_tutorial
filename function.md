@@ -99,7 +99,19 @@ print(a)
 
 Excercise
 
-Define a function called multiply that takes two parameters (a and b) and returns their product.
-Call the function with two integer values and print the result.
+
+Absolutely, here's an exercise focusing on Python functions:
+
+Exercise: Creating and Using Functions
+
+Simple Function:
+Create a function that takes two numbers as arguments and returns their sum.
+python
+Copy code
+def add_numbers(a, b):
+    return a + b
+
+result = add_numbers(5, 7)
+print("The sum is:", result)
 
 ---

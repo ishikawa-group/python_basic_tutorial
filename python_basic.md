@@ -5,12 +5,21 @@
 * Easy: grammar in python is easy.
 * Libraries: a lot of libraries are available.
 
+## Interpreter mode and script mode
+* In Python, you can use *interpreter* mode and *script* mode.
+    * In the interpreter mode, you execute the Python program with console and write the command to that console.
+    * In the script mode, you write some file (e.g. test.py), and execute the file from console like
+    ```bash
+    python test.py
+    ```
+* In the following, we recommend to execute commands with interpreter mode. That is, do `python` in the terminal then execute command after `>>>`.
+
 ### The difference between C++ and Python
 * C++: compiled, statically typed, and requires manual memory management, providing high performance and control, suited for performance-critical applications.
 * Python is interpreted, dynamically typed, and has automatic memory management, prioritizing simplicity, versatility, and rapid development over raw performance.
 
 ## Variables and types
-* In python, you have following types
+* In Python, you have following variable types.
 
 | types   | meaning                  | example              |
 | ------- | ------------------------ | -------------------- |
@@ -30,7 +39,7 @@ print(a)
 print(b)
 print(c)
 ```
-* In python, you can define variables in one line as
+* You can define variables in one line, as
 ```python {cmd}
 a, b = 1, 2
 print(a)
@@ -38,9 +47,7 @@ print(b)
 ```
 
 ## operator
-* There are several operators in python.
-
-* Arithmetic operators
+* There are several operators in Python.
 
 | symbol | meaning                      | example                            |
 | ------ | ---------------------------- | ---------------------------------- |
@@ -67,17 +74,24 @@ print(b)
 | in     | membership operator          | a in ["a", "b", "c"]               |
 | is     | identity operator            | a is 1                             |
 
+```python{cmd}
+a = 1
+b = 2
+c = a + b
+print(c)
+print(a == b)
+```
 ---
 
 ## Exercise
 1. Create two variables x and y and assign integer values to them.
-2. Perform arithmetic operations (addition, subtraction, multiplication, division, exponentiation, modulo) using these variables.
+2. Perform arithmetic operations (addition, subtraction, multiplication, division) using these variables.
 3. Print the results of each operation.
 
 ---
 
 ## List and tuple
-* *list* and *tuple* are popular types in python to treat a set of variables.
+* *list* and *tuple* are popular types in Python to treat a set of variables.
 
 ### list
 * A set of variables can be stored in *list*.
@@ -90,7 +104,7 @@ string_list = ["A", "B", "Three"]
 float_list[0]  # => 1
 float_list[0] = 0  # replacing the element
 ```
-* Note that, **in python, index starts with zero (not one)**; list[0] is the first element and list[1] is the second element.
+* Note that, **in Python, index starts with zero (not one)**; list[0] is the first element and list[1] is the second element.
 * You can obtain the length of the list with `len` function.
 ```python
 a = [1, 2, 3]
@@ -111,13 +125,6 @@ a.append(2)
 a  # => [0, 1, 2]
 ```
 
-#### Loop over list
-```python
-a = [0, 1, 2]
-for i in a:
-  print(i)
-```
-
 #### Index slicing
 * You can access the index of list in the following manner: `x[start=0 : stop=size : step=1]`
 * This is called *slicing*, and in the script you do like
@@ -132,50 +139,51 @@ print(a[0:9])  # from 0 to 8 (not 9!)
 ```python
 a = (0, 1, 2)
 ```
-* The biggest difference is that you cannot replace the element in tuple afterwards.
+* The biggest difference is that **you cannot replace the element in tuple afterwards**.
 ```python
 a = (0, 1, 2)
 a[0] = 10  # => error
 ```
 
 ## If ,for, and while
-* There are some control statements in python.
+* There are some control statements in Python.
 
 ### if statement
 * `if` statement can be written as follows
 ```python
 if a > 0:
-  print("a is lager than zero")
+    print("a is lager than zero")
 else:
-  print("a is smaller than zero")
+    print("a is smaller than zero")
 ```
 * You can use `else` statement to add the instruction, as
 ```python
 if a > 0:
-  print("a is positive")
+    print("a is positive")
 elif a == 0:
-  print("a is zero")
+    print("a is zero")
 else:
-  print("a is negative")
+    print("a is negative")
 ```
 
 ### for statement
-* In python, the code block is expressed by *indent*.
+* In Python, the code block is expressed by *indent*.
+* Either `tab` or `spaces` are OK for indent but **do not mix them**.
 * `for` statement can be written as follows:
 ```python
 for i in [0, 1, 2]:
-  print(i)
+    print(i)
 ```
-* `range` function is useful when using for statement.
+* `range` function is useful when using `for` statement.
 ```python
 for i in range(10):
-  print(i)
+    print(i)
 ```
 * You can access the index and the value of the list with `enumerate` function.
 ```python {cmd}
 a = [0, 1, 2]
 for i, val in enumerate(a):
-  print(i, val)
+    print(i, val)
 ```
 
 ### while statement
@@ -187,7 +195,7 @@ while a > 0:
   a -= 1
 ```
 
-### continue, break -- the loop control
+### continue, break; the loop control
 * If you want to skip loop at some condition, you can use `continue` statement.
 ```python {cmd}
 for i in range(10):
@@ -196,7 +204,7 @@ for i in range(10):
   else:
     print(i)
 ```
-* The for loop goes to next step when it finds `continue`. So rest of the part is not executed.
+* The `for` loop goes to next step when it finds `continue`. So rest of the part is not executed.
 * If you want to end the loop at some condition, you can use `break` statement.
 ```python {cmd}
 for i in range(10):
@@ -236,7 +244,7 @@ d.update({"Banana": 200})
 print(d)
 ```
 
-## Printing with format
+## Printing
 * You can print variables etc. with `print` function. There are several ways to do printing.
 ```python {cmd}
 name = "John"
@@ -272,10 +280,9 @@ print(f"a = {a}")
 print(f"a = {a:10.5f}")
 ```
 
-## Writing Python script
-* In python, you can use *interpreter* mode and *script* mode.
-* In the interpreter mode, you execute the python program with console and write the command to that console.
-* In the script mode, you write some file (e.g. test.py), and execute the file from console like
-```bash
-python test.py
-```
+---
+
+## Exercise
+* Create a dictionary representing a person's information (name, age, city) and access specific elements.([answer](./answer.md))
+
+<a href="./answer.md#example">asdf</a>
