@@ -49,30 +49,30 @@ print(b)
 ## operator
 * There are several operators in Python.
 
-| symbol | meaning                      | example                            |
-| ------ | ---------------------------- | ---------------------------------- |
-| >      | >                            | **Arithmetic operators**           |
-| +      | add                          | 1 + 2, "hello" + "world"           |
-| /      | divide                       | 10/2                               |
-| %      | modulus                      | 10/3                               |
-| >      | >                            | **Comparison operators**           |
-| ==     | identical                    | a == 1 (returns True or False)     |
-| $\gt$  | greater than                 | a > 1                              |
-| $\lt$  | less than                    | a < 1                              |
-| $\gt$= | greater than or equal        | a >= 1                             |
-| $\lt$= | less than or equal           | a <= 1                             |
-| >      | >                            | **Logical operators**              |
-| and    | logical and                  | a == 1 and b == 2                  |
-| or     | logical or                   | a == 1 or b == 2                   |
-| not    | logical not                  | not a == 1 (returns True or False) |
-| >      | >                            | **Assignment operators**           |
-| +=     | replace after addition       | a += 1 means a = a + 1             |
-| -=     | replace after subtract       | a -= 1 means a = a - 1             |
-| *=     | replace after multiplication | a *= 2 means a = a * 2             |
-| /=     | replace after division       | a /= 2 means a = a / 2             |
-| >      | >                            | **Others**                         |
-| in     | membership operator          | a in ["a", "b", "c"]               |
-| is     | identity operator            | a is 1                             |
+| symbol                   | meaning                      | example                            |
+| ------------------------ | ---------------------------- | ---------------------------------- |
+| **Arithmetic operators** | -                            | -                                  |
+| +                        | add                          | 1 + 2, "hello" + "world"           |
+| /                        | divide                       | 10/2                               |
+| %                        | modulus                      | 10/3                               |
+| **Comparison operators** | -                            | -                                  |
+| ==                       | identical                    | a == 1 (returns True or False)     |
+| $\gt$                    | greater than                 | a > 1                              |
+| $\lt$                    | less than                    | a < 1                              |
+| $\gt$=                   | greater than or equal        | a >= 1                             |
+| $\lt$=                   | less than or equal           | a <= 1                             |
+| **Logical operators**    | -                            | -                                  |
+| and                      | logical and                  | a == 1 and b == 2                  |
+| or                       | logical or                   | a == 1 or b == 2                   |
+| not                      | logical not                  | not a == 1 (returns True or False) |
+| **Assignment operators** | -                            | -                                  |
+| +=                       | replace after addition       | a += 1 means a = a + 1             |
+| -=                       | replace after subtract       | a -= 1 means a = a - 1             |
+| *=                       | replace after multiplication | a *= 2 means a = a * 2             |
+| /=                       | replace after division       | a /= 2 means a = a / 2             |
+| **Others**               | -                            | - |
+| in                       | membership operator          | a in ["a", "b", "c"]               |
+| is                       | identity operator            | a is 1                             |
 
 ```python{cmd}
 a = 1

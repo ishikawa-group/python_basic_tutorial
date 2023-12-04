@@ -1,5 +1,5 @@
 ## variable
-<h2 id="variable"></h2>
+<p id="variable"></p>
 
 ```python{cmd}
 x = 4
@@ -17,7 +17,7 @@ print(division)
 ```
 
 ## dict
-<h2 id="dict"></h2>
+<p id="dict"></p>
 
 ```python{cmd}
 # Create a dictionary representing a person
