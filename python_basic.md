@@ -86,7 +86,7 @@ print(a == b)
 ## Exercise
 1. Create two variables x and y and assign integer values to them.
 2. Perform arithmetic operations (addition, subtraction, multiplication, division) using these variables.
-3. Print the results of each operation.
+3. Print the results of each operation.(<a href="./answer.md#variable">answer</a>)
 
 ---
 
@@ -283,6 +283,4 @@ print(f"a = {a:10.5f}")
 ---
 
 ## Exercise
-* Create a dictionary representing a person's information (name, age, city) and access specific elements.([answer](./answer.md))
-
-<a href="./answer.md#example">asdf</a>
+* Create a dictionary representing a person's information (name, age, city) and access specific elements.(<a href="./answer.md#dict">answer</a>)

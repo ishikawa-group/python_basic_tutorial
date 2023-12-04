@@ -1,41 +1,25 @@
-## asdfasdf
-a
-b
-c
-d
-a
-b
-c
-d
-a
-b
-c
-d
-a
-b
-c
-d
-a
-b
-c
-d
-a
-b
-c
-d
-a
-b
-c
-d
-a
-b
-c
-d
+## variable
+<h2 id="variable"></h2>
 
-<h2 id="example"></h2>
+```python{cmd}
+x = 4
+y = 7
 
-## asdf
-```python
+addition = x + y
+subtraction = x - y
+multiplication = x * y
+division = x / y
+
+print(addition)
+print(subtraction)
+print(multiplication)
+print(division)
+```
+
+## dict
+<h2 id="dict"></h2>
+
+```python{cmd}
 # Create a dictionary representing a person
 person = {
     'name': 'Alice',
