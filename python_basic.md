@@ -220,7 +220,7 @@ for i in range(10):
 ## Exercise
 1. Write a program that checks if x is greater than y.
 If x is greater, print "x is greater than y"; otherwise, print "y is greater than or equal to x".
-2. Create a list containing at least five elements (numbers or strings). Use a for loop to iterate through the list and print each element.
+2. Create a list containing at least five elements (numbers or strings). Use a for loop to iterate through the list and print each element.(<a href="./answer.md#control">answer</a>)
 
 ---
 
