@@ -47,6 +47,18 @@ print(a)
 print(b)
 ```
 
+## comment
+* You can put comments, by starting `#`. This is a single line comment.
+* Comments with multiple lines can be defined by sandwitching with `"""`.
+```python{cmd}
+# this is a comment.
+
+"""
+This
+part
+is a comment
+"""
+```
 ## operator
 * There are several operators in Python.
 
@@ -79,8 +91,11 @@ print(b)
 a = 1
 b = 2
 c = a + b
+d = "Hello "
+e = "World"
 print(c)
 print(a == b)
+print(d + e)
 ```
 ---
 
@@ -92,7 +107,7 @@ print(a == b)
 
 ---
 
-## List and tuple
+## List, tuple and dict
 * *list* and *tuple* are popular types in Python to treat a set of variables.
 
 ### list
@@ -126,6 +141,21 @@ a = [0, 1]
 a.append(2)
 a  # => [0, 1, 2]
 ```
+* remove
+```python{cmd}
+a = [0, 1]
+a.remove(0)
+print(a)
+```
+* extend
+```python{cmd}
+a = [0, 1]
+b = [2, 3]
+c = a + b    # need to store in the different list
+a.extend(b)  # a is extended
+print(a)
+print(c)
+```
 
 #### Index slicing
 * You can access the index of the list as follows: `x[start=0 : stop=size : step=1]`
@@ -134,6 +164,8 @@ a  # => [0, 1, 2]
 a = [1]*10
 print(a[:])    # all elements
 print(a[0:9])  # from 0 to 8 (not 9!)
+print(a[:5])   # from 0 to 4
+print(a[4:])   # from 5 to the last(10)
 ```
 
 ### Tuple
@@ -146,6 +178,33 @@ a = (0, 1, 2)
 a = (0, 1, 2)
 a[0] = 10  # => error
 ```
+
+### dict
+* `dict` is a special type that allows making *key* and *value* pair.
+* key and value is separated with colon (`:`).
+```python
+d = {"Apple": 100}
+```
+* Here "Apple" is key and 100 is value. You can access the value by specifying the key.
+```python {cmd}
+d = {"Apple": 100, "Orange": 120}
+print(d["Orange"])
+```
+* You can add the key-value pair to the dict by `update` function.
+```python {cmd}
+d = {}
+d["Apple"] = 100
+d.update({"Banana": 200})
+print(d)
+```
+
+---
+
+## Exercise
+* Create a dictionary representing a person's information (name, age, city) and access specific elements.
+<a href="./answer.md#dict">answer</a>
+
+---
 
 ## If, for, and while
 * There are some control statements in Python.
@@ -227,26 +286,6 @@ If x is greater, print "x is greater than y"; otherwise, print "y is greater tha
 
 ---
 
-## dict
-* `dict` is a special type that allows making *key* and *value* pair.
-```python
-d = {}
-d["Apple"] = 100
-```
-* Here "price" is key and 100 is value. You can access the value by specifying the key.
-```python {cmd}
-d = {}
-d["Apple"] = 100
-print(d["Apple"])
-```
-* You can add the key-value pair to the dict by `update` function.
-```python {cmd}
-d = {}
-d["Apple"] = 100
-d.update({"Banana": 200})
-print(d)
-```
-
 ## Printing
 * You can print variables etc. with `print` function. There are several ways to do printing.
 ```python {cmd}
@@ -281,9 +320,3 @@ print(f"a = {a:+10.5e}")  # exponential with plus/minus sign
 b = 2.34
 print(f"a = {a}, b={b}")
 ```
-
----
-
-## Exercise
-* Create a dictionary representing a person's information (name, age, city) and access specific elements.
-<a href="./answer.md#dict">answer</a>

@@ -96,8 +96,23 @@ python --version
 * `'ImportError: No module named '_tkinter', please install the python3-tk package'`
     * Do `sudo apt install python3-tk`.
 
+# VS code
+* Visual Studio code (VS code) is a free code editor made by Microsoft.
+* Works both on Windows and Mac.
+## Setup
+1. Download the installer from https://code.visualstudio.com/
+2. Install extensions(拡張機能)
+    * "Japanese Language Pack" (if you want).
+    * "Python"
 
-## Google Colaboratory
+## Wrirting Python script
+1. Open a folder where Python script exists
+2. After writing the code, save file
+3. The "run" command (">" button) to run the script
+
+* You can change the Python interpreter (like pyenv) by clicking the "Python ..." in the bottom bar.
+
+# Google Colaboratory
 * Google Colab is a free, cloud-based platform where you can write and run Python code using Jupyter notebooks
 * You can use expensive GPUs (graphical proceccing unit) with Google Cloab for free (with some limitations)
 
