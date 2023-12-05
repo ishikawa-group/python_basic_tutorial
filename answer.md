@@ -68,3 +68,35 @@ with open('example.txt', 'r') as file:
     content = file.read()
     print(content)
 ```
+
+## function
+<p id="function"></p>
+
+```python{cmd}
+# define a function
+def add_numbers(a, b):
+    return a + b
+
+result = add_numbers(5, 7)
+print("The sum is:", result)
+```
+
+## class
+<p id="class"></p>
+
+```python{cmd}
+class Car:
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
+
+    def display_info(self):
+        print(f"Car: {self.year} {self.make} {self.model}")
+
+# Creating an instance of the Car class
+my_car = Car("Toyota", "Corolla", 2020)
+
+# Displaying car information
+my_car.display_info()
+```

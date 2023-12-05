@@ -20,7 +20,7 @@ transform = transforms.Compose([
     transforms.Normalize((0.5,), (0.5,))
 ])
 
-train_dataset = torchvision.datasets.MNIST(root='./data', train=True, transform=transform, download=True)
+train_dataset = torchvision.datasets.MNIST(root="./data", train=True, transform=transform, download=True)
 train_loader = torch.utils.data.DataLoader(dataset=train_dataset, batch_size=batch_size, shuffle=True)
 
 # Generator model
@@ -32,9 +32,7 @@ class Generator(nn.Module):
     
     def forward(self, x):
         x = self.fc1(x)
-        # x = F.ReLU(x)
         x = self.fc2(x)
-        #x = F.tanh(x)
         x = F.sigmoid(x)
         return x
 

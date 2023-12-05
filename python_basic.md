@@ -2,24 +2,25 @@
 
 ## Advantage of Python
 * Interpreter: no need to compile, directly executed.
-* Easy: grammar in python is easy.
+* Easy: grammar in Python is easy.
 * Libraries: a lot of libraries are available.
+* Dynamic typing: no need to define the type of variables, functions, etc.
 
-## Interpreter mode and script mode
-* In Python, you can use *interpreter* mode and *script* mode.
-    * In the interpreter mode, you execute the Python program with console and write the command to that console.
-    * In the script mode, you write some file (e.g. test.py), and execute the file from console like
+## Interactive mode and script mode
+* In Python, you can use *interactive* mode and *script* mode.
+    * In the interpreter mode, you execute the Python program with the console and write the command to that console.
+    * In the script mode, you write some file (e.g. test.py) and execute the file from the console like
     ```bash
     python test.py
     ```
-* In the following, we recommend to execute commands with interpreter mode. That is, do `python` in the terminal then execute command after `>>>`.
+* In the following, we recommend executing commands in the interactive mode. That is, do `python` in the terminal then execute the command after `>>>``.
 
 ### The difference between C++ and Python
 * C++: compiled, statically typed, and requires manual memory management, providing high performance and control, suited for performance-critical applications.
 * Python is interpreted, dynamically typed, and has automatic memory management, prioritizing simplicity, versatility, and rapid development over raw performance.
 
 ## Variables and types
-* In Python, you have following variable types.
+* In Python, you have the following variable types.
 
 | types   | meaning                  | example              |
 | ------- | ------------------------ | -------------------- |
@@ -29,7 +30,7 @@
 | bool    | boolian logical variable | True, False          |
 | complex | complex number           | (1, 2) (=1 + 2j)     |
 
-* So let's define some variable and print it with `print` function.
+* So let's define some variables and print them with `print` function.
 ```python {cmd}
 a = 123
 b = 1.2
@@ -105,7 +106,7 @@ string_list = ["A", "B", "Three"]
 float_list[0]  # => 1
 float_list[0] = 0  # replacing the element
 ```
-* Note that, **in Python, index starts with zero (not one)**; list[0] is the first element and list[1] is the second element.
+* Note that, **in Python, the index starts with zero (not one)**; list[0] is the first element and list[1] is the second element.
 * You can obtain the length of the list with `len` function.
 ```python
 a = [1, 2, 3]
@@ -127,7 +128,7 @@ a  # => [0, 1, 2]
 ```
 
 #### Index slicing
-* You can access the index of list in the following manner: `x[start=0 : stop=size : step=1]`
+* You can access the index of the list as follows: `x[start=0 : stop=size : step=1]`
 * This is called *slicing*, and in the script you do like
 ```python {cmd}
 a = [1]*10
@@ -136,17 +137,17 @@ print(a[0:9])  # from 0 to 8 (not 9!)
 ```
 
 ### Tuple
-* *Tuple* is similar to list, but different way of treating data set.
+* *Tuple* is similar to a list, but different way of treating a data set.
 ```python
 a = (0, 1, 2)
 ```
-* The biggest difference is that **you cannot replace the element in tuple afterwards**.
+* The biggest difference is that **you cannot replace the element in a tuple afterward**.
 ```python
 a = (0, 1, 2)
 a[0] = 10  # => error
 ```
 
-## If ,for, and while
+## If, for, and while
 * There are some control statements in Python.
 
 ### if statement
@@ -157,7 +158,7 @@ if a > 0:
 else:
     print("a is smaller than zero")
 ```
-* You can use `else` statement to add the instruction, as
+* You can use `else` statement to add the instructions, as
 ```python
 if a > 0:
     print("a is positive")
@@ -188,7 +189,7 @@ for i, val in enumerate(a):
 ```
 
 ### while statement
-* If you want to repeat the procedure based on some condtion, you can use `while` statement
+* If you want to repeat the procedure based on some condition, you can use `while` statement
 ```python
 a = 10
 while a > 0:
@@ -197,7 +198,7 @@ while a > 0:
 ```
 
 ### continue, break; the loop control
-* If you want to skip loop at some condition, you can use `continue` statement.
+* If you want to skip the loop at some condition, you can use `continue` statement.
 ```python {cmd}
 for i in range(10):
   if i == 5:
@@ -205,7 +206,7 @@ for i in range(10):
   else:
     print(i)
 ```
-* The `for` loop goes to next step when it finds `continue`. So rest of the part is not executed.
+* The `for` loop goes to the next step when it finds `continue`. So rest of the part is not executed.
 * If you want to end the loop at some condition, you can use `break` statement.
 ```python {cmd}
 for i in range(10):
@@ -227,7 +228,7 @@ If x is greater, print "x is greater than y"; otherwise, print "y is greater tha
 ---
 
 ## dict
-* `dict` is a special type that allows to make *key* and *value* pair.
+* `dict` is a special type that allows making *key* and *value* pair.
 ```python
 d = {}
 d["Apple"] = 100

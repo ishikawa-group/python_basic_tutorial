@@ -13,7 +13,7 @@ a = np.zeros(10)
 ```
 ## pip
 * To install some library, using `pip` is helpful.
-* This shoud be done **outside** the python interpreter or script (that is, terminal).
+* This shoud be done **outside** the Python interpreter or script (that is, terminal).
 ```bash
 pip install numpy
 ```

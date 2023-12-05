@@ -1,5 +1,75 @@
 ## Pandas
 
+* *pandas* is a Python library for data processing and analysis. Pandas provides a great range of methods to modify and operate on data; in particular, it allows queries and joins of tables.
+* In pandas, you can use various types (for example, integers, dates, floating-point numbers, and strings) in a single table.
+* Another valuable tool provided by pandas is its ability to ingest from a great variety of file formats and databases, like SQL, Excel files, JSON, and comma-separated values (CSV) files.
+
+* It is built around a data structure called the **DataFrame**.
+
+### loading the library
+```python
+import pandas as pd
+```
+
+### Basic
+```python {cmd}
+import pandas as pd
+sales1 = [["P001", "Windows", 85000],
+          ["P002", "Mac", 120000],
+          ["P003", "Windows", 200000],
+          ["P002", "Mac", 130000]]
+columns = ["Product ID", "OS", "Price"]
+df1 = pd.DataFrame(data=sales1, columns=columns)
+print(df1)
+```
+
+* statictics
+```python
+df1["Price"].min()
+df1["Price"].max()
+df1["Price"].mean()
+```
+
+* sort
+```python
+df1 = df1.sort_values(by="Price")  # ascending
+df1 = df1.sort_values(by="Price", ascending=False)  #descending
+```
+
+* taking subgroup
+```python
+df_win = df1[df1["OS"]=="Windows"]
+df_mac = df1[df1["OS"]=="Mac"]
+```
+
+## Exercise: Analyzing Sales Data
+
+* Suppose you have sales data in a CSV file (sales_data.csv) containing columns for Date and Sales. Let's load this data into a Pandas DataFrame and perform basic analysis.
+
+```python{cmd}
+import pandas as pd
+
+# Load the sales data into a Pandas DataFrame
+file_path = 'sales_data.csv'  # Replace with your file path
+data = pd.read_csv(file_path)
+
+# Display the first few rows of the DataFrame
+print("First few rows of the data:")
+print(data.head())
+
+# Calculate basic statistics
+total_sales = data['Sales'].sum()
+average_sales = data['Sales'].mean()
+max_sales = data['Sales'].max()
+min_sales = data['Sales'].min()
+
+print("Total Sales: ",   total_sales)
+print("Average Sales: ", average_sales)
+print("Maximum Sales: ", max_sales)
+print("Minimum Sales: ", min_sales)
+```
+
+---
 Here are examples showcasing basic usages of Pandas:
 
 Loading Data:

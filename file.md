@@ -1,6 +1,6 @@
 # File
-* In this lecture, we'll learn how to treat the files in python.
-* To access the files from python code, you should use `open` function. When opening file, you need to specify the *mode*.
+* In this lecture, we'll learn how to treat the files in Python.
+* To access the files from Python code, you should use `open` function. When opening a file, you need to specify the *mode*.
 
 | letter | meaning             |
 | ------ | ------------------- |
@@ -8,7 +8,7 @@
 | w      | write               |
 | a      | append              |
 
-* You can choose *text* or *binary* mode after the r, w, a character by specifying `t` or `b`. Text mode is default.
+* You can choose *text* or *binary* mode after the `r`, `w`, `a` character by specifying `t` or `b`. Text mode is used by default.
 
 ## open
 ```python
@@ -32,7 +32,7 @@ f.close()
 ```
 
 ## with
-* You can use `with` statement to open the file, and in this way you can omit the closing procedure of the file.
+* You can use `with` statement to open the file, and in this way, you can omit the closing procedure of the file.
 ```python
 with open("test.txt", "w") as f:
   f.write("Some string\n")
@@ -44,7 +44,7 @@ with open("textfile.txt", "r") as f:
     line = line.strip()
     print(line)
 ```
-* `strip` is the function to remove line break.
+* `strip` is the function to remove change-line charactors.
 
 ---
 

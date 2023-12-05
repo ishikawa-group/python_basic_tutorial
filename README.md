@@ -7,6 +7,7 @@
 * [Environment setup](./setup.md)
 * [Python basics](./python_basic.md)
 * [File usage in Python](./file.md)
+* [Using libraries](./library.md)
 
 ### Day 2: Functions and Class
 * [Functions](./function.md)
@@ -20,3 +21,4 @@
 
 ### Day 4: Generative Adversarial Networks (GANs)
 * [Neural network](./neural_network.md)
+* [Generative adversarial network](./mnist_gan.md)
