@@ -197,7 +197,12 @@ d["Apple"] = 100
 d.update({"Banana": 200})
 print(d)
 ```
-
+* To loop over dict,
+```python{cmd}
+d = {"Apple": 120, "Orange": 110, "Banana": 200}
+for i, j in d.items():
+    print(i, "is", j, "Yen.")
+```
 ---
 
 ## Exercise
