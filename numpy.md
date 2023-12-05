@@ -26,6 +26,22 @@ b = np.array(a)
 print(a)
 print(b)
 ```
+
+### linear spacing
+* You can have an uniformly-ditributed numbers by `linspace` function.
+```python{cmd}
+import numpy as np
+x = np.linspace(-10, 10, 100)  # start, end, number of points
+```
+
+### mathematical functions
+* Several functions are available in numpy.
+    * `numpy.sin()`: sine function
+    * `numpy.cos()`: cosine function
+    * `numpy.exp()`: exponential
+    * `numpy.log()`: natural logarithm function
+    * `numpy.log10()`: base 10 logarithm function
+
 ### maximum and minimum
 * Maximum and minimum values in an array can be easily found by `numpy.max` and `numpy.min` functions.
 * The max/min argument i.e. the index corresponding to the max/min value is obtained by `numpy.argmax` and `numpy.argmin` functions.
@@ -66,6 +82,21 @@ print(Ainv)
 print(np.matmul(Ainv, A))  # matrix-matrix multiply
 ```
 
+* numerical integration
+```python{cmd}
+import numpy as np
+from scipy import integrate
+
+# Define the function to integrate
+def my_func(x):
+    return x**2  # Example function: x^2
+
+# Perform numerical integration using quad
+result, _ = integrate.quad(my_func, 0, 4)  # Integrate x^2 from 0 to 4
+
+print("Result of the integration:", result)
+```
+
 * ordinary differential equation (odeint)
     * solving differential equation $\frac{dy}{dt} = -y$
 ```python {cmd}
@@ -90,39 +121,10 @@ plt.show()
 
 ---
 
-## Exercise: Calculate Total Sales
-
+## Exercise (numpy)
 * Let's say you have sales data for a week represented as a NumPy array. Calculate the total sales for the week.
+<a href="./answer.md#numpy">answer</a>
 
-```python{cmd}
-import numpy as np
-
-# Sales data for a week
-sales = np.array([400, 550, 300, 650, 700, 480, 520])
-
-# Calculate total sales for the week
-total_sales = np.sum(sales)
-
-print("Total sales for the week: ", total_sales)
-```
-
----
-
-## Exercise: Numerical Integration
-
-* Suppose you want to numerically integrate a function using SciPy's quad function.
-
-```python{cmd}
-from scipy import integrate
-
-# Define the function to integrate
-def my_func(x):
-    return x**2  # Example function: x^2
-
-# Perform numerical integration using quad
-result, _ = integrate.quad(my_func, 0, 4)  # Integrate x^2 from 0 to 4
-
-print("Result of the integration:", result)
-```
-
----
+## Exercise (scipy)
+* Perform the numerical integration of $\exp(-x^2)$ function from -10 to 10, using SciPy's quad function.
+<a href="./answer.md#scipy">answer</a>

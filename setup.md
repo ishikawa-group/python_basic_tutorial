@@ -98,28 +98,10 @@ python --version
 
 
 ## Google Colaboratory
-### Uploading data
-* You can upload the files in Colab webpage, but it is better setup the Google Drive and move data from it.
-* Setup the google site to make Google Drive account.
-* Upload the file/folder with Google Drive.
-
-* Putting `!` indicates the *shell command*.
-* Putting `%` indicates the *magic command*.
-* To change the directory, specify `%cd` (not `!cd` because it generates new shell).
-
-* You can directly edit the python script (.py) file in Google Colab.
-
-### Using GPU
-1. "Runtime" tab.
-2. "Change the type of Runtime".
-3. Choose GPU you want.
-
----
-
 * Google Colab is a free, cloud-based platform where you can write and run Python code using Jupyter notebooks
 * You can use expensive GPUs (graphical proceccing unit) with Google Cloab for free (with some limitations)
 
-## setup
+### Setup
 1. Sign in with your Google Account (if exists).
 2. Go to Google Colaboratory page in your web browser.
     * https://colab.research.google.com/notebooks/intro.ipynb
@@ -135,3 +117,14 @@ python --version
     * "File" --> "Save" will save your notebook to Google Drive.
     * Click the folder button in left panel then folders are open.
     * You file is save to "drive" --> "Mydrive" (by default).
+
+### Notebook-specific grammar
+* Putting `!` indicates the *shell command*.
+* Putting `%` indicates the *magic command*.
+    * e.g. To change the directory, specify `%cd` (not `!cd` because it generates new shell).
+* You can directly edit the Python script (.py) file in Google Colab; click the .py file from the directory tree. 
+
+### Using GPU
+1. "Runtime" tab.
+2. "Change the type of Runtime".
+3. Choose GPU you want.

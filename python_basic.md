@@ -256,7 +256,11 @@ age = 20
 print("Hello my name is", name)
 print("Hello my name is %s. My age is %d." % (name, age))
 print("Hello my name is {0:s}. My age is {1:d}.".format(name, age))
+print(f"Hello my name is {name:s}. My age is {age:d}.")
 ```
+* By using `format`, you can make a detailed print.
+* `f"..."` is the simplified way for `"...".fomat`.
+
 
 | symbol | type        |
 | ------ | ----------- |
@@ -265,22 +269,17 @@ print("Hello my name is {0:s}. My age is {1:d}.".format(name, age))
 | f      | float       |
 | e      | exponential |
 
-* By using `format`, you can print as follows.
 ```python {cmd}
 a = 1.23
-print("a = {}".format(a))         # simplest
-print("a = {:.2f}".format(a))     # float with 2 decimal points
-print("a = {:10.5f}".format(a))   # 5 decimal points with field length of 10
-print("a = {:<10.5f}".format(a))  # left align
-print("a = {:>10.5f}".format(a))  # right align
-print("a = {:10.5e}".format(a))   # exponential
-print("a = {:+10.5e}".format(a))  # exponential with plus/minus sign
-```
-* The printing with format can be written in short, as
-```python {cmd}
-a = 1.23
-print(f"a = {a}")
-print(f"a = {a:10.5f}")
+print(f"a = {a}")         # simplest
+print(f"a = {a:.2f}")     # float with 2 decimal points
+print(f"a = {a:10.5f}")   # 5 decimal points with field length of 10
+print(f"a = {a:<10.5f}")  # left align
+print(f"a = {a:>10.5f}")  # right align
+print(f"a = {a:10.5e}")   # exponential
+print(f"a = {a:+10.5e}")  # exponential with plus/minus sign
+b = 2.34
+print(f"a = {a}, b={b}")
 ```
 
 ---

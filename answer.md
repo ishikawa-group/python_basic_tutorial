@@ -100,3 +100,62 @@ my_car = Car("Toyota", "Corolla", 2020)
 # Displaying car information
 my_car.display_info()
 ```
+
+## numpy
+<p id="numpy"></p>
+
+```python{cmd}
+import numpy as np
+
+# Sales data for a week
+sales = np.array([400, 550, 300, 650, 700, 480, 520])
+
+# Calculate total sales for the week
+total_sales = np.sum(sales)
+
+print("Total sales for the week: ", total_sales)
+```
+
+## scipy
+<p id="scipy"></p>
+
+```python{cmd}
+import numpy as np
+from scipy import integrate
+
+# Define the function to integrate
+def my_func(x):
+    #return x**2  # Example function: x^2
+    return np.exp(-x**2)
+
+# Perform numerical integration using quad
+result, _ = integrate.quad(my_func, -10, 10)  # Integrate x^2 from 0 to 4
+
+print("Result of the integration:", result)
+```
+
+## pandas
+<p id="pandas"></p>
+
+```python{cmd}
+import pandas as pd
+
+# Load the sales data into a Pandas DataFrame
+file_path = "sales_data.csv"  # Replace with your file path
+data = pd.read_csv(file_path)
+
+# Display the first few rows of the DataFrame
+print("First few rows of the data:")
+print(data.head())
+
+# Calculate basic statistics
+total_sales = data["Sales"].sum()
+average_sales = data["Sales"].mean()
+max_sales = data["Sales"].max()
+min_sales = data["Sales"].min()
+
+print("Total Sales: ",   total_sales)
+print("Average Sales: ", average_sales)
+print("Maximum Sales: ", max_sales)
+print("Minimum Sales: ", min_sales)
+```

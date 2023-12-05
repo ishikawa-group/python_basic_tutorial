@@ -14,61 +14,45 @@ import pandas as pd
 ### Basic
 ```python {cmd}
 import pandas as pd
-sales1 = [["P001", "Windows", 85000],
-          ["P002", "Mac", 120000],
-          ["P003", "Windows", 200000],
-          ["P002", "Mac", 130000]]
+sales = [["P001", "Windows", 85000],
+         ["P002", "Mac", 120000],
+         ["P003", "Windows", 200000],
+         ["P002", "Mac", 130000]]
 columns = ["Product ID", "OS", "Price"]
-df1 = pd.DataFrame(data=sales1, columns=columns)
-print(df1)
+df = pd.DataFrame(data=sales, columns=columns)
+print(df)
+```
+* see several rows
+```python
+df.head()
 ```
 
 * statictics
 ```python
-df1["Price"].min()
-df1["Price"].max()
-df1["Price"].mean()
+df["Price"].min()
+df["Price"].max()
+df["Price"].mean()
 ```
 
 * sort
+    * ascending: from low value to high value
+    * descending: from high value to low value
 ```python
-df1 = df1.sort_values(by="Price")  # ascending
-df1 = df1.sort_values(by="Price", ascending=False)  #descending
+df = df.sort_values(by="Price")  # ascending
+df = df.sort_values(by="Price", ascending=False)  # descending
 ```
 
 * taking subgroup
 ```python
-df_win = df1[df1["OS"]=="Windows"]
-df_mac = df1[df1["OS"]=="Mac"]
+df_win = df[df["OS"]=="Windows"]
+df_mac = df[df["OS"]=="Mac"]
 ```
 
-## Exercise: Analyzing Sales Data
-
-* Suppose you have sales data in a CSV file (sales_data.csv) containing columns for Date and Sales. Let's load this data into a Pandas DataFrame and perform basic analysis.
-
-```python{cmd}
-import pandas as pd
-
-# Load the sales data into a Pandas DataFrame
-file_path = 'sales_data.csv'  # Replace with your file path
-data = pd.read_csv(file_path)
-
-# Display the first few rows of the DataFrame
-print("First few rows of the data:")
-print(data.head())
-
-# Calculate basic statistics
-total_sales = data['Sales'].sum()
-average_sales = data['Sales'].mean()
-max_sales = data['Sales'].max()
-min_sales = data['Sales'].min()
-
-print("Total Sales: ",   total_sales)
-print("Average Sales: ", average_sales)
-print("Maximum Sales: ", max_sales)
-print("Minimum Sales: ", min_sales)
-```
-
+## Exercise
+* Suppose you have sales data in a CSV file (sales_data.csv) containing a column named "Sales".
+1. Load this data into a Pandas DataFrame and see some raws by `.head()` function.
+2. Calculate the total, average, max, min sales with `.sum()`, `mean()`, `max()`, and `min()` functions.
+<a href="./answer.md#pandas">answer</a>
 ---
 Here are examples showcasing basic usages of Pandas:
 
