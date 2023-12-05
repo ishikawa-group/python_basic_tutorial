@@ -86,7 +86,8 @@ print(a == b)
 ## Exercise
 1. Create two variables x and y and assign integer values to them.
 2. Perform arithmetic operations (addition, subtraction, multiplication, division) using these variables.
-3. Print the results of each operation.(<a href="./answer.md#variable">answer</a>)
+3. Print the results of each operation.
+<a href="./answer.md#variable">answer</a>
 
 ---
 
@@ -220,7 +221,8 @@ for i in range(10):
 ## Exercise
 1. Write a program that checks if x is greater than y.
 If x is greater, print "x is greater than y"; otherwise, print "y is greater than or equal to x".
-2. Create a list containing at least five elements (numbers or strings). Use a for loop to iterate through the list and print each element.(<a href="./answer.md#control">answer</a>)
+2. Create a list containing at least five elements (numbers or strings). Use a for loop to iterate through the list and print each element.
+<a href="./answer.md#control">answer</a>
 
 ---
 
@@ -283,4 +285,5 @@ print(f"a = {a:10.5f}")
 ---
 
 ## Exercise
-* Create a dictionary representing a person's information (name, age, city) and access specific elements.(<a href="./answer.md#dict">answer</a>)
+* Create a dictionary representing a person's information (name, age, city) and access specific elements.
+<a href="./answer.md#dict">answer</a>

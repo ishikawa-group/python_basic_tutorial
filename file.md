@@ -48,25 +48,9 @@ with open("textfile.txt", "r") as f:
 
 ---
 
-Sure, here's a simple exercise that demonstrates file input and output in Python:
+## Exercise: Writing and Reading from a File
 
-Exercise: Writing and Reading from a File
+1. Create a new text file and write some content to it using Python.
+2. Read the content from the file you just created.
+<a href="./answer.md#file">answer</a>
 
-Write to a File:
-Create a new text file and write some content to it using Python.
-python
-Copy code
-# Open a file in write mode ('w')
-with open('example.txt', 'w') as file:
-    file.write('This is an example file.\n')
-    file.write('Writing to a file in Python is easy!\n')
-    file.write('You can write anything you want here.')
-Read from the File:
-Read the content from the file you just created.
-python
-Copy code
-# Open the same file in read mode ('r')
-with open('example.txt', 'r') as file:
-    content = file.read()
-    print(content)
-This exercise demonstrates the basic usage of file input and output in Python. It first writes some text to a file using the open() function with the 'w' mode (write mode). Then, it reads the content of the file using the open() function with the 'r' mode (read mode).

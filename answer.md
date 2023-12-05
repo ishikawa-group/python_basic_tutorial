@@ -51,3 +51,20 @@ print("Name:", person['name'])
 print("Age:", person['age'])
 print("City:", person['city'])
 ```
+
+## file
+<p id="file"></p>
+
+```python{cmd}
+# Open a file in write mode ('w')
+with open('example.txt', 'w') as file:
+    file.write('This is an example file.\n')
+    file.write('Writing to a file in Python is easy!\n')
+    file.write('You can write anything you want here.')
+```
+```python{cmd}
+# Open the same file in read mode ('r')
+with open('example.txt', 'r') as file:
+    content = file.read()
+    print(content)
+```
