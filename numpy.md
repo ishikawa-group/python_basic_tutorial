@@ -53,21 +53,24 @@ print(np.max(b))
 print(np.argmax(b))
 ```
 
-## scipy
+# scipy
 * *SciPy* is a Python library collecting scientific computing functionalities.
 * It provides advanced linear algebra routines, mathematical function optimization, signal processing, special mathematical functions, and statistical distributions.
-    * scipy.special: Special functions
-    * scipy.integrate: Integration
-    * scipy.optimize: Optimization
-    * scipy.interpolate: Interpolation
-    * scipy.fft: Fourier Transforms
-    * scipy.signal: Signal Processing
-    * scipy.linalg: Linear Algebra
-    * scipy.sparse.csgraph: Sparse eigenvalue problems
-    * scipy.spatial: Spatial data structures and algorithms
-    * scipy.stats: Statistics
-    * scipy.ndimage: Multidimensional image processing
-    * scipy.io: File IO
+
+| library name         | contents                             |
+| :------------------- | :----------------------------------- |
+| scipy.special        | Special functions                    |
+| scipy.integrate      | Integration                          |
+| scipy.optimize       | Optimization                         |
+| scipy.interpolate    | Interpolation                        |
+| scipy.fft            | Fourier Transforms                   |
+| scipy.signal         | Signal Processing                    |
+| scipy.linalg         | Linear Algebra                       |
+| scipy.sparse.csgraph | Sparse eigenvalue problems           |
+| scipy.spatial        | Spatial data structures & algorithms |
+| scipy.stats          | Statistics                           |
+| scipy.ndimage        | Multidimensional image processing    |
+| scipy.io             | File IO                              |
 
 * linear algebra (linalg)
 ```python {cmd}

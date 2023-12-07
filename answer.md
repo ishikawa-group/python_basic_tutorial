@@ -19,6 +19,7 @@ print(division)
 ## control
 <p id="control"></p>
 
+1.
 ```python{cmd}
 x = 2
 y = 1
@@ -27,6 +28,7 @@ if x > y:
 else:
     print("y is greater than or equal to x")
 ```
+2.
 ```python{cmd}
 a = [0, 1, 2, 3, 4]
 for i in a:
@@ -42,37 +44,51 @@ for i in b:
 ```python{cmd}
 # Create a dictionary representing a person
 person = {
-    'name': 'Alice',
-    'age': 30,
-    'city': 'New York'
+    "name": "Alice",
+    "age" :  30,
+    "city": "New York"
 }
 
 # Access specific elements in the dictionary
-print("Name:", person['name'])
-print("Age:", person['age'])
-print("City:", person['city'])
+print("Name:", person["name"])
+print("Age:",  person["age"])
+print("City:", person["city"])
 ```
 
 ## file
 <p id="file"></p>
 
+1.
 ```python{cmd}
-# Open a file in write mode ('w')
-with open('example.txt', 'w') as file:
-    file.write('This is an example file.\n')
-    file.write('Writing to a file in Python is easy!\n')
-    file.write('You can write anything you want here.')
+# Open a file in write mode ("w")
+with open("example.txt", "w") as file:
+    file.write("This is an example file.\n")
+    file.write("Writing to a file in Python is easy!\n")
+    file.write("You can write anything you want here.")
 ```
+2.
 ```python{cmd}
-# Open the same file in read mode ('r')
-with open('example.txt', 'r') as file:
+# Open the same file in read mode ("r")
+with open("example.txt", "r") as file:
     content = file.read()
     print(content)
 ```
 
-## function
-<p id="function"></p>
+## function 1
+<p id="function1"></p>
 
+```python{cmd}
+def say_twice(string):
+    return string + string
+
+s = say_twice("Wow")
+print(s)
+```
+
+## function 2
+<p id="function2"></p>
+
+1.
 ```python{cmd}
 # define a function
 def add_numbers(a, b):
@@ -80,6 +96,20 @@ def add_numbers(a, b):
 
 result = add_numbers(5, 7)
 print("The sum is:", result)
+```
+
+2.
+```python{cmd}
+def double(li):
+    new_list = []
+    for i in li:
+        new_list.append(i*2)
+
+    return new_list
+
+old_list = [10, 20, 30]
+new_list = double(old_list)
+print(new_list)
 ```
 
 ## class
@@ -147,7 +177,7 @@ data = pd.read_csv(file_path)
 
 # Display the first few rows of the DataFrame
 print("First few rows of the data:")
-print(data.head())
+print(dat)
 
 # Calculate basic statistics
 total_sales = data["Sales"].sum()

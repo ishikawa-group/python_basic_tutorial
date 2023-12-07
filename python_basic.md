@@ -8,7 +8,7 @@
 
 ## Interactive mode and script mode
 * In Python, you can use *interactive* mode and *script* mode.
-    * In the interpreter mode, you execute the Python program with the console and write the command to that console.
+    * In the interactive mode, you execute the Python program with the console and write the command to that console.
     * In the script mode, you write some file (e.g. test.py) and execute the file from the console like
     ```bash
     python test.py
@@ -66,7 +66,11 @@ is a comment
 | ------------------------ | ---------------------------- | ---------------------------------- |
 | **Arithmetic operators** | -                            | -                                  |
 | +                        | add                          | 1 + 2, "hello" + "world"           |
+| -                        | subtract                     | 2 - 1                              |
+| *                        | multiplicate                 | 10 * 10                            |
+| **                       | power                        | 10 ** 2 (becomes 100)              |
 | /                        | divide                       | 10/2                               |
+| //                       | floor division (truncation)  | 10//3 (becomes 3, not 3.3)         |
 | %                        | modulus                      | 10/3                               |
 | **Comparison operators** | -                            | -                                  |
 | ==                       | identical                    | a == 1 (returns True or False)     |
@@ -83,7 +87,7 @@ is a comment
 | -=                       | replace after subtract       | a -= 1 means a = a - 1             |
 | *=                       | replace after multiplication | a *= 2 means a = a * 2             |
 | /=                       | replace after division       | a /= 2 means a = a / 2             |
-| **Others**               | -                            | - |
+| **Others**               | -                            | -                                  |
 | in                       | membership operator          | a in ["a", "b", "c"]               |
 | is                       | identity operator            | a is 1                             |
 
@@ -141,12 +145,14 @@ a = [0, 1]
 a.append(2)
 a  # => [0, 1, 2]
 ```
+
 * remove
 ```python{cmd}
 a = [0, 1]
 a.remove(0)
 print(a)
 ```
+
 * extend
 ```python{cmd}
 a = [0, 1]

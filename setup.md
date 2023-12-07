@@ -15,7 +15,7 @@
 * When above doesn't work, check "Windows の機能の有効化、または無効化", then "Linux 用 Windows サブシステム", "仮想マシンプラットフォーム" is ON.
 * Note that WSL makes home directory (`/home/your_name`) which is different from the Windows user directory (`C:\Users\your_name`).
 * You can access Windows system from Ubuntu like: `cd` to Desktop by `cd /mnt/c/Users/your_name/Desktop/`.
-* It is useful to make symbolic link between Ubuntu and Windows like
+* It is useful to make symbolic link between Ubuntu and Windows. So, in *Ubuntu terminal (not PowerShell)*, do
     ```bash
     cd
     ln -s /mnt/c/Users/your_user_name/Desktop/ desktop
@@ -64,10 +64,11 @@ echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
 echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
 echo 'eval "$(pyenv init -)"' >> ~/.bashrc
 ```
+* if you are using zsh, replace `~/.bashrc` with `~/.zshrc`.
 
 2. Reload Bash Configuration
 ```bash
-source ~/.bashrc
+source ~/.bashrc  # ~/.zshrc for zsh user
 ```
 
 ##  Install Python using pyenv
