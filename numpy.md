@@ -27,20 +27,31 @@ print(a)
 print(b)
 ```
 
-### linear spacing
+### Array Creation
+* `numpy.zeros(n)`: array with n zeros.
+* `numpy.ones(n)`: array with n ones.
+* `np.arange(n)`: sequence of numbers with n elements.
+
+#### Linear spacing
 * You can have an uniformly-ditributed numbers by `linspace` function.
 ```python{cmd}
 import numpy as np
 x = np.linspace(-10, 10, 100)  # start, end, number of points
 ```
 
-### mathematical functions
+### Random Number Generation
+* `numpy.random.rand()`: generate random numbers from a uniform distribution.
+* `numpy.random.randn()`: generate random numbers from a normal distribution.
+* `numpy.random.randint()`: generate random integers.
+
+### Mathematical functions
 * Several functions are available in numpy.
     * `numpy.sin()`: sine function
     * `numpy.cos()`: cosine function
     * `numpy.exp()`: exponential
     * `numpy.log()`: natural logarithm function
     * `numpy.log10()`: base 10 logarithm function
+    * `numpy.pi`: $\pi = 3.141592...$
 
 ### maximum and minimum
 * Maximum and minimum values in an array can be easily found by `numpy.max` and `numpy.min` functions.

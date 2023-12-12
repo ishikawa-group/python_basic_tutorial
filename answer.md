@@ -166,8 +166,8 @@ print("Result of the integration:", result)
 ```
 
 ## pandas
-<p id="pandas"></p>
-
+<p id="pandas1"></p>
+1. 
 ```python{cmd}
 import pandas as pd
 
@@ -189,4 +189,30 @@ print("Total Sales: ",   total_sales)
 print("Average Sales: ", average_sales)
 print("Maximum Sales: ", max_sales)
 print("Minimum Sales: ", min_sales)
+```
+
+<p id="pandas2"></p>
+2. 
+```python{cmd}
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# import csv
+df = pd.read_csv("employee.csv")
+
+# taking high-salary group
+df_high = df[df["Salary"] > 55000]
+
+# calculate and print the mean values
+ave_age_high = df_high["Age"].mean()
+ave_age = df["Age"].mean()
+print(f"Average age of salary > 55k is {ave_age_high:.1f}.")
+print(f"Average age of all is {ave_age:.1f}.")
+
+# mean values by Department
+print(df.groupby("Department").mean(numeric_only=True))
+
+# scatter plot
+df.plot(x="Age", y="Salary", kind="scatter")
+plt.show()
 ```

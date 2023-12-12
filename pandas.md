@@ -77,6 +77,8 @@ df = pd.read_csv("sample.csv")
 print(df.head())
 ```
 
+---
+
 ## Exercise
 * Suppose you have sales data in a CSV file (sales_data.csv) containing a column named "Sales".
 1. Load this data into a Pandas DataFrame and see the DataFrame with `df.head()` function.
@@ -85,22 +87,29 @@ print(df.head())
 
 ---
 
+### Some important commands
+* Let's analye the following DataFrame.
+```python {cmd}
+import pandas as pd
+sales = [["P001", "Windows", 85000],
+         ["P002", "Mac", 120000],
+         ["P003", "Windows", 200000],
+         ["P002", "Mac", 130000]]
+columns = ["Product ID", "OS", "Price"]
+df = pd.DataFrame(data=sales, columns=columns)
+print(df)
+```
+
 Here are examples showcasing basic usages of Pandas:
 
-
-* Access a specific column
+* Extract a specific column
 ```python
-column_data = df['Column_Name']
+column_data = df["Price"]
 ```
 
 * Access specific rows using iloc (by index)
 ```python
-specific_rows = df.iloc[3:6]
-```
-
-* Access specific rows using loc (by label)
-```python
-specific_rows = df.loc[df['Column_Name'] == 'Value']
+specific_element = df.iloc[0, 0]
 ```
 
 * Summary statistics of numerical columns
@@ -108,54 +117,64 @@ specific_rows = df.loc[df['Column_Name'] == 'Value']
 summary_stats = df.describe()
 ```
 
-* Unique values in a column
-```python
-unique_values = df['Column_Name'].unique()
-```
-
 * Add a new column
 ```python
-df['New_Column'] = df['Column_A'] + df['Column_B']
+df["2xPrice"] = df["Price"]*2
 ```
 
 * Drop a column
 ```python
-df.drop(columns=['Column_Name'], inplace=True)
+df_new = df.drop(columns=["Price"], inplace=False)
 ```
+* `inplace=True` will replace the df itself.
 
 * Filtering rows based on a condition
 ```python
-filtered_data = df[df['Column_Name'] > 10]
+filtered_data1 = df[df["Price"] > 100000]
+filtered_data2 = df[(df["Price"] > 100000) & (df["OS"]=="Mac")]
 ```
 
-* You can fill missing values with specific value (in this case, 0)
+* Taking mean value for grouped data
 ```python
-df.fillna(value=0, inplace=True)
+grouped_data = df.groupby("OS").mean()
+
+# When numeric data and categorical data are mixed
+grouped_data = df.groupby("OS").mean(numeric_only=True)
 ```
-* Drop rows with missing values
+* You can create a simple plot. Following plots can be made by setting `kind` argument.
+    * "line" : line plot (default)
+    * "bar" : vertical bar plot
+    * "barh" : horizontal bar plot
+    * "hist" : histogram
+    * "box" : boxplot
+    * "kde" : Kernel Density Estimation plot
+    * "density" : same as ‘kde’
+    * "area" : area plot
+    * "pie" : pie plot
 ```python
-df.dropna(inplace=True)
-```
-* Grouped data
-```python
-# Grouping and Aggregation:
-# Group by a column and calculate mean
-grouped_data = df.groupby('Column_Name').mean()
-```
-* You can merge two DataFrames into one, using some colum ans the key.
-```python
-merged_df = pd.merge(df1, df2, on='Key_Column')
-```
-* You can create a simple plot
-```python
-df.plot(x='Column_X', y='Column_Y', kind='line')
+import matplotlib.pyplot as plt
+df.plot(x="Product ID", y="Price", kind="bar")
+plt.show()
 ```
 
 * You can export th DataFrame to a CSV file
 ```python
-df.to_csv('new_data.csv', index=False)
+df.to_csv("computers.csv", index=False)
+```
+
+* Reading Microsoft Excel data
+    * after installing xlrd by `pip install xlrd`,
+```python
+df = pd.read_excel("water-spectra.xls")
 ```
 
 ---
 
 ## Exercise 2
+* Let's analyze the emplyee information stored in "employee.csv", as follows.
+1. Import a csv file to a Pandas DataFrame.
+2. Extract the high-saraly group, whose "Salary" is higher than "55000".
+3. Calculate and print the mean age of high-salary group and all the employee.
+4. Calculate the mean values of each department, by using `groupby()` function.
+5. Make a scatter plot of "Age" vs. "Salary".
+<a href="./answer.md#pandas2">answer</a>

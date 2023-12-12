@@ -1,4 +1,4 @@
-# Making a plot in python
+# Making a plot in Python
 * *matplotlib* is the scientific plotting library in Python. It provides functions for making visualizations such as line charts, histograms, scatter plots, and so on.
 * In this chapter, we'll look at the basic usage of matplotlib, then also see a similar library *seaborn* which makes cooler plot.
 
@@ -205,39 +205,3 @@ fig.add_trace(go.Scatter(x=xs, y=randoms))
 
 fig.show()
 ```
-
----
-
-Exercise: Visualizing Relationships with Pairplot
-
-Let's generate random data for this exercise and use Seaborn's pairplot to visualize relationships between variables.
-
-python
-Copy code
-import seaborn as sns
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-
-# Generating random data
-np.random.seed(42)
-data = pd.DataFrame({
-    'Feature_1': np.random.randn(100),
-    'Feature_2': np.random.randn(100),
-    'Feature_3': np.random.randn(100),
-    'Feature_4': np.random.randn(100)
-})
-
-# Creating a pairplot
-sns.pairplot(data)
-plt.title('Pairplot of Random Data')
-plt.show()
-In this exercise:
-
-np.random.randn(100) generates random data for four features (Feature_1, Feature_2, Feature_3, Feature_4) in a Pandas DataFrame.
-sns.pairplot() is used to create a grid of pairwise plots for these features.
-The resulting pairplot shows scatterplots for each pair of features and histograms for the individual features along the diagonal.
-Replace the data DataFrame with your own dataset containing numerical variables to explore relationships between them using Seaborn's pairplot function. Adjust the features or dataset as needed to visualize different data relationships.
-
-
----
