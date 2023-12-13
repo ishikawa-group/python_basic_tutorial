@@ -56,7 +56,7 @@ def __init__(self):
 
 2. `__call__`
 * This is called when the instance is called like a function.
-```python {cmd}
+```python{cmd}
 class Hello:
     def __init__(self):
         print("init is called")
@@ -68,9 +68,27 @@ hello = Hello()
 hello()
 ```
 
+---
+
+## Exercise
+* Create a Car class with the following specifications:
+
+1. Attributes:
+* maker: Maker of the car (string)
+* model: Model of the car (string)
+* year: Year the car was manufactured (integer)
+
+2. Methods:
+* `__init__`: Constructor method to initialize the attributes.
+* display_info: Method that prints out the make, model, and year of the car.
+* Create an instance of the Car class, set some values for its attributes, and display its information.
+<a href="./answer.md#class">answer</a>
+
+---
+
 ## super
 * Now consider making a class for a soccer player and a baseball player.
-```python {cmd}
+```python{cmd}
 class SoccerPlayer:
     def __init__(self, name, age):
         self.name = name
@@ -152,18 +170,3 @@ s1 = SoccerPlayer("Messi", 36, True)
 
 s1.self_introduce()
 ```
----
-
-## Exercise:
-* Create a Car class with the following specifications:
-
-1. Attributes:
-* make: Make of the car (string)
-* model: Model of the car (string)
-* year: Year the car was manufactured (integer)
-
-2. Methods:
-* `__init__`: Constructor method to initialize the attributes.
-* display_info: Method that prints out the make, model, and year of the car.
-* Create an instance of the Car class, set some values for its attributes, and display its information.
-<a href="./answer.md#class">answer</a>

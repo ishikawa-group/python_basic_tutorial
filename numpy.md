@@ -11,7 +11,7 @@ import numpy as np
 * `as np` is not mandatory but often used.
 
 ### array
-```python {cmd}
+```python{cmd}
 import numpy as np
 a = np.zeros(2)
 print(a)
@@ -19,7 +19,7 @@ print(a)
 
 ### convert list to numpy array
 * numpy array can be made by defining the list first, as
-```python {cmd}
+```python{cmd}
 import numpy as np
 a = [1, 2, 3, 4, 5]
 b = np.array(a)
@@ -56,13 +56,21 @@ x = np.linspace(-10, 10, 100)  # start, end, number of points
 ### maximum and minimum
 * Maximum and minimum values in an array can be easily found by `numpy.max` and `numpy.min` functions.
 * The max/min argument i.e. the index corresponding to the max/min value is obtained by `numpy.argmax` and `numpy.argmin` functions.
-```python {cmd}
+```python{cmd}
 import numpy as np
 a = [1, 2, 4, 2, 1]
 b = np.array(a)
 print(np.max(b))
 print(np.argmax(b))
 ```
+
+---
+
+## Exercise (numpy)
+* Let's say you have sales data for a week represented as a NumPy array. Calculate the total sales for the week.
+<a href="./answer.md#numpy">answer</a>
+
+---
 
 # scipy
 * *SciPy* is a Python library collecting scientific computing functionalities.
@@ -84,14 +92,14 @@ print(np.argmax(b))
 | scipy.io             | File IO                              |
 
 * linear algebra (linalg)
-```python {cmd}
+```python{cmd}
 import numpy as np
 from scipy import linalg
  
 A = np.array([[1, 3, 2], [-1, 0, 1], [2, 3, 0]])
  
 Ainv = linalg.inv(A)
- 
+
 print(Ainv)
 print(np.matmul(Ainv, A))  # matrix-matrix multiply
 ```
@@ -113,7 +121,7 @@ print("Result of the integration:", result)
 
 * ordinary differential equation (odeint)
     * solving differential equation $\frac{dy}{dt} = -y$
-```python {cmd}
+```python{cmd}
 import numpy as np
 from scipy.integrate import odeint
 import matplotlib.pyplot as plt
@@ -134,10 +142,6 @@ plt.show()
 ```
 
 ---
-
-## Exercise (numpy)
-* Let's say you have sales data for a week represented as a NumPy array. Calculate the total sales for the week.
-<a href="./answer.md#numpy">answer</a>
 
 ## Exercise (scipy)
 * Perform the numerical integration of $\exp(-x^2)$ function from -10 to 10, using SciPy's quad function.

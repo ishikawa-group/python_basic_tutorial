@@ -55,7 +55,7 @@ with open("test.txt", "w") as f:
     f.write("Some string\n")
 ```
 * reading text file
-```python {cmd}
+```python{cmd}
 with open("textfile.txt", "r") as f:
     for line in f:
         line = line.strip()

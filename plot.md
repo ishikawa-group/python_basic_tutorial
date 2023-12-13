@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 ```
 
 ### example
-```python {cmd}
+```python{cmd}
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -46,7 +46,7 @@ plt.xticks(np.arange(0, 2+0.1, 9.5))
 * This is more advanced, but I recommend to use it because it enables finer control of the figure.
 
 ### example
-```python {cmd}
+```python{cmd}
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -72,7 +72,7 @@ ax.set_title("sine curve")
 ```
 
 ### bar plot
-```python {cmd}
+```python{cmd}
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -86,7 +86,7 @@ plt.show()
 ```
 
 ### histogram
-```python {cmd}
+```python{cmd}
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -99,7 +99,7 @@ plt.show()
 ```
 
 ### displaying image
-```python {cmd}
+```python{cmd}
 import matplotlib.pyplot as plt
 
 img = plt.imread("image.jpg")
@@ -110,7 +110,7 @@ plt.show()
 ```
 
 ### figure configuration
-```python {cmd}
+```python{cmd}
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -146,7 +146,7 @@ plt.show()
 ```
 
 ## Saving figure
-```python {cmd}
+```python{cmd}
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -164,7 +164,7 @@ plt.close()
 * `seaborn` is another visualization library, which is based on matplotlib.
 * seaborn makes cooler plots than matplotlib.
 
-```python {cmd}
+```python{cmd}
 import seaborn as sns
 import matplotlib.pyplot as plt
 
@@ -190,7 +190,7 @@ plt.show()
 * `plotly` enables plotting the interactive plot. The plot is made on the browser, and you can see numerical values when you put mouse pointer on it.
 * To use plotly, you need to load the library first and then make `Figure` object instance. After that, you can add plots to the instance by `add_trace` method.
 
-```python {cmd}
+```python{cmd}
 import numpy as np
 xs = np.linspace(0, 10, 100)
 sins = np.sin(xs)

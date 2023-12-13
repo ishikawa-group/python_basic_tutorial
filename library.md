@@ -9,7 +9,7 @@ import numpy
 a = numpy.zeros(10)
 ```
 * You can make abbriviation to library, as
-```python {cmd}
+```python{cmd}
 import numpy as np
 
 a = np.zeros(10)

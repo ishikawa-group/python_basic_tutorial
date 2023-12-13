@@ -34,12 +34,12 @@ print(series)
 #### Making a DataFrame
 * DataFrame is more useful than Series, so it is more often used.
 * DataFrame assembles Series, so you can think like the Series is a vector and DataFrame is a matrix.
-```python {cmd}
+```python{cmd}
 import pandas as pd
 sales = [["P001", "Windows", 85000],
          ["P002", "Mac", 120000],
          ["P003", "Windows", 200000],
-         ["P002", "Mac", 130000]]
+         ["P004", "Mac", 130000]]
 columns = ["Product ID", "OS", "Price"]
 df = pd.DataFrame(data=sales, columns=columns)
 print(df)
@@ -65,10 +65,12 @@ df = df.sort_values(by="Price", ascending=False)  # descending
 print(df.head())
 ```
 
-#### Taking subgroup
+#### Filtering: taking subgroup
 ```python
 df_win = df[df["OS"]=="Windows"]
 df_mac = df[df["OS"]=="Mac"]
+
+df_new = df[(df["Price"] > 100000) & (df["OS"]=="Mac")]  # multiple condition
 ```
 
 #### Importing from CSV (comma separated file) file
@@ -89,61 +91,58 @@ print(df.head())
 ---
 
 ### Some important commands
-* Let's analye the following DataFrame.
-```python {cmd}
+* Let's analye the following DataFrame again.
+```python{cmd}
 import pandas as pd
 sales = [["P001", "Windows", 85000],
          ["P002", "Mac", 120000],
          ["P003", "Windows", 200000],
-         ["P002", "Mac", 130000]]
+         ["P004", "Mac", 130000]]
 columns = ["Product ID", "OS", "Price"]
 df = pd.DataFrame(data=sales, columns=columns)
 print(df)
 ```
 
-Here are examples showcasing basic usages of Pandas:
+* Here are examples showcasing basic usages of Pandas:
 
-* Extract a specific column
-```python
-column_data = df["Price"]
-```
-
-* Access specific rows using iloc (by index)
+#### Access specific rows using iloc (by index)
 ```python
 specific_element = df.iloc[0, 0]
 ```
 
-* Summary statistics of numerical columns
+#### Summary statistics of numerical columns
 ```python
 summary_stats = df.describe()
 ```
 
-* Add a new column
+#### Add a new column
 ```python
 df["2xPrice"] = df["Price"]*2
 ```
 
-* Drop a column
+#### Drop a column
 ```python
 df_new = df.drop(columns=["Price"], inplace=False)
 ```
 * `inplace=True` will replace the df itself.
 
-* Filtering rows based on a condition
-```python
-filtered_data1 = df[df["Price"] > 100000]
-filtered_data2 = df[(df["Price"] > 100000) & (df["OS"]=="Mac")]
-```
-
-* Taking mean value for grouped data
+#### Taking mean value for grouped data
 ```python
 grouped_data = df.groupby("OS").mean()
 
 # When numeric data and categorical data are mixed
 grouped_data = df.groupby("OS").mean(numeric_only=True)
 ```
-* You can create a simple plot. Following plots can be made by setting `kind` argument.
+
+#### Plot
+```python
+import matplotlib.pyplot as plt
+df.plot(x="Product ID", y="Price", kind="bar")
+plt.show()
+```
+* Following plots can be made by setting `kind` argument.
     * "line" : line plot (default)
+    * "scatter": scatter plot
     * "bar" : vertical bar plot
     * "barh" : horizontal bar plot
     * "hist" : histogram
@@ -152,19 +151,15 @@ grouped_data = df.groupby("OS").mean(numeric_only=True)
     * "density" : same as ‘kde’
     * "area" : area plot
     * "pie" : pie plot
-```python
-import matplotlib.pyplot as plt
-df.plot(x="Product ID", y="Price", kind="bar")
-plt.show()
-```
 
+#### Exporting to CSV file
 * You can export th DataFrame to a CSV file
 ```python
 df.to_csv("computers.csv", index=False)
 ```
 
-* Reading Microsoft Excel data
-    * after installing xlrd by `pip install xlrd`,
+#### Reading Microsoft Excel data
+* After installing xlrd by `pip install xlrd`, you can do
 ```python
 df = pd.read_excel("water-spectra.xls")
 ```
