@@ -4,7 +4,7 @@
 * First you **define** a function, then you **call** it to use.
 
 * Let's try to calculate the average score of Math, English, and Science for students A and B.
-```python{cmd}
+```python
 stu_A_score = {"Math": 89, "English": 30, "Science": 86}
 stu_B_score = {"Math": 59, "English": 70, "Science": 65}
 
@@ -14,7 +14,7 @@ aveB = (stu_B_score["Math"] + stu_B_score["English"] + stu_B_score["Science"])/3
 print(f"Average of A is {aveA:.2f}, B is {aveB:.2f}")
 ```
 * Clearly, taking average is common procedure so you do not want to write it twice.
-```python{cmd}
+```python
 def average(scores):
     sum = 0
     for key, val in scores.items():
@@ -38,7 +38,7 @@ def say_hello():
     return "hello"
 ```
 * A function will `return` the result when it is called, and returned value will be stored to other variable.
-```python{cmd}
+```python
 def say_hello():
     return "hello"
 
@@ -47,14 +47,14 @@ print(s)
 ```
 
 * The `return` statement is not mandatory, so you can omit it like
-```python{cmd}
+```python
 def say_hello2():
     print("hello")
 
 say_hello2()
 ```
 * But I recommend writing return for safety. If no need to return, you can put `None`.
-```python{cmd}
+```python
 def say_hello3():
     print("hello")
     return None
@@ -67,7 +67,7 @@ say_hello3()
 
 ## Argument
 * **argument** is the variable that one passes to the function. The function usually does some procedure using that argument. You can pass an argument to the function, like
-```python{cmd}
+```python
 def say_something(s):
     print(s)
     return None
@@ -75,7 +75,7 @@ def say_something(s):
 say_something("hello")
 ```
 * You can set the default value for arguments like
-```python{cmd}
+```python
 def say_something(s="hello"):
     print(s)
     return s
@@ -84,7 +84,7 @@ say_something("good morning")
 say_something()
 ```
 * You can use multiple arguments
-```python{cmd}
+```python
 def combine_string(s1, s2):
     new_string = s1 + " " + s2
     return new_string
@@ -93,7 +93,7 @@ s = combine_string("Good", "Morning")
 print(s)
 ```
 * You can also use multiple return-value, as
-```python{cmd}
+```python
 def say_strong(s1, s2):
     s1new = s1 + "!"
     s2new = s2 + "!"
@@ -106,7 +106,7 @@ print(s1new, s2new)
 ## Scope of variables
 * When you define the function, you have to know about the *scope* of variables.
 * The variables defined *inside* the function cannot be used outside the function.
-```python{cmd}
+```python
 def hello():
   i = 10
   print(i)
@@ -117,7 +117,7 @@ print(i)  # => not defined
 ```
 * This is because `i` in the above funcion is *local variable*.
 * Instead, variables defined outside the function is *global variable* so they can be accessed even inside the function.
-```python{cmd}
+```python
 i = 10
 def hello():
     print(i)
@@ -126,7 +126,7 @@ def hello():
 hello()
 ```
 * Note that the same variable name is used for both local and global variables, the global variable is used.
-```python{cmd}
+```python
 a = 10
 
 def hello():
@@ -137,7 +137,7 @@ hello()
 print(a)
 ```
 * It is safer to use *global* inside the function to access the global variable.
-```python{cmd}
+```python
 a = 10
 
 def hello():

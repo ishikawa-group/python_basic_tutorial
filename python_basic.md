@@ -31,7 +31,7 @@
 | complex | complex number           | (1, 2) (=1 + 2j)     |
 
 * So let's define some variables and print them with `print` function.
-```python{cmd}
+```python
 a = 123
 b = 1.2
 c = "hello"
@@ -41,7 +41,7 @@ print(b)
 print(c)
 ```
 * You can define variables in one line, as
-```python{cmd}
+```python
 a, b = 1, 2
 print(a)
 print(b)
@@ -50,7 +50,7 @@ print(b)
 ## comment
 * You can put comments, by starting `#`. This is a single line comment.
 * Comments with multiple lines can be defined by sandwitching with `"""`.
-```python{cmd}
+```python
 # this is a comment.
 
 """
@@ -91,7 +91,7 @@ is a comment
 | in                       | membership operator          | a in ["a", "b", "c"]               |
 | is                       | identity operator            | a is 1                             |
 
-```python{cmd}
+```python
 a = 1
 b = 2
 c = a + b
@@ -147,14 +147,14 @@ a  # => [0, 1, 2]
 ```
 
 * remove
-```python{cmd}
+```python
 a = [0, 1]
 a.remove(0)
 print(a)
 ```
 
 * extend
-```python{cmd}
+```python
 a = [0, 1]
 b = [2, 3]
 c = a + b    # need to store in the different list
@@ -166,7 +166,7 @@ print(c)
 #### Index slicing
 * You can access the index of the list as follows: `x[start=0 : stop=size : step=1]`
 * This is called *slicing*, and in the script you do like
-```python{cmd}
+```python
 a = [1]*10
 print(a[:])    # all elements
 print(a[0:9])  # from 0 to 8 (not 9!)
@@ -192,19 +192,19 @@ a[0] = 10  # => error
 d = {"Apple": 100}
 ```
 * Here "Apple" is key and 100 is value. You can access the value by specifying the key.
-```python{cmd}
+```python
 d = {"Apple": 100, "Orange": 120}
 print(d["Orange"])
 ```
 * You can add the key-value pair to the dict by `update` function.
-```python{cmd}
+```python
 d = {}
 d["Apple"] = 100
 d.update({"Banana": 200})
 print(d)
 ```
 * To loop over dict,
-```python{cmd}
+```python
 d = {"Apple": 120, "Orange": 110, "Banana": 200}
 for i, j in d.items():
     print(i, "is", j, "Yen.")
@@ -252,7 +252,7 @@ for i in range(10):
     print(i)
 ```
 * You can access the index and the value of the list with `enumerate` function.
-```python{cmd}
+```python
 a = [0, 1, 2]
 for i, val in enumerate(a):
     print(i, val)
@@ -269,7 +269,7 @@ while a > 0:
 
 ### continue, break; the loop control
 * If you want to skip the loop at some condition, you can use `continue` statement.
-```python{cmd}
+```python
 for i in range(10):
   if i == 5:
     continue
@@ -278,7 +278,7 @@ for i in range(10):
 ```
 * The `for` loop goes to the next step when it finds `continue`. So rest of the part is not executed.
 * If you want to end the loop at some condition, you can use `break` statement.
-```python{cmd}
+```python
 for i in range(10):
   if i == 5:
     break
@@ -299,7 +299,7 @@ If x is greater, print "x is greater than y"; otherwise, print "y is greater tha
 
 ## Printing
 * You can print variables etc. with `print` function. There are several ways to do printing.
-```python{cmd}
+```python
 name = "John"
 age = 20
 
@@ -319,7 +319,7 @@ print(f"Hello my name is {name:s}. My age is {age:d}.")
 | f      | float       |
 | e      | exponential |
 
-```python{cmd}
+```python
 a = 1.23
 print(f"a = {a}")         # simplest
 print(f"a = {a:.2f}")     # float with 2 decimal points

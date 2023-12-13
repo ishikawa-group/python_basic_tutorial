@@ -15,7 +15,7 @@ import pandas as pd
 
 #### Making a Series
 * basic
-```python{cmd}
+```python
 import pandas as pd
 sales = ["David", "Bob", "Josh"]
 series = pd.Series(data=sales)
@@ -23,7 +23,7 @@ print(series)
 ```
 
 * You can set the column name if you like.
-```python{cmd}
+```python
 import pandas as pd
 sales  = ["David", "Bob", "Josh"]
 column = "Members"
@@ -34,7 +34,7 @@ print(series)
 #### Making a DataFrame
 * DataFrame is more useful than Series, so it is more often used.
 * DataFrame assembles Series, so you can think like the Series is a vector and DataFrame is a matrix.
-```python{cmd}
+```python
 import pandas as pd
 sales = [["P001", "Windows", 85000],
          ["P002", "Mac", 120000],
@@ -74,7 +74,7 @@ df_new = df[(df["Price"] > 100000) & (df["OS"]=="Mac")]  # multiple condition
 ```
 
 #### Importing from CSV (comma separated file) file
-```python{cmd}
+```python
 import pandas as pd
 df = pd.read_csv("sample.csv")
 print(df.head())
@@ -92,7 +92,7 @@ print(df.head())
 
 ### Some important commands
 * Let's analye the following DataFrame again.
-```python{cmd}
+```python
 import pandas as pd
 sales = [["P001", "Windows", 85000],
          ["P002", "Mac", 120000],

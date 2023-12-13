@@ -1,7 +1,7 @@
 ## variable
 <p id="variable"></p>
 
-```python{cmd}
+```python
 x = 4
 y = 7
 
@@ -20,7 +20,7 @@ print(division)
 <p id="control"></p>
 
 1.
-```python{cmd}
+```python
 x = 2
 y = 1
 if x > y:
@@ -29,7 +29,7 @@ else:
     print("y is greater than or equal to x")
 ```
 2.
-```python{cmd}
+```python
 a = [0, 1, 2, 3, 4]
 for i in a:
     print(i)
@@ -41,7 +41,7 @@ for i in b:
 ## dict
 <p id="dict"></p>
 
-```python{cmd}
+```python
 # Create a dictionary representing a person
 person = {
     "name": "Alice",
@@ -59,7 +59,7 @@ print("City:", person["city"])
 <p id="file"></p>
 
 1.
-```python{cmd}
+```python
 # Open a file in write mode ("w")
 with open("example.txt", "w") as file:
     file.write("This is an example file.\n")
@@ -67,7 +67,7 @@ with open("example.txt", "w") as file:
     file.write("You can write anything you want here.")
 ```
 2.
-```python{cmd}
+```python
 # Open the same file in read mode ("r")
 with open("example.txt", "r") as file:
     content = file.read()
@@ -77,7 +77,7 @@ with open("example.txt", "r") as file:
 ## function 1
 <p id="function1"></p>
 
-```python{cmd}
+```python
 def say_twice(string):
     return string + string
 
@@ -89,7 +89,7 @@ print(s)
 <p id="function2"></p>
 
 1.
-```python{cmd}
+```python
 # define a function
 def add_numbers(a, b):
     return a + b
@@ -99,7 +99,7 @@ print("The sum is:", result)
 ```
 
 2.
-```python{cmd}
+```python
 def double(li):
     new_list = []
     for i in li:
@@ -115,7 +115,7 @@ print(new_list)
 ## class
 <p id="class"></p>
 
-```python{cmd}
+```python
 class Car:
     def __init__(self, make, model, year):
         self.make = make
@@ -135,7 +135,7 @@ my_car.display_info()
 ## numpy
 <p id="numpy"></p>
 
-```python{cmd}
+```python
 import numpy as np
 
 # Sales data for a week
@@ -150,7 +150,7 @@ print("Total sales for the week: ", total_sales)
 ## scipy
 <p id="scipy"></p>
 
-```python{cmd}
+```python
 import numpy as np
 from scipy import integrate
 
@@ -169,7 +169,7 @@ print("Result of the integration:", result)
 <p id="pandas1"></p>
 
 1. 
-```python{cmd}
+```python
 import pandas as pd
 
 # Load the sales data into a Pandas DataFrame
@@ -195,7 +195,7 @@ print("Minimum Sales: ", min_sales)
 <p id="pandas2"></p>
 
 2. 
-```python{cmd}
+```python
 import pandas as pd
 import matplotlib.pyplot as plt
 

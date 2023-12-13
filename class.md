@@ -56,7 +56,7 @@ def __init__(self):
 
 2. `__call__`
 * This is called when the instance is called like a function.
-```python{cmd}
+```python
 class Hello:
     def __init__(self):
         print("init is called")
@@ -88,7 +88,7 @@ hello()
 
 ## super
 * Now consider making a class for a soccer player and a baseball player.
-```python{cmd}
+```python
 class SoccerPlayer:
     def __init__(self, name, age):
         self.name = name
@@ -113,7 +113,7 @@ class BaseballPlayer:
 ```
 * The `self_introduce` method is common to two classes, so we would like to omit to write it twice.
 * To do this, let's define `Person` class, and consider `SoccerPlayer` and `BaseballPlayer` inherit the nature of `Person` class. This is called **inheritance**.
-```python{cmd}
+```python
 class Person:
     def __init__(self, name, age):
         self.name = name
@@ -140,7 +140,7 @@ s1.self_introduce()
 b1.self_introduce()
 ```
 * You can add some attributes specialized to the child class by calling `super().__init__()` in `__init__`.
-```python{cmd}
+```python
 class Person:
     def __init__(self, name, age):
         self.name = name

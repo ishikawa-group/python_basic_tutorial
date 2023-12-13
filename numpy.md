@@ -11,7 +11,7 @@ import numpy as np
 * `as np` is not mandatory but often used.
 
 ### array
-```python{cmd}
+```python
 import numpy as np
 a = np.zeros(2)
 print(a)
@@ -19,7 +19,7 @@ print(a)
 
 ### convert list to numpy array
 * numpy array can be made by defining the list first, as
-```python{cmd}
+```python
 import numpy as np
 a = [1, 2, 3, 4, 5]
 b = np.array(a)
@@ -34,7 +34,7 @@ print(b)
 
 #### Linear spacing
 * You can have an uniformly-ditributed numbers by `linspace` function.
-```python{cmd}
+```python
 import numpy as np
 x = np.linspace(-10, 10, 100)  # start, end, number of points
 ```
@@ -56,7 +56,7 @@ x = np.linspace(-10, 10, 100)  # start, end, number of points
 ### maximum and minimum
 * Maximum and minimum values in an array can be easily found by `numpy.max` and `numpy.min` functions.
 * The max/min argument i.e. the index corresponding to the max/min value is obtained by `numpy.argmax` and `numpy.argmin` functions.
-```python{cmd}
+```python
 import numpy as np
 a = [1, 2, 4, 2, 1]
 b = np.array(a)
@@ -92,7 +92,7 @@ print(np.argmax(b))
 | scipy.io             | File IO                              |
 
 * linear algebra (linalg)
-```python{cmd}
+```python
 import numpy as np
 from scipy import linalg
  
@@ -105,7 +105,7 @@ print(np.matmul(Ainv, A))  # matrix-matrix multiply
 ```
 
 * numerical integration
-```python{cmd}
+```python
 import numpy as np
 from scipy import integrate
 
@@ -121,7 +121,7 @@ print("Result of the integration:", result)
 
 * ordinary differential equation (odeint)
     * solving differential equation $\frac{dy}{dt} = -y$
-```python{cmd}
+```python
 import numpy as np
 from scipy.integrate import odeint
 import matplotlib.pyplot as plt
