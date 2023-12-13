@@ -21,6 +21,7 @@ sales = ["David", "Bob", "Josh"]
 series = pd.Series(data=sales)
 print(series)
 ```
+
 * You can set the column name if you like.
 ```python{cmd}
 import pandas as pd
