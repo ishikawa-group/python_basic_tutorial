@@ -167,6 +167,7 @@ print("Result of the integration:", result)
 
 ## pandas
 <p id="pandas1"></p>
+
 1. 
 ```python{cmd}
 import pandas as pd
@@ -192,6 +193,7 @@ print("Minimum Sales: ", min_sales)
 ```
 
 <p id="pandas2"></p>
+
 2. 
 ```python{cmd}
 import pandas as pd
