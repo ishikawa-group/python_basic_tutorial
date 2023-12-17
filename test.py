@@ -1,18 +1,21 @@
-import pandas as pd
-sales = [["P001", "Windows", 85000],
-         ["P002", "Mac", 120000],
-         ["P003", "Windows", 200000],
-         ["P002", "Mac", 130000]]
-columns = ["Product ID", "OS", "Price"]
-df = pd.DataFrame(data=sales, columns=columns)
-print(df)
-price = df["Price"]
-print(price)
-print(df.iloc[0,0])
-print(df.describe())
-df["2xPrice"] = df["Price"]*2
-print(df)
-df.drop(columns=["2xPrice"], inplace=True)
-print(df)
-filt = df[df["Price"] > 100000]
-print(filt)
+from sklearn.datasets import load_iris
+from sklearn import tree
+import matplotlib.pyplot as plt
+
+iris = load_iris()
+X, y = iris.data[:, 2:4], iris.target
+clf = tree.DecisionTreeClassifier()
+clf = clf.fit(X, y)
+tree.plot_tree(clf, filled=True)
+plt.show()
+
+from mlxtend.plotting import plot_decision_regions
+import numpy as np
+
+fig, ax = plt.subplots(figsize=(7, 7))
+plot_decision_regions(X, y, clf=clf)
+plt.xlabel('petal length [cm]')
+plt.ylabel('petal width [cm]')
+plt.legend(loc='upper left')
+plt.tight_layout()
+plt.show()
