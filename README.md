@@ -15,9 +15,9 @@
 * [Numpy & Scipy](./numpy.md)
 * [Pandas](./pandas.md)
 
-### Day 3: Machine Learning using *scikit-learn*
-* [Machine learning](./machine_learning.md)
+### Day 3: Plotting and machine Learning using *scikit-learn*
 * [Plot](./plot.md)
+* [Machine learning](./machine_learning.md)
 
 ### Day 4: Generative Adversarial Networks (GANs)
 * [Neural network](./neural_network.md)

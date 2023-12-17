@@ -37,7 +37,7 @@ print(diabetes["target"])
 ```
 
 * First, convert data in to Pandas DataFrame.
-```python{cmd}
+```python
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
@@ -98,7 +98,7 @@ plt.show()
 * Classification algorithm tries to set a *decision boundary*, which divides the data into several classes.
 
 <div align="center">
-<img src="./fig/classification.png" width=40%>
+<img src="./fig/classification.png" width=30%>
 </div>
 
 * A decision boundary need not to be a simple linear line.
@@ -110,7 +110,7 @@ plt.show()
 <img src="./fig/iris.png" width=50%>
 </div>
 
-```python{cmd}
+```python
 # Importing scikit-learn and loading a dataset
 from sklearn import datasets
 
@@ -122,7 +122,7 @@ print("Target:", iris.target_names)
 
 * The dataset has three species, *iris setosa*, *iris versicolor*, and *iris virginica*.
 * The relationship between species and variables such as sepal length or width can be shown as follows.
-```python{cmd}
+```python
 from sklearn import datasets
 
 iris = datasets.load_iris()
@@ -142,7 +142,7 @@ plt.show()
 <img src="./fig/tree.png" width=60%>
 </div>
 
-```python{cmd}
+```python
 from sklearn.datasets import load_iris
 from sklearn import tree
 from mlxtend.plotting import plot_decision_regions
@@ -199,7 +199,7 @@ plt.show()
 * Thus, evaluation of the accuracy should be done with unseen data. To do this, we split the data into training data and test data.
 
 <div align="center">
-<img src="./fig/train_test.png" width=50%>
+<img src="./fig/train_test.png" width=30%>
 </div>
 
 * In scikit-learn, splitting the training and test data is done with `train_test_split` function.
@@ -220,42 +220,7 @@ print(f"training: {len(X_train)}, test: {len(X_test)}")
 ---
 
 ## Exercise
-* Make the regression model of diabates with train-test split.
-1. 
-2. 
-
-
-```python{cmd}
-from sklearn import datasets, linear_model
-import matplotlib.pyplot as plt
-import pandas as pd
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import r2_score
-
-dia = datasets.load_diabetes()
-X = pd.DataFrame(dia.data, columns=dia.feature_names)
-y = pd.DataFrame(dia.target, columns=["target"])
-df = pd.concat([X, y], axis=1)
-
-x = df[["bmi"]]
-
-x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2)
-
-model = linear_model.LinearRegression()
-model.fit(x_train, y_train)
-
-r2_train = r2_score(y_train, model.predict(x_train))
-r2_test  = r2_score(y_test, model.predict(x_test))
-
-print(f"Training R2: {r2_train:.3f}")
-print(f"Test R2: {r2_test:.3f}")
-
-# plot
-plt.figure(figsize=(5, 5))
-plt.scatter(df["bmi"], df["target"])
-plt.plot(x_test, model.predict(x_test), color="red")
-plt.xlabel("bmi")
-plt.ylabel("target")
-plt.title("bmi vs target (Linear Regression)")
-plt.show()
-```
+* Make the regression model of diabates with train-test split. Let's analyze the diabetes data again. Using "BMI" as the variable, try to regress the target variable.
+1. Using same x and y in the diabetes regression, split these x and y into the training and test sets.
+2. Do the regression, and measure the R2 score for training and test sets. What's the difference?
+<a href="./answer.md#ml">answer</a>

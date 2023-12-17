@@ -8,7 +8,7 @@
 import matplotlib.pyplot as plt
 ```
 
-### example
+### Example
 ```python
 import matplotlib.pyplot as plt
 import numpy as np
@@ -22,22 +22,32 @@ plt.ylabel("f = cos(x)")
 plt.show()
 ```
 
-### setting limits
+### Setting limits
 ```python
 plt.xlim([-2, 2])
 plt.ylim([0, 10])
 ```
 
-### setting labels
+### Setting labels
 ```python
 plt.xlabel("xlabel")
 plt.ylabel("ylabel")
 ```
 
-### setting ticks
+### Setting ticks
 ```python
 plt.xticks(np.arange(0, 2+0.1, 9.5))
 ```
+
+---
+
+## Exercise
+* Plot these two data in one figure for $-2\pi \le x \le 2\pi$.
+1. $y = \cos(x)$
+2. $y = \cos(x) + 0.5(r - 0.5)$ where $r$ is the random number of $r \in [0, 1]$.
+<a href="./answer.md#plot">answer</a>
+
+---
 
 ## Figure and Axes
 * In matplotlib, there are two ways to make plots.
@@ -45,7 +55,7 @@ plt.xticks(np.arange(0, 2+0.1, 9.5))
 * Another way to plot is use `Figure` and `Axes` objects. `Figure` controls the figure part, and `Axes` controls the axes part of each figure.
 * This is more advanced, but I recommend to use it because it enables finer control of the figure.
 
-### example
+### Example
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -59,19 +69,19 @@ ax.plot(x, y)
 plt.show()
 ```
 
-### setting limits
+### Setting limits
 ```python
 ax.set_xlim([0, 1])
 ax.set_xlim([0, 1])
 ```
-### setting labels
+### Setting labels
 ```python
 ax.set_xlabel("x")
 ax.set_ylabel("y = sin(x)")
 ax.set_title("sine curve")
 ```
 
-### bar plot
+### Bar plot
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -85,7 +95,7 @@ ax.bar(x, y)
 plt.show()
 ```
 
-### histogram
+### Histogram
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -98,7 +108,7 @@ ax.hist(values, bins=10, ec="k")
 plt.show()
 ```
 
-### displaying image
+### Displaying image
 ```python
 import matplotlib.pyplot as plt
 
@@ -109,7 +119,7 @@ ax.imshow(img)
 plt.show()
 ```
 
-### figure configuration
+### Figure configuration
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
