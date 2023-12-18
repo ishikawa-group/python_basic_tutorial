@@ -78,8 +78,9 @@ x = df[["bmi"]]
 
 model = linear_model.LinearRegression()
 model.fit(x, y)
+y_pred = mode.predict(x)
 
-r2 = r2_score(y, model.predict(x))
+r2 = r2_score(y, y_pred)
 
 print(f"R2: {r2:.3f}")
 
@@ -92,6 +93,9 @@ plt.ylabel("target")
 plt.title("bmi vs target (Linear Regression)")
 plt.show()
 ```
+* You can see the regression model was set by `model = linear_model.LinearRegression()`, which is a class.
+* Then the class method `.fit` and `.predict` was used. These methods do the parameter fitting and making a prediction, respectively.
+* This procedure is common to most of the scikit-learn classes. So, if you want to use other regression models, just replace the regression class.
 
 ## Classification
 * Let's try to do the classification with scikit-learn.
