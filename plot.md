@@ -1,6 +1,8 @@
 # Making a plot in Python
-* *matplotlib* is the scientific plotting library in Python. It provides functions for making visualizations such as line charts, histograms, scatter plots, and so on.
-* In this chapter, we'll look at the basic usage of matplotlib, then also see a similar library *seaborn* which makes cooler plot.
+* In this lecture, we will learn how to make a plot with Python. *Matplotlib*, *seaborn*, and *plotly* libraries are introduced.
+* *Matplotlib* is the scientific plotting library in Python. It provides functions for making visualizations such as line charts, histograms, scatter plots, and so on.
+* *Seaborn* is also widely used plotting library, which makes cooler plot.
+* Plotly is gives interactive plot, which is more fancy for presentation purposes.
 
 ## matplotlib
 ### loading the library
@@ -8,7 +10,8 @@
 import matplotlib.pyplot as plt
 ```
 
-### Example
+### Basic line plot
+* Here is the basic usage of matplotlib.
 ```python
 import matplotlib.pyplot as plt
 import numpy as np
@@ -21,20 +24,39 @@ plt.xlabel("x")
 plt.ylabel("f = cos(x)")
 plt.show()
 ```
+* Do not forget to call `show` function. Otherwise, plot is made but not shown.
+
+### Scatter plot
+* By changing `plot` to `scatter`, you can make a scatter plot.
+```python{cmd}
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.linspace(-2*np.pi, 2*np.pi, 100)
+y = np.cos(x)
+
+plt.scatter(x,y)
+plt.xlabel("x")
+plt.ylabel("f = cos(x)")
+plt.show()
+```
 
 ### Setting limits
+* The range of plotting can be set as follows.
 ```python
 plt.xlim([-2, 2])
 plt.ylim([0, 10])
 ```
 
 ### Setting labels
+* x- and y-axis labels are set as follows.
 ```python
 plt.xlabel("xlabel")
 plt.ylabel("ylabel")
 ```
 
 ### Setting ticks
+* Ticks can be set as follows.
 ```python
 plt.xticks(np.arange(0, 2+0.1, 9.5))
 ```
@@ -170,9 +192,8 @@ plt.savefig("sin.png")
 plt.close()
 ```
 
-# seaborn
-* `seaborn` is another visualization library, which is based on matplotlib.
-* seaborn makes cooler plots than matplotlib.
+# Seaborn
+* `Seaborn` is another visualization library, which is based on matplotlib. This makes cooler plots than matplotlib.
 
 ```python
 import seaborn as sns
@@ -208,10 +229,41 @@ randoms = np.random.rand(100)
 
 import plotly.graph_objects as go
 fig = go.Figure()
+
 # adding scatter plot
 fig.add_trace(go.Scatter(x=xs, y=sins))
+
 # adding another scatter plot
 fig.add_trace(go.Scatter(x=xs, y=randoms))
 
+fig.show()
+```
+* If you are using Google Colab, put follwing lines after importing the library.
+```python
+
+import plotly.io as pio
+pio.renderers.default = "colab"
+```
+
+## Application
+* You can plot the interactive chart as follows.
+```python
+import plotly
+import plotly.graph_objs as go
+from plotly.subplots import make_subplots
+import pandas as pd
+import plotly.io as pio
+pio.renderers.default = "colab"
+
+df = pd.read_csv(
+    'https://raw.githubusercontent.com/plotly/datasets/master/finance-charts-apple.csv')
+
+fig = go.Figure(data=[
+        go.Candlestick(
+            x=df['Date'],
+            open=df['AAPL.Open'],
+            high=df['AAPL.High'],
+            low=df['AAPL.Low'],
+            close=df['AAPL.Close'])])
 fig.show()
 ```
