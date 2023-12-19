@@ -217,9 +217,9 @@ sns.pairplot(data=iris)
 plt.show()
 ```
 
-# plotly
-* `plotly` enables plotting the interactive plot. The plot is made on the browser, and you can see numerical values when you put mouse pointer on it.
-* To use plotly, you need to load the library first and then make `Figure` object instance. After that, you can add plots to the instance by `add_trace` method.
+# Plotly
+* `plotly` enables an interactive plot, which is made on the browser, and you can see numerical values when you put mouse pointer on it.
+* To use plotly, you need to load the library first. Then, make `Figure` object instance and after that, you can add plots to the instance by `add_trace` method.
 
 ```python
 import numpy as np
