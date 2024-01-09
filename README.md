@@ -21,4 +21,4 @@
 
 ### Day 4: Generative Adversarial Networks (GANs)
 * [Neural network](./neural_network.md)
-* [Generative adversarial network](./mnist_gan.md)
+* [Generative adversarial network](./gan.md)
