@@ -278,4 +278,5 @@ plt.xlabel('epoch')
 plt.ylabel('loss')
 plt.legend(['Discriminator', 'Generator'])
 plt.title('Losses')
+plt.show()
 ```

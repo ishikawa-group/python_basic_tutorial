@@ -27,7 +27,7 @@
 ```
 
 <div align=center>
-<img src="./fig/perceptron.png" width=60%>
+<img src="./fig/perceptron.png" width=50%>
 </div>
 
 * A single LTU can be used for simple linear binary classification. It computes a linear combination of the inputs and if the result exceeds a threshold. Otherwise it outputs the positive class or else outputs the negative class.
