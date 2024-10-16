@@ -39,15 +39,6 @@ libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-d
 curl https://pyenv.run | bash
 ```
 
-4. Add pyenv-related settings to `~/.bashrc`.
-* Add following sentences in `~/.bashrc`.
-```bash
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-```
-* Then reload bashrc: `source ~/.bashrc`.
-
 ### Mac
 1. Install Homebrew (if not installed)
 ```bash
