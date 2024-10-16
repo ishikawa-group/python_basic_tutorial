@@ -22,29 +22,21 @@
     ```
 * If some commands are unavailable (e.g. vi), install them by `sudo apt install vim`.
 
-2. Install Dependencies
+2. Install dependencies
 ```bash
 sudo apt update
 sudo apt -y upgrade
 ```
 then
 ```bash
-sudo apt install -y \
-    build-essential \
-    libssl-dev \
-    zlib1g-dev \
-    libbz2-dev \
-    libreadline-dev \
-    libsqlite3-dev \
-    libncursesw5-dev \
-    tk-dev \
-    libffi-dev \
-    liblzma-dev
+sudo apt update; sudo apt install build-essential libssl-dev zlib1g-dev \
+libbz2-dev libreadline-dev libsqlite3-dev curl \
+libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
 ```
 
-3. Clone pyenv
+3. Install pyenv
 ```bash
-git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+curl https://pyenv.run | bash
 ```
 
 ### Mac
@@ -92,6 +84,13 @@ pyenv global 3.9.5
 ```bash
 python --version
 ```
+
+## Installing pip
+* `pip` is the Python package manager.
+* To install it, execute following commands (both Windows WSL2 and MacOS).
+1. `curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py`
+2. `python get-pip.py`
+* After installing pip, you can download the library like: `pip install numpy`.
 
 ### Troubleshooting
 * `'ImportError: No module named '_tkinter', please install the python3-tk package'`
