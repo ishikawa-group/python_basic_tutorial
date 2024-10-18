@@ -1,25 +1,25 @@
 # Setting up the Python environment
 * To setup the Python programming environment, you need to do following steps:
-    1. Install pyenv
-    2. Install Python
+  1. Install pyenv
+  2. Install Python
 * Windows and Mac users go different route for step1, while step 2 is common.
 
 ## Installing pyenv
 ### Windows
 1. Install WSL2 (Windows service for linux ver.2); following is an example in Windows 10
-    1. Open "Windows Power Shell" or "Terminal" as Administrator.
-    2. Type `wsl --set-default-version 2` (for safe)
-    3. Type `wsl --install -d Ubuntu`.
-    4. After installation is done, open `Ubuntu` in Application.
+  1. Open "Windows Power Shell" or "Terminal" as Administrator.
+  2. Type `wsl --set-default-version 2` (for safe)
+  3. Type `wsl --install -d Ubuntu`.
+  4. After installation is done, open `Ubuntu` in Application.
 
 * When above doesn't work, check "Windows の機能の有効化、または無効化", then "Linux 用 Windows サブシステム", "仮想マシンプラットフォーム" is ON.
 * Note that WSL makes home directory (`/home/your_name`) which is different from the Windows user directory (`C:\Users\your_name`).
 * You can access Windows system from Ubuntu like: `cd` to Desktop by `cd /mnt/c/Users/your_name/Desktop/`.
 * It is useful to make symbolic link between Ubuntu and Windows. So, in *Ubuntu terminal (not PowerShell)*, do
-    ```bash
-    cd
-    ln -s /mnt/c/Users/your_user_name/Desktop/ desktop
-    ```
+  ```bash
+  cd
+  ln -s /mnt/c/Users/your_user_name/Desktop/ desktop
+  ```
 * If some commands are unavailable (e.g. vi), install them by `sudo apt install vim`.
 
 2. Install dependencies
@@ -60,8 +60,9 @@ echo 'eval "$(pyenv init -)"' >> ~/.bashrc
 
 2. Reload Bash Configuration
 ```bash
-source ~/.bashrc  # ~/.zshrc for zsh user
+source ~/.bashrc
 ```
+* If you are using zsh, replace `~/.bashrc` with `~/.zshrc`.
 
 ##  Install Python using pyenv
 1. List available Python versions
@@ -71,7 +72,7 @@ pyenv install --list
 
 2. Choose a version and install it (e.g., Python 3.9.5)
 ```bash
-pyenv install 3.9.5 --verbose
+pyenv install 3.9.5
 ```
 * It will take some time ...
 
@@ -87,16 +88,17 @@ python --version
 
 ## Installing pip
 * `pip` is the Python package manager.
-* To install it, execute following commands (both Windows WSL2 and MacOS).
-1. `curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py`
-2. `python get-pip.py`
+* If pyenv is installed, pip is automatically installed.
+* To not installed, do the following commands to install (both Windows WSL2 and MacOS).
+  1. `curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py`
+  2. `python get-pip.py`
 * After installing pip, you can download the library like: `pip install numpy`.
 
 ### Troubleshooting
-* `'ImportError: No module named '_tkinter', please install the python3-tk package'`
-    * Do `sudo apt install python3-tk`.
+* `'ImportError: No module named '_tkinter', please install the python3-tk package'` (Windows)
+  + Do `sudo apt install python3-tk`.
 
-# VS code
+# VScode
 * Visual Studio code (VS code) is a free code editor made by Microsoft.
 * Works both on Windows and Mac.
 ## Setup
