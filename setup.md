@@ -4,6 +4,7 @@
   2. Install Python
 * Windows and Mac users go different route for step1, while step 2 is common.
 
+# Install
 ## Installing pyenv
 ### Windows
 1. Install WSL2 (Windows service for linux ver.2); following is an example in Windows 10
@@ -93,6 +94,16 @@ python --version
   1. `curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py`
   2. `python get-pip.py`
 * After installing pip, you can download the library like: `pip install numpy`.
+
+## Python install from source
+* When you don't have permission or OS is old, installing Python via pyenv does'nt work.
+* In that case, you need to insall Python from source code.
+1. Make some directory and go there: `mkdir python`, `cd python`.
+2. Get the tar.xz file from web, using `wget`.
+3. `tar jxvf Python.x.x.x.tar.xz`
+4. `./configure --prefix=/your_home/python`.
+5. `make` then `make install`.
+* `pip` is also install. Do not forget to set PATH, and alias to map `python` -> `python3` and `pip` -> `pip3`.
 
 ### Troubleshooting
 * `'ImportError: No module named '_tkinter', please install the python3-tk package'` (Windows)
