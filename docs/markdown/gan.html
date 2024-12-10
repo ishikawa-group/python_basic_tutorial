@@ -1,0 +1,806 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>Generative adversarial network · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.0.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/honkit-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="answer.html" />
+    
+    
+    <link rel="prev" href="neural_network.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Day 1: Environment Setup and Python Basics
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="setup.html">
+            
+                <a href="setup.html">
+            
+                    
+                    Environment setup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="basic.html">
+            
+                <a href="basic.html">
+            
+                    
+                    Basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="file.html">
+            
+                <a href="file.html">
+            
+                    
+                    File usage in Python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="library.html">
+            
+                <a href="library.html">
+            
+                    
+                    Using libraries
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Day 2: Functions and Class
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="function.html">
+            
+                <a href="function.html">
+            
+                    
+                    Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="class.html">
+            
+                <a href="class.html">
+            
+                    
+                    Class
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="numpy.html">
+            
+                <a href="numpy.html">
+            
+                    
+                    Numpy & Scipy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="pandas.html">
+            
+                <a href="pandas.html">
+            
+                    
+                    Pandas
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    Day 3: Plotting and machine Learning using scikit-learn
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="plot.html">
+            
+                <a href="plot.html">
+            
+                    
+                    Plot
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="machine_learning.html">
+            
+                <a href="machine_learning.html">
+            
+                    
+                    Machine learning
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    Day 4: Generative Adversarial Networks (GANs)
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="neural_network.html">
+            
+                <a href="neural_network.html">
+            
+                    
+                    Neural network
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.2" data-path="gan.html">
+            
+                <a href="gan.html">
+            
+                    
+                    Generative adversarial network
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="answer.html">
+            
+                <a href="answer.html">
+            
+                    
+                    Answers
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Generative adversarial network</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="generative-adverserial-networks">Generative Adverserial Networks</h1>
+<ul>
+<li>Deep neural networks are used mainly for supervised learning: classification or regression. Generative Adverserial Networks or GANs, however, use neural networks for a very different purpose, a <strong>generative modeling</strong>.
+  <em>Generative modeling is an unsupervised learning task in machine learning that involves automatically discovering and learning the regularities or patterns in input data in such a way that the model can be used to generate or output new examples that plausibly could have been drawn from the original dataset.</em></li>
+<li>While there are many approaches used for generative modeling, a Generative Adverserial Network takes the following approach:<ul>
+<li>There are two neural networks: a <strong>Generator</strong> and a <strong>Discriminator</strong>.</li>
+<li>The generator generates a "fake" sample given a random noise.</li>
+<li>The discriminator attempts to detect whether a given sample is "real" (picked from the training data) or "fake" (generated by the generator).</li>
+<li>Training happens in tandem: we train the discriminator for a few epochs, then train the generator for a few epochs, and repeat. This way both the generator and the discriminator get better at doing their jobs.</li>
+</ul>
+</li>
+</ul>
+<div align="center">
+<img src="../fig/gan.png" width="60%"></img>
+</div>
+
+<ul>
+<li>In this tutorial, we'll train a GAN to generate images of handwritten digits. A database for such handwritten digits is called <em>MNIST database</em>, easily and free downloadable. We used this MNIST dataset for traing, and try to generate the MNIST-like handwritten dataset with GAN.</li>
+</ul>
+<div align="center">
+<img src="../fig/mnist.png" width="40%"></img>
+</div>
+
+<ul>
+<li>We'll use the <strong>PyTorch</strong> library, which is mainly developed Meta. Inc., (previously known as Facebook).</li>
+</ul>
+<h2 id="load-the-data">Load the Data</h2>
+<ul>
+<li><p>We begin by downloading and importing the data as a PyTorch dataset using the MNIST helper class from <code>torchvision.datasets</code>.</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> torch
+<span class="hljs-keyword">import</span> torchvision
+<span class="hljs-keyword">from</span> torchvision.transforms <span class="hljs-keyword">import</span> ToTensor, Normalize, Compose
+<span class="hljs-keyword">from</span> torchvision.datasets <span class="hljs-keyword">import</span> MNIST
+
+mnist = MNIST(root=<span class="hljs-string">'data'</span>, 
+              train=<span class="hljs-literal">True</span>, 
+              download=<span class="hljs-literal">True</span>,
+              transform=Compose([ToTensor(), Normalize(mean=(<span class="hljs-number">0.5</span>,), std=(<span class="hljs-number">0.5</span>,))]))
+</code></pre>
+</li>
+<li><p>Note that we are are transforming the pixel values from the range [0, 1] to the range [-1, 1]. The reason for doing this will become clear when define the generator network. Let's look at a sample tensor from the data.</p>
+<pre><code class="lang-python">img, label = mnist[<span class="hljs-number">0</span>]
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'Label: '</span>, label)
+<span class="hljs-built_in">print</span>(img[:,<span class="hljs-number">10</span>:<span class="hljs-number">15</span>,<span class="hljs-number">10</span>:<span class="hljs-number">15</span>])
+torch.<span class="hljs-built_in">min</span>(img), torch.<span class="hljs-built_in">max</span>(img)
+</code></pre>
+</li>
+<li><p>Let's plot one of the images.</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt
+%matplotlib inline
+
+plt.imshow(img[<span class="hljs-number">0</span>], cmap=<span class="hljs-string">'gray'</span>)
+plt.show()
+<span class="hljs-built_in">print</span>(<span class="hljs-string">'Label:'</span>, label)
+</code></pre>
+</li>
+<li><p>Finally, let's create a dataloader to load the images in batches.</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> torch.utils.data <span class="hljs-keyword">import</span> DataLoader
+
+batch_size = <span class="hljs-number">100</span>
+data_loader = DataLoader(mnist, batch_size, shuffle=<span class="hljs-literal">True</span>)
+</code></pre>
+</li>
+<li><p>We'll also create a device which can be used to move the data and models to a graphical procssing unit (GPU), if one is available. Using GPU is faster than using CPU!</p>
+<pre><code class="lang-python"><span class="hljs-comment"># Device configuration</span>
+device = torch.device(<span class="hljs-string">'cuda'</span> <span class="hljs-keyword">if</span> torch.cuda.is_available() <span class="hljs-keyword">else</span> <span class="hljs-string">'cpu'</span>)
+</code></pre>
+</li>
+</ul>
+<h2 id="discriminator-network">Discriminator Network</h2>
+<ul>
+<li>The discriminator takes an image as input, and tries to classify it as "real" or "generated". In this sense, it's like any other neural network. While we can use a complicated neural networks, we'll use a simple one with 3 layers.</li>
+<li><p>Since the MNIST image has 28 pixels in width and height, it is 28x28 = 784 pixels. We'll transform it to a vector of size 784.</p>
+<pre><code class="lang-python">image_size = <span class="hljs-number">784</span>
+hidden_size = <span class="hljs-number">256</span>
+<span class="hljs-keyword">import</span> torch.nn <span class="hljs-keyword">as</span> nn
+
+D = nn.Sequential(
+    nn.Linear(image_size, hidden_size),
+    nn.LeakyReLU(<span class="hljs-number">0.2</span>),
+    nn.Linear(hidden_size, hidden_size),
+    nn.LeakyReLU(<span class="hljs-number">0.2</span>),
+    nn.Linear(hidden_size, <span class="hljs-number">1</span>),
+    nn.Sigmoid())
+</code></pre>
+</li>
+<li><p>We use the Leaky ReLU activation for the discriminator.
+  <em>Different from the regular ReLU function, Leaky ReLU allows the pass of a small gradient signal for negative values. As a result, it makes the gradients from the discriminator flows stronger into the generator. Instead of passing a gradient (slope) of 0 in the back-prop pass, it passes a small negative gradient.</em></p>
+</li>
+<li><p>Just like any other binary classification model, the output of the discriminator is a single number between 0 and 1, which can be interpreted as the probability of the input image being fake i.e. GAN-generated.</p>
+</li>
+<li><p>After defineing the discriminator, let's move the model to the chosen device.</p>
+<pre><code class="lang-python">D.to(device)
+</code></pre>
+</li>
+</ul>
+<h2 id="generator-network">Generator Network</h2>
+<ul>
+<li><p>The input to the generator is typically a vector of random noise. Once again, to keep things simple, we'll use a neural network with 3 layers, and the output will be a vector of size 784, which can be transformed to a 28x28 pixel image.</p>
+<pre><code class="lang-python">latent_size = <span class="hljs-number">64</span>
+G = nn.Sequential(
+    nn.Linear(latent_size, hidden_size),
+    nn.ReLU(),
+    nn.Linear(hidden_size, hidden_size),
+    nn.ReLU(),
+    nn.Linear(hidden_size, image_size),
+    nn.Tanh())
+</code></pre>
+</li>
+<li><p>We use the hyperbolic tangent (tanH) activation function for the output layer of the generator.</p>
+</li>
+<li><p>Let's generate an output vector using the generator and view it as an image by transforming and denormalizing the output.</p>
+<pre><code class="lang-python">y = G(torch.randn(<span class="hljs-number">2</span>, latent_size))
+gen_imgs = y.reshape((-<span class="hljs-number">1</span>, <span class="hljs-number">28</span>,<span class="hljs-number">28</span>)).detach()
+plt.imshow(gen_imgs[<span class="hljs-number">0</span>], cmap=<span class="hljs-string">'gray'</span>)
+plt.show()
+</code></pre>
+</li>
+<li><p>Now move the generator to the chosen device.</p>
+<pre><code class="lang-python">G.to(device)
+</code></pre>
+</li>
+</ul>
+<h2 id="discriminator-training">Discriminator Training</h2>
+<ul>
+<li><p>Since the discriminator is a binary classification model, we can use the <em>binary cross entropy</em> loss function to quantify how well it is able to differentiate between real and generated images.</p>
+<pre><code class="lang-python">criterion = nn.BCELoss()
+d_optimizer = torch.optim.Adam(D.parameters(), lr=<span class="hljs-number">0.0002</span>)
+</code></pre>
+</li>
+<li><p>Let's define helper functions to reset gradients and train the discriminator.</p>
+<pre><code class="lang-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">reset_grad</span>():
+    d_optimizer.zero_grad()
+    g_optimizer.zero_grad()
+
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">train_discriminator</span>(<span class="hljs-params">images</span>):
+    <span class="hljs-comment"># Create the labels which are later used as input for the BCE loss</span>
+    real_labels = torch.ones(batch_size, <span class="hljs-number">1</span>).to(device)
+    fake_labels = torch.zeros(batch_size, <span class="hljs-number">1</span>).to(device)
+
+    <span class="hljs-comment"># Loss for real images</span>
+    outputs = D(images)
+    d_loss_real = criterion(outputs, real_labels)
+    real_score = outputs
+
+    <span class="hljs-comment"># Loss for fake images</span>
+    z = torch.randn(batch_size, latent_size).to(device)
+    fake_images = G(z)
+    outputs = D(fake_images)
+    d_loss_fake = criterion(outputs, fake_labels)
+    fake_score = outputs
+
+    <span class="hljs-comment"># Combine losses</span>
+    d_loss = d_loss_real + d_loss_fake
+    <span class="hljs-comment"># Reset gradients</span>
+    reset_grad()
+    <span class="hljs-comment"># Compute gradients</span>
+    d_loss.backward()
+    <span class="hljs-comment"># Adjust the parameters using backprop</span>
+    d_optimizer.step()
+
+    <span class="hljs-keyword">return</span> d_loss, real_score, fake_score
+</code></pre>
+</li>
+<li><p>Here are the steps involved in training the discriminator.</p>
+<ol>
+<li>We expect the discriminator to output 1 if the image was picked from the real MNIST dataset, and 0 if it was generated. </li>
+<li>We first pass a batch of real images, and compute the loss, setting the target labels to 1. </li>
+<li>Then we generate a batch of fake images using the generator, pass them into the discriminator, and compute the loss, setting the target labels to 0 (fake).</li>
+<li>Finally we add the two losses and use the overall loss to perform gradient descent to adjust the weights of the discriminator.</li>
+</ol>
+</li>
+<li><p>It's important to note that we don't change the weights of the generator model while training the discriminator (<code>d_optimizer</code> only affects the <code>D.parameters()</code>)</p>
+</li>
+</ul>
+<h2 id="generator-training">Generator Training</h2>
+<ul>
+<li>Since the outputs of the generator are images, it's not obvious how we can train the generator. This is where we employ a rather elegant trick, which is to use the discriminator as a part of the loss function.</li>
+<li>Here's how it works: We generate a batch of images using the generator, pass the into the discriminator.</li>
+<li>We calculate the loss by setting the target labels to 1 i.e. real. We do this because the generator's objective is to "fool" the discriminator. </li>
+<li><p>We use the loss to perform gradient descent i.e. change the weights of the generator, so it gets better at generating real-like images.</p>
+</li>
+<li><p>Here's what this looks like in code.</p>
+<pre><code class="lang-python">g_optimizer = torch.optim.Adam(G.parameters(), lr=<span class="hljs-number">0.0002</span>)
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">train_generator</span>():
+    <span class="hljs-comment"># Generate fake images and calculate loss</span>
+    z = torch.randn(batch_size, latent_size).to(device)
+    fake_images = G(z)
+    labels = torch.ones(batch_size, <span class="hljs-number">1</span>).to(device)
+    g_loss = criterion(D(fake_images), labels)
+
+    <span class="hljs-comment"># Backprop and optimize</span>
+    reset_grad()
+    g_loss.backward()
+    g_optimizer.step()
+    <span class="hljs-keyword">return</span> g_loss, fake_images
+</code></pre>
+</li>
+</ul>
+<h2 id="training-the-model">Training the Model</h2>
+<ul>
+<li><p>Let's create a directory where we can save intermediate outputs from the generator to visually inspect the progress of the model</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> os
+
+sample_dir = <span class="hljs-string">'samples'</span>
+<span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> os.path.exists(sample_dir):
+    os.makedirs(sample_dir)
+</code></pre>
+</li>
+<li><p>Let's save a batch of real images that we can use for visual comparision while looking at the generated images.</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> IPython.display <span class="hljs-keyword">import</span> Image
+<span class="hljs-keyword">from</span> torchvision.utils <span class="hljs-keyword">import</span> save_image
+
+<span class="hljs-comment"># Save some real images</span>
+<span class="hljs-keyword">for</span> images, _ <span class="hljs-keyword">in</span> data_loader:
+    images = images.reshape(images.size(<span class="hljs-number">0</span>), <span class="hljs-number">1</span>, <span class="hljs-number">28</span>, <span class="hljs-number">28</span>)
+    save_image(images, os.path.join(sample_dir, <span class="hljs-string">'real_images.png'</span>), nrow=<span class="hljs-number">10</span>)
+    <span class="hljs-keyword">break</span>
+
+Image(os.path.join(sample_dir, <span class="hljs-string">'real_images.png'</span>))
+</code></pre>
+</li>
+<li><p>We'll also define a helper function to save a batch of generated images to disk at the end of every epoch. We'll use a fixed set of input vectors to the generator to see how the individual generated images evolve over time as we train the model.</p>
+<pre><code class="lang-python">sample_vectors = torch.randn(batch_size, latent_size).to(device)
+
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">save_fake_images</span>(<span class="hljs-params">index</span>):
+    fake_images = G(sample_vectors)
+    fake_images = fake_images.reshape(fake_images.size(<span class="hljs-number">0</span>), <span class="hljs-number">1</span>, <span class="hljs-number">28</span>, <span class="hljs-number">28</span>)
+    fake_fname = <span class="hljs-string">'fake_images-{0:0=4d}.png'</span>.<span class="hljs-built_in">format</span>(index)
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">'Saving'</span>, fake_fname)
+    save_image(fake_images, os.path.join(sample_dir, fake_fname), nrow=<span class="hljs-number">10</span>)
+
+<span class="hljs-comment"># Before training</span>
+save_fake_images(<span class="hljs-number">0</span>)
+Image(os.path.join(sample_dir, <span class="hljs-string">'fake_images-0000.png'</span>))
+</code></pre>
+</li>
+<li><p>We are now ready to train the model. In each epoch, we train the discriminator first, and then the generator.</p>
+</li>
+<li><p>The training might take a while if you're not using a GPU.</p>
+<pre><code class="lang-python">num_epochs = <span class="hljs-number">20</span>
+total_step = <span class="hljs-built_in">len</span>(data_loader)
+d_losses, g_losses, real_scores, fake_scores = [], [], [], []
+
+<span class="hljs-keyword">for</span> epoch <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(num_epochs):
+    <span class="hljs-keyword">for</span> i, (images, _) <span class="hljs-keyword">in</span> <span class="hljs-built_in">enumerate</span>(data_loader):
+        <span class="hljs-comment"># Load a batch &amp; transform to vectors</span>
+        images = images.reshape(batch_size, -<span class="hljs-number">1</span>).to(device)
+
+        <span class="hljs-comment"># Train the discriminator and generator</span>
+        d_loss, real_score, fake_score = train_discriminator(images)
+        g_loss, fake_images = train_generator()
+
+        <span class="hljs-comment"># Inspect the losses</span>
+        <span class="hljs-keyword">if</span> (i+<span class="hljs-number">1</span>) % <span class="hljs-number">200</span> == <span class="hljs-number">0</span>:
+            d_losses.append(d_loss.item())
+            g_losses.append(g_loss.item())
+            real_scores.append(real_score.mean().item())
+            fake_scores.append(fake_score.mean().item())
+            <span class="hljs-built_in">print</span>(<span class="hljs-string">'Epoch [{}/{}], Step [{}/{}], d_loss: {:.4f}, g_loss: {:.4f}, D(x): {:.2f}, D(G(z)): {:.2f}'</span> 
+                  .<span class="hljs-built_in">format</span>(epoch, num_epochs, i+<span class="hljs-number">1</span>, total_step, d_loss.item(), g_loss.item(), 
+                          real_score.mean().item(), fake_score.mean().item()))
+
+    <span class="hljs-comment"># Sample and save images</span>
+    <span class="hljs-keyword">if</span> (epoch+<span class="hljs-number">1</span>) % <span class="hljs-number">5</span> == <span class="hljs-number">0</span>:
+        save_fake_images(epoch+<span class="hljs-number">1</span>)
+</code></pre>
+</li>
+<li><p>Here's how the generated images look, after the 10th, 50th, 100th and 300th epochs of training.</p>
+<pre><code class="lang-python">Image(<span class="hljs-string">'./samples/fake_images-0050.png'</span>)
+Image(<span class="hljs-string">'./samples/fake_images-0100.png'</span>)
+Image(<span class="hljs-string">'./samples/fake_images-0300.png'</span>)
+</code></pre>
+</li>
+<li><p>We can also visualize how the loss changes over time. Visualizing losses is quite useful for debugging the training process. For GANs, we expect the generator's loss to reduce over time, without the discriminator's loss getting too high.</p>
+<pre><code class="lang-python">plt.plot(d_losses, <span class="hljs-string">'-'</span>)
+plt.plot(g_losses, <span class="hljs-string">'-'</span>)
+plt.xlabel(<span class="hljs-string">'epoch'</span>)
+plt.ylabel(<span class="hljs-string">'loss'</span>)
+plt.legend([<span class="hljs-string">'Discriminator'</span>, <span class="hljs-string">'Generator'</span>])
+plt.title(<span class="hljs-string">'Losses'</span>)
+plt.show()
+</code></pre>
+</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="neural_network.html" class="navigation navigation-prev " aria-label="Previous page: Neural network">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="answer.html" class="navigation navigation-next " aria-label="Next page: Answers">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Generative adversarial network","level":"1.5.2","depth":2,"next":{"title":"Answers","level":"1.6","depth":1,"path":"markdown/answer.md","ref":"./markdown/answer.md","articles":[]},"previous":{"title":"Neural network","level":"1.5.1","depth":2,"path":"markdown/neural_network.md","ref":"./markdown/neural_network.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["hide-published-with","katex"],"pluginsConfig":{"hide-published-with":{},"katex":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"markdown/gan.md","mtime":"2024-12-10T12:13:49.106Z","type":"markdown"},"gitbook":{"version":"6.0.2","time":"2024-12-10T12:22:06.189Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-hide-published-with/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

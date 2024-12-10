@@ -4,21 +4,21 @@
 ## Lecture plan
 
 ### Day 1: Environment Setup and Python Basics
-* [Environment setup](./setup.md)
-* [Python basics](./python_basic.md)
-* [File usage in Python](./file.md)
-* [Using libraries](./library.md)
+* [Environment setup](./markdown/setup.md)
+* [Basics](./markdown/basic.md)
+* [File usage in Python](./markdown/file.md)
+* [Using libraries](./markdown/library.md)
 
 ### Day 2: Functions and Class
-* [Functions](./function.md)
-* [Class](./class.md)
-* [Numpy & Scipy](./numpy.md)
-* [Pandas](./pandas.md)
+* [Functions](./markdown/function.md)
+* [Class](./markdown/class.md)
+* [Numpy & Scipy](./markdown/numpy.md)
+* [Pandas](./markdown/pandas.md)
 
 ### Day 3: Plotting and machine Learning using *scikit-learn*
-* [Plot](./plot.md)
-* [Machine learning](./machine_learning.md)
+* [Plot](./markdown/plot.md)
+* [Machine learning](./markdown/machine_learning.md)
 
 ### Day 4: Generative Adversarial Networks (GANs)
-* [Neural network](./neural_network.md)
-* [Generative adversarial network](./gan.md)
+* [Neural network](./markdown/neural_network.md)
+* [Generative adversarial network](./markdown/gan.md)
