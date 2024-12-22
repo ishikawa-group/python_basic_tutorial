@@ -1,6 +1,6 @@
 # Summary
 
-* [Introduction](README.md)
+* [Introduction](./README.md)
 
 * [Day 1: Setup and Basics]()
   * [Environment setup](./markdown/setup.md)

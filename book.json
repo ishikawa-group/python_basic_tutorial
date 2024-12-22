@@ -1,3 +1,13 @@
 {
-    "plugins":["hide-published-with", "katex"]
+  "title":"Python Introductino",
+  "description":"Description",
+  "language":"ja",
+  "plugins": [
+    "katex",
+    "back-to-top-button",
+    "hide-published-with"
+  ],
+  "styles": {
+    "website": "styles/website.css"
+  }
 }

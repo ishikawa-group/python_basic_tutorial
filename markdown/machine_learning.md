@@ -52,7 +52,7 @@
 * See the correlation heat map. This heat map shows the *correlation coefficient*, which measures the dependence of two variables.
 
 $$
-r_{xy} = \frac{n\sum x_i y_i - \bar{x}\bar{y}}{\sqrt{n\sum x_i^2 - \bar{x}^2}\sqrt{n\sum y_i^2 - \bar{y}^2}}
+r_{xy} = \frac{\frac{1}{n}\sum_{i=1}^n \left( x_i - \bar{x} \right)\left( y_i - \bar{y} \right) }{\sqrt{\frac{1}{n}\sum_{i=1}^n \left(x_i - \bar{x} \right)^2}\sqrt{\frac{1}{n}\sum_{i=1}^n \left(y_i - \bar{y} \right)^2}}
 $$
 
 ```python
@@ -66,7 +66,7 @@ plt.show()
 * We will measure the score by the *R2 (coefficient of determination)*.
 
 $$
-R^2 = 1 - \frac{\sum(y_i - y_{pred})^2}{\sum(y_i - \hat{y})^2}
+R^2 = 1 - \frac{\sum_{i=1}^n (y_i - y_{pred})^2}{\sum_{i=1}^n (y_i - \hat{y})^2}
 $$
 
 * Here $y_{pred}$ is the y-value predicted by the regression model and $\hat{y}$ is the average value of y.
@@ -221,9 +221,7 @@ plt.show()
   print(f"training: {len(X_train)}, test: {len(X_test)}")
   ```
 
----
-
-## Exercise
+# Exercise
 * Make the regression model of diabates with train-test split. Let's analyze the diabetes data again. Using "BMI" as the variable, try to regress the target variable.
 1. Using same x and y in the diabetes regression, split these x and y into the training and test sets.
 2. Do the regression, and measure the R2 score for training and test sets. What's the difference?
