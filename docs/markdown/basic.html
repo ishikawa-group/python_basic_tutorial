@@ -41,7 +41,15 @@
 
     
         
-        <link rel="stylesheet" href="../styles/website.css">
+    
+        
+    
+        
+    
+        
+    
+        
+    
         
     
 
@@ -615,6 +623,34 @@ is a comment
 <td>a /= 2 means a = a / 2</td>
 </tr>
 <tr>
+<td>%=</td>
+<td>replace after modulus</td>
+<td>a %= 2 means a = a % 2</td>
+</tr>
+<tr>
+<td>**=</td>
+<td>replace after power</td>
+<td>a <strong>= 2 means a = a </strong> 2</td>
+</tr>
+<tr>
+<td>//=</td>
+<td>replace after floor</td>
+<td>a //= 2 means a = a // 2</td>
+</tr>
+<tr>
+<td>&amp;=</td>
+<td>replace after logical and</td>
+<td>a &amp;= 2 means a = a &amp; 2</td>
+</tr>
+<tr>
+<td></td>
+<td>=</td>
+<td>replace after logical or</td>
+<td>a</td>
+<td>= 2 means a = a</td>
+<td>2</td>
+</tr>
+<tr>
 <td><strong>Others</strong></td>
 <td>-</td>
 <td>-</td>
@@ -724,8 +760,12 @@ a[<span class="hljs-number">0</span>] = <span class="hljs-number">10</span>  <sp
 <span class="hljs-built_in">print</span>(d[<span class="hljs-string">"Orange"</span>])
 </code></pre>
 </li>
-<li>You can add the key-value pair to the dict by <code>update</code> function.<pre><code class="lang-python">d = {}
-d[<span class="hljs-string">"Apple"</span>] = <span class="hljs-number">100</span>
+<li>You can add the key-value pair to the dict by <code>|</code> or <code>update</code> function.<pre><code class="lang-python">a = {<span class="hljs-string">"Apple"</span>: <span class="hljs-number">100</span>}
+b = {<span class="hljs-string">"Banana"</span>: <span class="hljs-number">200</span>}
+c = a | b
+<span class="hljs-built_in">print</span>(c)
+</code></pre>
+or<pre><code class="lang-python">d = {<span class="hljs-string">"Apple"</span>: <span class="hljs-number">100</span>}
 d.update({<span class="hljs-string">"Banana"</span>: <span class="hljs-number">200</span>})
 <span class="hljs-built_in">print</span>(d)
 </code></pre>
@@ -733,6 +773,10 @@ d.update({<span class="hljs-string">"Banana"</span>: <span class="hljs-number">2
 <li>To loop over dict,<pre><code class="lang-python">d = {<span class="hljs-string">"Apple"</span>: <span class="hljs-number">120</span>, <span class="hljs-string">"Orange"</span>: <span class="hljs-number">110</span>, <span class="hljs-string">"Banana"</span>: <span class="hljs-number">200</span>}
 <span class="hljs-keyword">for</span> i, j <span class="hljs-keyword">in</span> d.items():
     <span class="hljs-built_in">print</span>(i, <span class="hljs-string">"is"</span>, j, <span class="hljs-string">"Yen."</span>)
+</code></pre>
+</li>
+<li>Setting initial values to dict from key can be done by <code>.fromkeys()</code>.<pre><code class="lang-python">keys = {<span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"c"</span>}
+{}.fromkeys(keys, <span class="hljs-number">0</span>)  <span class="hljs-comment"># --&gt; {"a": 0, "b": 0, "c": 0}</span>
 </code></pre>
 </li>
 </ul>
@@ -914,7 +958,7 @@ b = <span class="hljs-number">2.34</span>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Basics","level":"1.2.2","depth":2,"next":{"title":"File usage in Python","level":"1.2.3","depth":2,"path":"markdown/file.md","ref":"./markdown/file.md","articles":[]},"previous":{"title":"Environment setup","level":"1.2.1","depth":2,"path":"markdown/setup.md","ref":"./markdown/setup.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","back-to-top-button","hide-published-with"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"katex":{},"back-to-top-button":{},"hide-published-with":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Python Introductino","language":"ja","gitbook":"*","description":"Description"},"file":{"path":"markdown/basic.md","mtime":"2024-12-10T12:18:53.584Z","type":"markdown"},"gitbook":{"version":"6.0.2","time":"2024-12-22T03:37:18.096Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Basics","level":"1.2.2","depth":2,"next":{"title":"File usage in Python","level":"1.2.3","depth":2,"path":"markdown/file.md","ref":"./markdown/file.md","articles":[]},"previous":{"title":"Environment setup","level":"1.2.1","depth":2,"path":"markdown/setup.md","ref":"./markdown/setup.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","back-to-top-button","hide-published-with"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"katex":{},"back-to-top-button":{},"hide-published-with":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Python Introductino","language":"ja","gitbook":"*","description":"Description"},"file":{"path":"markdown/basic.md","mtime":"2025-02-24T06:22:11.994Z","type":"markdown"},"gitbook":{"version":"6.0.2","time":"2025-02-24T06:23:31.380Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

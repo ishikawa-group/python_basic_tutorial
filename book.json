@@ -6,8 +6,5 @@
     "katex",
     "back-to-top-button",
     "hide-published-with"
-  ],
-  "styles": {
-    "website": "styles/website.css"
-  }
+  ]
 }

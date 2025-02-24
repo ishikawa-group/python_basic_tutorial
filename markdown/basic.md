@@ -88,6 +88,11 @@
 | -=                       | replace after subtract       | a -= 1 means a = a - 1             |
 | *=                       | replace after multiplication | a *= 2 means a = a * 2             |
 | /=                       | replace after division       | a /= 2 means a = a / 2             |
+| %=                       | replace after modulus        | a %= 2 means a = a % 2             |
+| **=                      | replace after power          | a **= 2 means a = a ** 2           |
+| //=                      | replace after floor          | a //= 2 means a = a // 2           |
+| &=                       | replace after logical and    | a &= 2 means a = a & 2             |
+| |=                       | replace after logical or     | a |= 2 means a = a | 2             |
 | **Others**               | -                            | -                                  |
 | in                       | membership operator          | a in ["a", "b", "c"]               |
 | is                       | identity operator            | a is 1                             |
@@ -195,10 +200,16 @@ print(d + e)
   d = {"Apple": 100, "Orange": 120}
   print(d["Orange"])
   ```
-* You can add the key-value pair to the dict by `update` function.
+* You can add the key-value pair to the dict by `|` or `update` function.
   ```python
-  d = {}
-  d["Apple"] = 100
+  a = {"Apple": 100}
+  b = {"Banana": 200}
+  c = a | b
+  print(c)
+  ```
+  or
+  ```python
+  d = {"Apple": 100}
   d.update({"Banana": 200})
   print(d)
   ```
@@ -207,6 +218,11 @@ print(d + e)
   d = {"Apple": 120, "Orange": 110, "Banana": 200}
   for i, j in d.items():
       print(i, "is", j, "Yen.")
+  ```
+* Setting initial values to dict from key can be done by `.fromkeys()`.
+  ```python
+  keys = {"a", "b", "c"}
+  {}.fromkeys(keys, 0)  # --> {"a": 0, "b": 0, "c": 0}
   ```
 
 ---
