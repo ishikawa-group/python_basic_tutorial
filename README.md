@@ -6,7 +6,10 @@
 ## Lecture plan
 ### Day 1: Environment Setup and Python Basics
 * Environment setup
-* Basics
+* Variables and types
+* list, tuple and dict
+* if, for, and while statement
+* print function
 * File usage in Python
 * Using libraries
 

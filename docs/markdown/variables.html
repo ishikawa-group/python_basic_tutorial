@@ -1,9 +1,9 @@
 
 <!DOCTYPE HTML>
-<html lang="ja" >
+<html lang="" >
     <head>
         <meta charset="UTF-8">
-        <title>Basics · Python Introductino</title>
+        <title>Variables and operators · Python Introductino</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="HonKit 6.0.2">
@@ -64,7 +64,7 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="file.html" />
+    <link rel="next" href="list_dict.html" />
     
     
     <link rel="prev" href="setup.html" />
@@ -78,7 +78,7 @@
         
             
 <div id="book-search-input" role="search">
-    <input type="text" placeholder="検索ワードを入力" />
+    <input type="text" placeholder="Type to search" />
 </div>
 
             
@@ -136,12 +136,12 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.2" data-path="basic.html">
+        <li class="chapter active" data-level="1.2.2" data-path="variables.html">
             
-                <a href="basic.html">
+                <a href="variables.html">
             
                     
-                    Basics
+                    Variables and operators
             
                 </a>
             
@@ -149,7 +149,46 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.3" data-path="file.html">
+        <li class="chapter " data-level="1.2.3" data-path="list_dict.html">
+            
+                <a href="list_dict.html">
+            
+                    
+                    List, tuple and dict
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="if_for.html">
+            
+                <a href="if_for.html">
+            
+                    
+                    If, for and while statement
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="print.html">
+            
+                <a href="print.html">
+            
+                    
+                    Print function
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="file.html">
             
                 <a href="file.html">
             
@@ -162,7 +201,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.4" data-path="library.html">
+        <li class="chapter " data-level="1.2.7" data-path="library.html">
             
                 <a href="library.html">
             
@@ -361,7 +400,7 @@
 
     <li>
         <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
-            HonKitで公開 
+            Published with HonKit
         </a>
     </li>
 </ul>
@@ -384,7 +423,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Basics</a>
+        <a href=".." >Variables and operators</a>
     </h1>
 </div>
 
@@ -684,237 +723,6 @@ e = <span class="hljs-string">"World"</span>
 <li>Print the results of each operation.
 <a href="answer.html#variable">answer</a></li>
 </ol>
-<hr></hr>
-<h2 id="list-tuple-and-dict">List, tuple and dict</h2>
-<ul>
-<li><em>list</em> and <em>tuple</em> are popular types in Python to treat a set of variables.</li>
-</ul>
-<h3 id="list">list</h3>
-<ul>
-<li>A set of variables can be stored in <em>list</em>.<pre><code class="lang-python">float_list  = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]
-string_list = [<span class="hljs-string">"A"</span>, <span class="hljs-string">"B"</span>, <span class="hljs-string">"Three"</span>]
-</code></pre>
-</li>
-<li>The elements in the list can be accessed with <em>index</em>.<pre><code class="lang-python">float_list[<span class="hljs-number">0</span>]  <span class="hljs-comment"># =&gt; 1</span>
-float_list[<span class="hljs-number">0</span>] = <span class="hljs-number">0</span>  <span class="hljs-comment"># replacing the element</span>
-</code></pre>
-</li>
-<li>Note that, <strong>in Python, the index starts with zero (not one)</strong>; list[0] is the first element and list[1] is the second element.</li>
-<li>You can obtain the length of the list with <code>len</code> function.<pre><code class="lang-python">a = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]
-<span class="hljs-built_in">len</span>(a)
-</code></pre>
-</li>
-<li>You can combine lists as<pre><code class="lang-python">[<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>] + [<span class="hljs-number">3</span>, <span class="hljs-number">4</span>]  <span class="hljs-comment"># =&gt; [0, 1, 2, 3, 4, 5]</span>
-</code></pre>
-</li>
-<li>Multiplication is also possible<pre><code class="lang-python">a = [<span class="hljs-number">0</span>] * <span class="hljs-number">10</span>  <span class="hljs-comment"># =&gt; [0, 0, 0, ..., 0]</span>
-</code></pre>
-</li>
-<li>You can append an element with <code>append</code><pre><code class="lang-python">a = [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>]
-a.append(<span class="hljs-number">2</span>)
-a  <span class="hljs-comment"># =&gt; [0, 1, 2]</span>
-</code></pre>
-</li>
-<li>remove<pre><code class="lang-python">a = [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>]
-a.remove(<span class="hljs-number">0</span>)
-<span class="hljs-built_in">print</span>(a)
-</code></pre>
-</li>
-<li>extend<pre><code class="lang-python">a = [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>]
-b = [<span class="hljs-number">2</span>, <span class="hljs-number">3</span>]
-c = a + b    <span class="hljs-comment"># need to store in the different list</span>
-a.extend(b)  <span class="hljs-comment"># a is extended</span>
-<span class="hljs-built_in">print</span>(a)
-<span class="hljs-built_in">print</span>(c)
-</code></pre>
-</li>
-</ul>
-<h4 id="index-slicing">Index slicing</h4>
-<ul>
-<li>You can access the index of the list as follows: <code>x[start=0 : stop=size : step=1]</code></li>
-<li>This is called <em>slicing</em>, and in the script you do like<pre><code class="lang-python">a = [<span class="hljs-number">1</span>]*<span class="hljs-number">10</span>
-<span class="hljs-built_in">print</span>(a[:])    <span class="hljs-comment"># all elements</span>
-<span class="hljs-built_in">print</span>(a[<span class="hljs-number">0</span>:<span class="hljs-number">9</span>])  <span class="hljs-comment"># from 0 to 8 (not 9!)</span>
-<span class="hljs-built_in">print</span>(a[:<span class="hljs-number">5</span>])   <span class="hljs-comment"># from 0 to 4</span>
-<span class="hljs-built_in">print</span>(a[<span class="hljs-number">4</span>:])   <span class="hljs-comment"># from 5 to the last(10)</span>
-</code></pre>
-</li>
-</ul>
-<h3 id="tuple">Tuple</h3>
-<ul>
-<li><em>Tuple</em> is similar to a list, but different way of treating a data set.<pre><code class="lang-python">a = (<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>)
-</code></pre>
-</li>
-<li>The biggest difference is that <strong>you cannot replace the element in a tuple afterward</strong>.<pre><code class="lang-python">a = (<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>)
-a[<span class="hljs-number">0</span>] = <span class="hljs-number">10</span>  <span class="hljs-comment"># =&gt; error</span>
-</code></pre>
-</li>
-</ul>
-<h3 id="dict">dict</h3>
-<ul>
-<li><code>dict</code> is a special type that allows making <em>key</em> and <em>value</em> pair.</li>
-<li>key and value is separated with colon (<code>:</code>).<pre><code class="lang-python">d = {<span class="hljs-string">"Apple"</span>: <span class="hljs-number">100</span>}
-</code></pre>
-</li>
-<li>Here "Apple" is key and 100 is value. You can access the value by specifying the key.<pre><code class="lang-python">d = {<span class="hljs-string">"Apple"</span>: <span class="hljs-number">100</span>, <span class="hljs-string">"Orange"</span>: <span class="hljs-number">120</span>}
-<span class="hljs-built_in">print</span>(d[<span class="hljs-string">"Orange"</span>])
-</code></pre>
-</li>
-<li>You can add the key-value pair to the dict by <code>|</code> or <code>update</code> function.<pre><code class="lang-python">a = {<span class="hljs-string">"Apple"</span>: <span class="hljs-number">100</span>}
-b = {<span class="hljs-string">"Banana"</span>: <span class="hljs-number">200</span>}
-c = a | b
-<span class="hljs-built_in">print</span>(c)
-</code></pre>
-or<pre><code class="lang-python">d = {<span class="hljs-string">"Apple"</span>: <span class="hljs-number">100</span>}
-d.update({<span class="hljs-string">"Banana"</span>: <span class="hljs-number">200</span>})
-<span class="hljs-built_in">print</span>(d)
-</code></pre>
-</li>
-<li>To loop over dict,<pre><code class="lang-python">d = {<span class="hljs-string">"Apple"</span>: <span class="hljs-number">120</span>, <span class="hljs-string">"Orange"</span>: <span class="hljs-number">110</span>, <span class="hljs-string">"Banana"</span>: <span class="hljs-number">200</span>}
-<span class="hljs-keyword">for</span> i, j <span class="hljs-keyword">in</span> d.items():
-    <span class="hljs-built_in">print</span>(i, <span class="hljs-string">"is"</span>, j, <span class="hljs-string">"Yen."</span>)
-</code></pre>
-</li>
-<li>Setting initial values to dict from key can be done by <code>.fromkeys()</code>.<pre><code class="lang-python">keys = {<span class="hljs-string">"a"</span>, <span class="hljs-string">"b"</span>, <span class="hljs-string">"c"</span>}
-{}.fromkeys(keys, <span class="hljs-number">0</span>)  <span class="hljs-comment"># --&gt; {"a": 0, "b": 0, "c": 0}</span>
-</code></pre>
-</li>
-</ul>
-<hr></hr>
-<h2 id="exercise">Exercise</h2>
-<ul>
-<li>Create a dictionary representing a person's information (name, age, city) and access specific elements.
-<a href="answer.html#dict">answer</a></li>
-</ul>
-<hr></hr>
-<h2 id="if-for-and-while">If, for, and while</h2>
-<ul>
-<li>There are some control statements in Python.</li>
-</ul>
-<h3 id="if-statement">if statement</h3>
-<ul>
-<li><code>if</code> statement can be written as follows<pre><code class="lang-python"><span class="hljs-keyword">if</span> a &gt; <span class="hljs-number">0</span>:
-    <span class="hljs-built_in">print</span>(<span class="hljs-string">"a is lager than zero"</span>)
-<span class="hljs-keyword">else</span>:
-    <span class="hljs-built_in">print</span>(<span class="hljs-string">"a is smaller than zero"</span>)
-</code></pre>
-</li>
-<li>You can use <code>else</code> statement to add the instructions, as<pre><code class="lang-python"><span class="hljs-keyword">if</span> a &gt; <span class="hljs-number">0</span>:
-    <span class="hljs-built_in">print</span>(<span class="hljs-string">"a is positive"</span>)
-<span class="hljs-keyword">elif</span> a == <span class="hljs-number">0</span>:
-    <span class="hljs-built_in">print</span>(<span class="hljs-string">"a is zero"</span>)
-<span class="hljs-keyword">else</span>:
-    <span class="hljs-built_in">print</span>(<span class="hljs-string">"a is negative"</span>)
-</code></pre>
-</li>
-</ul>
-<h3 id="for-statement">for statement</h3>
-<ul>
-<li>In Python, the code block is expressed by <em>indent</em>.</li>
-<li>Either <code>tab</code> or <code>spaces</code> are OK for indent but <strong>do not mix them</strong>.</li>
-<li><code>for</code> statement can be written as follows:<pre><code class="lang-python"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>]:
-    <span class="hljs-built_in">print</span>(i)
-</code></pre>
-</li>
-<li><code>range</code> function is useful when using <code>for</code> statement.<pre><code class="lang-python"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">10</span>):
-    <span class="hljs-built_in">print</span>(i)
-</code></pre>
-</li>
-<li>You can access the index and the value of the list with <code>enumerate</code> function.<pre><code class="lang-python">a = [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>]
-<span class="hljs-keyword">for</span> i, val <span class="hljs-keyword">in</span> <span class="hljs-built_in">enumerate</span>(a):
-    <span class="hljs-built_in">print</span>(i, val)
-</code></pre>
-</li>
-</ul>
-<h3 id="while-statement">while statement</h3>
-<ul>
-<li>If you want to repeat the procedure based on some condition, you can use <code>while</code> statement<pre><code class="lang-python">a = <span class="hljs-number">10</span>
-<span class="hljs-keyword">while</span> a &gt; <span class="hljs-number">0</span>:
-    <span class="hljs-built_in">print</span>(a)
-    a -= <span class="hljs-number">1</span>
-</code></pre>
-</li>
-</ul>
-<h3 id="continue-break-the-loop-control">continue, break; the loop control</h3>
-<ul>
-<li>If you want to skip the loop at some condition, you can use <code>continue</code> statement.<pre><code class="lang-python"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">10</span>):
-    <span class="hljs-keyword">if</span> i == <span class="hljs-number">5</span>:
-    <span class="hljs-keyword">continue</span>
-<span class="hljs-keyword">else</span>:
-    <span class="hljs-built_in">print</span>(i)
-</code></pre>
-</li>
-<li>The <code>for</code> loop goes to the next step when it finds <code>continue</code>. So rest of the part is not executed.</li>
-<li>If you want to end the loop at some condition, you can use <code>break</code> statement.<pre><code class="lang-python"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">10</span>):
-    <span class="hljs-keyword">if</span> i == <span class="hljs-number">5</span>:
-        <span class="hljs-keyword">break</span>
-    <span class="hljs-keyword">else</span>:
-      <span class="hljs-built_in">print</span>(i)
-</code></pre>
-</li>
-<li>In this way, the loop after finding <code>i == 5</code> is not executed.</li>
-</ul>
-<hr></hr>
-<h2 id="exercise">Exercise</h2>
-<ol>
-<li>Write a program that checks if x is greater than y.
-If x is greater, print "x is greater than y"; otherwise, print "y is greater than or equal to x".</li>
-<li>Create a list containing at least five elements (numbers or strings). Use a for loop to iterate through the list and print each element.</li>
-</ol>
-<p><a href="answer.html#control">answer</a></p>
-<hr></hr>
-<h2 id="printing">Printing</h2>
-<ul>
-<li><p>You can print variables etc. with <code>print</code> function. There are several ways to do printing.</p>
-<pre><code class="lang-python">name = <span class="hljs-string">"John"</span>
-age = <span class="hljs-number">20</span>
-
-<span class="hljs-built_in">print</span>(<span class="hljs-string">"Hello my name is"</span>, name)
-<span class="hljs-built_in">print</span>(<span class="hljs-string">"Hello my name is %s. My age is %d."</span> % (name, age))
-<span class="hljs-built_in">print</span>(<span class="hljs-string">"Hello my name is {0:s}. My age is {1:d}."</span>.<span class="hljs-built_in">format</span>(name, age))
-<span class="hljs-built_in">print</span>(<span class="hljs-string">f"Hello my name is <span class="hljs-subst">{name:s}</span>. My age is <span class="hljs-subst">{age:d}</span>."</span>)
-</code></pre>
-</li>
-<li>By using <code>format</code>, you can make a detailed print.</li>
-<li><code>f"..."</code> is the simplified way for <code>"...".fomat</code>.</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>symbol</th>
-<th>type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>d</td>
-<td>integer</td>
-</tr>
-<tr>
-<td>s</td>
-<td>string</td>
-</tr>
-<tr>
-<td>f</td>
-<td>float</td>
-</tr>
-<tr>
-<td>e</td>
-<td>exponential</td>
-</tr>
-</tbody>
-</table>
-<pre><code class="lang-python">a = <span class="hljs-number">1.23</span>
-<span class="hljs-built_in">print</span>(<span class="hljs-string">f"a = <span class="hljs-subst">{a}</span>"</span>)         <span class="hljs-comment"># simplest</span>
-<span class="hljs-built_in">print</span>(<span class="hljs-string">f"a = <span class="hljs-subst">{a:<span class="hljs-number">.2</span>f}</span>"</span>)     <span class="hljs-comment"># float with 2 decimal points</span>
-<span class="hljs-built_in">print</span>(<span class="hljs-string">f"a = <span class="hljs-subst">{a:<span class="hljs-number">10.5</span>f}</span>"</span>)   <span class="hljs-comment"># 5 decimal points with field length of 10</span>
-<span class="hljs-built_in">print</span>(<span class="hljs-string">f"a = <span class="hljs-subst">{a:&lt;<span class="hljs-number">10.5</span>f}</span>"</span>)  <span class="hljs-comment"># left align</span>
-<span class="hljs-built_in">print</span>(<span class="hljs-string">f"a = <span class="hljs-subst">{a:&gt;<span class="hljs-number">10.5</span>f}</span>"</span>)  <span class="hljs-comment"># right align</span>
-<span class="hljs-built_in">print</span>(<span class="hljs-string">f"a = <span class="hljs-subst">{a:<span class="hljs-number">10.5</span>e}</span>"</span>)   <span class="hljs-comment"># exponential</span>
-<span class="hljs-built_in">print</span>(<span class="hljs-string">f"a = <span class="hljs-subst">{a:+<span class="hljs-number">10.5</span>e}</span>"</span>)  <span class="hljs-comment"># exponential with plus/minus sign</span>
-b = <span class="hljs-number">2.34</span>
-<span class="hljs-built_in">print</span>(<span class="hljs-string">f"a = <span class="hljs-subst">{a}</span>, b=<span class="hljs-subst">{b}</span>"</span>)
-</code></pre>
 
                                 
                                 </section>
@@ -947,7 +755,7 @@ b = <span class="hljs-number">2.34</span>
                 </a>
                 
                 
-                <a href="file.html" class="navigation navigation-next " aria-label="Next page: File usage in Python">
+                <a href="list_dict.html" class="navigation navigation-next " aria-label="Next page: List, tuple and dict">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -958,7 +766,7 @@ b = <span class="hljs-number">2.34</span>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Basics","level":"1.2.2","depth":2,"next":{"title":"File usage in Python","level":"1.2.3","depth":2,"path":"markdown/file.md","ref":"./markdown/file.md","articles":[]},"previous":{"title":"Environment setup","level":"1.2.1","depth":2,"path":"markdown/setup.md","ref":"./markdown/setup.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","back-to-top-button","hide-published-with"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"katex":{},"back-to-top-button":{},"hide-published-with":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Python Introductino","language":"ja","gitbook":"*","description":"Description"},"file":{"path":"markdown/basic.md","mtime":"2025-02-24T06:22:11.994Z","type":"markdown"},"gitbook":{"version":"6.0.2","time":"2025-02-24T06:23:31.380Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Variables and operators","level":"1.2.2","depth":2,"next":{"title":"List, tuple and dict","level":"1.2.3","depth":2,"path":"markdown/list_dict.md","ref":"./markdown/list_dict.md","articles":[]},"previous":{"title":"Environment setup","level":"1.2.1","depth":2,"path":"markdown/setup.md","ref":"./markdown/setup.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","back-to-top-button","hide-published-with"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"katex":{},"back-to-top-button":{},"hide-published-with":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Python Introductino","gitbook":"*","description":"Description"},"file":{"path":"markdown/variables.md","mtime":"2025-02-24T15:12:48.408Z","type":"markdown"},"gitbook":{"version":"6.0.2","time":"2025-02-24T15:19:22.084Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

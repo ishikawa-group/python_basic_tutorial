@@ -1,7 +1,6 @@
 {
   "title":"Python Introductino",
   "description":"Description",
-  "language":"ja",
   "plugins": [
     "katex",
     "back-to-top-button",

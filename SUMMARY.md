@@ -4,7 +4,10 @@
 
 * [Day 1: Setup and Basics]()
   * [Environment setup](./markdown/setup.md)
-  * [Basics](./markdown/basic.md)
+  * [Variables and operators](./markdown/variables.md)
+  * [List, tuple and dict](./markdown/list_dict.md)
+  * [If, for and while statement](./markdown/if_for.md)
+  * [Print function](./markdown/print.md)
   * [File usage in Python](./markdown/file.md)
   * [Using libraries](./markdown/library.md)
 

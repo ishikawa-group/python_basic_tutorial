@@ -3,7 +3,7 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <title>Functions · Python Introductino</title>
+        <title>Print function · Python Introductino</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="HonKit 6.0.2">
@@ -64,8 +64,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="class.html" />
+    <link rel="next" href="file.html" />
     
+    
+    <link rel="prev" href="if_for.html" />
     
 
     </head>
@@ -173,7 +175,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.5" data-path="print.html">
+        <li class="chapter active" data-level="1.2.5" data-path="print.html">
             
                 <a href="print.html">
             
@@ -231,7 +233,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.3.1" data-path="function.html">
+        <li class="chapter " data-level="1.3.1" data-path="function.html">
             
                 <a href="function.html">
             
@@ -421,7 +423,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Functions</a>
+        <a href=".." >Print function</a>
     </h1>
 </div>
 
@@ -436,169 +438,65 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="function">Function</h1>
+                                <h1 id="printing">Printing</h1>
 <ul>
-<li>In this lecture, we learn how to define and use functions in Python.</li>
-<li>A <strong>function</strong> summarizes several instructions (or commands) into one.</li>
-<li>First you <strong>define</strong> a function, then you <strong>call</strong> it to use.</li>
-<li><p>Let's try to calculate the average score of Math, English, and Science for students A and B.</p>
-<pre><code class="lang-python">stu_A_score = {<span class="hljs-string">"Math"</span>: <span class="hljs-number">89</span>, <span class="hljs-string">"English"</span>: <span class="hljs-number">30</span>, <span class="hljs-string">"Science"</span>: <span class="hljs-number">86</span>}
-stu_B_score = {<span class="hljs-string">"Math"</span>: <span class="hljs-number">59</span>, <span class="hljs-string">"English"</span>: <span class="hljs-number">70</span>, <span class="hljs-string">"Science"</span>: <span class="hljs-number">65</span>}
+<li><p>You can print variables etc. with <code>print</code> function. There are several ways to do printing.</p>
+<pre><code class="lang-python">name = <span class="hljs-string">"John"</span>
+age = <span class="hljs-number">20</span>
 
-aveA = (stu_A_score[<span class="hljs-string">"Math"</span>] + stu_A_score[<span class="hljs-string">"English"</span>] + stu_A_score[<span class="hljs-string">"Science"</span>])/<span class="hljs-number">3</span>
-aveB = (stu_B_score[<span class="hljs-string">"Math"</span>] + stu_B_score[<span class="hljs-string">"English"</span>] + stu_B_score[<span class="hljs-string">"Science"</span>])/<span class="hljs-number">3</span>
-
-<span class="hljs-built_in">print</span>(<span class="hljs-string">f"Average of A is <span class="hljs-subst">{aveA:<span class="hljs-number">.2</span>f}</span>, B is <span class="hljs-subst">{aveB:<span class="hljs-number">.2</span>f}</span>"</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">"Hello my name is"</span>, name)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">"Hello my name is %s. My age is %d."</span> % (name, age))
+<span class="hljs-built_in">print</span>(<span class="hljs-string">"Hello my name is {0:s}. My age is {1:d}."</span>.<span class="hljs-built_in">format</span>(name, age))
+<span class="hljs-built_in">print</span>(<span class="hljs-string">f"Hello my name is <span class="hljs-subst">{name:s}</span>. My age is <span class="hljs-subst">{age:d}</span>."</span>)
 </code></pre>
 </li>
-<li><p>Clearly, taking average is common procedure so you do not want to write it twice.</p>
-<pre><code class="lang-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">average</span>(<span class="hljs-params">scores</span>):
-    <span class="hljs-built_in">sum</span> = <span class="hljs-number">0</span>
-    <span class="hljs-keyword">for</span> key, val <span class="hljs-keyword">in</span> scores.items():
-        <span class="hljs-built_in">sum</span> += val
-    ave = <span class="hljs-built_in">sum</span>/<span class="hljs-built_in">len</span>(scores)
-    <span class="hljs-keyword">return</span> ave
-
-stu_A_score = {<span class="hljs-string">"Math"</span>: <span class="hljs-number">89</span>, <span class="hljs-string">"English"</span>: <span class="hljs-number">30</span>, <span class="hljs-string">"Science"</span>: <span class="hljs-number">86</span>}
-stu_B_score = {<span class="hljs-string">"Math"</span>: <span class="hljs-number">59</span>, <span class="hljs-string">"English"</span>: <span class="hljs-number">70</span>, <span class="hljs-string">"Science"</span>: <span class="hljs-number">65</span>}
-
-aveA = average(stu_A_score)
-aveB = average(stu_B_score)
-
-<span class="hljs-built_in">print</span>(<span class="hljs-string">f"Average of A is <span class="hljs-subst">{aveA:<span class="hljs-number">.2</span>f}</span>, B is <span class="hljs-subst">{aveB:<span class="hljs-number">.2</span>f}</span>"</span>)
-</code></pre>
-</li>
+<li>By using <code>format</code>, you can make a detailed print.</li>
+<li><code>f"..."</code> is the simplified way for <code>"...".fomat</code>.</li>
 </ul>
-<h2 id="basic">Basic</h2>
-<ul>
-<li><p>You can define a function like</p>
-<pre><code class="lang-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">say_hello</span>():
-    <span class="hljs-keyword">return</span> <span class="hljs-string">"hello"</span>
+<table>
+<thead>
+<tr>
+<th>symbol</th>
+<th>type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>d</td>
+<td>integer</td>
+</tr>
+<tr>
+<td>s</td>
+<td>string</td>
+</tr>
+<tr>
+<td>f</td>
+<td>float</td>
+</tr>
+<tr>
+<td>e</td>
+<td>exponential</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-python">a = <span class="hljs-number">1.23</span>
+<span class="hljs-built_in">print</span>(<span class="hljs-string">f"a = <span class="hljs-subst">{a}</span>"</span>)         <span class="hljs-comment"># simplest</span>
+<span class="hljs-built_in">print</span>(<span class="hljs-string">f"a = <span class="hljs-subst">{a:<span class="hljs-number">.2</span>f}</span>"</span>)     <span class="hljs-comment"># float with 2 decimal points</span>
+<span class="hljs-built_in">print</span>(<span class="hljs-string">f"a = <span class="hljs-subst">{a:<span class="hljs-number">10.5</span>f}</span>"</span>)   <span class="hljs-comment"># 5 decimal points with field length of 10</span>
+<span class="hljs-built_in">print</span>(<span class="hljs-string">f"a = <span class="hljs-subst">{a:&lt;<span class="hljs-number">10.5</span>f}</span>"</span>)  <span class="hljs-comment"># left align</span>
+<span class="hljs-built_in">print</span>(<span class="hljs-string">f"a = <span class="hljs-subst">{a:&gt;<span class="hljs-number">10.5</span>f}</span>"</span>)  <span class="hljs-comment"># right align</span>
+<span class="hljs-built_in">print</span>(<span class="hljs-string">f"a = <span class="hljs-subst">{a:<span class="hljs-number">10.5</span>e}</span>"</span>)   <span class="hljs-comment"># exponential</span>
+<span class="hljs-built_in">print</span>(<span class="hljs-string">f"a = <span class="hljs-subst">{a:+<span class="hljs-number">10.5</span>e}</span>"</span>)  <span class="hljs-comment"># exponential with plus/minus sign</span>
+b = <span class="hljs-number">2.34</span>
+<span class="hljs-built_in">print</span>(<span class="hljs-string">f"a = <span class="hljs-subst">{a}</span>, b=<span class="hljs-subst">{b}</span>"</span>)
 </code></pre>
-</li>
-<li><p>A function will <code>return</code> the result when it is called, and returned value will be stored to other variable.</p>
-<pre><code class="lang-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">say_hello</span>():
-    <span class="hljs-keyword">return</span> <span class="hljs-string">"hello"</span>
-
-s = say_hello()
-<span class="hljs-built_in">print</span>(s)
-</code></pre>
-</li>
-<li><p>The <code>return</code> statement is not mandatory, so you can omit it like</p>
-<pre><code class="lang-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">say_hello2</span>():
-    <span class="hljs-built_in">print</span>(<span class="hljs-string">"hello"</span>)
-
-say_hello2()
-</code></pre>
-</li>
-<li><p>But I recommend writing return for safety. If no need to return, you can put <code>None</code>.</p>
-<pre><code class="lang-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">say_hello3</span>():
-    <span class="hljs-built_in">print</span>(<span class="hljs-string">"hello"</span>)
-    <span class="hljs-keyword">return</span> <span class="hljs-literal">None</span>
-
-say_hello3()
-</code></pre>
-</li>
-</ul>
-<h2 id="exercise">Exercise</h2>
-<ul>
-<li>Define and call the function that repeats the string you inputted ("abc" -&gt; "abcabc")</li>
-</ul>
-<p><a href="answer.html#function1">answer</a></p>
-<h2 id="argument">Argument</h2>
-<ul>
-<li><p><strong>argument</strong> is the variable that one passes to the function. The function usually does some procedure using that argument. You can pass an argument to the function, like</p>
-<pre><code class="lang-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">say_something</span>(<span class="hljs-params">s</span>):
-    <span class="hljs-built_in">print</span>(s)
-    <span class="hljs-keyword">return</span> <span class="hljs-literal">None</span>
-
-say_something(<span class="hljs-string">"hello"</span>)
-</code></pre>
-</li>
-<li><p>You can set the default value for arguments like</p>
-<pre><code class="lang-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">say_something</span>(<span class="hljs-params">s=<span class="hljs-string">"hello"</span></span>):
-    <span class="hljs-built_in">print</span>(s)
-    <span class="hljs-keyword">return</span> s
-
-say_something(<span class="hljs-string">"good morning"</span>)
-say_something()
-</code></pre>
-</li>
-<li><p>You can use multiple arguments</p>
-<pre><code class="lang-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">combine_string</span>(<span class="hljs-params">s1, s2</span>):
-    new_string = s1 + <span class="hljs-string">" "</span> + s2
-    <span class="hljs-keyword">return</span> new_string
-
-s = combine_string(<span class="hljs-string">"Good"</span>, <span class="hljs-string">"Morning"</span>)
-<span class="hljs-built_in">print</span>(s)
-</code></pre>
-</li>
-<li><p>You can also use multiple return-value, as</p>
-<pre><code class="lang-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">say_strong</span>(<span class="hljs-params">s1, s2</span>):
-    s1new = s1 + <span class="hljs-string">"!"</span>
-    s2new = s2 + <span class="hljs-string">"!"</span>
-    <span class="hljs-keyword">return</span> s1new, s2new
-
-s1new, s2new = say_strong(<span class="hljs-string">"Good"</span>, <span class="hljs-string">"Morning"</span>)
-<span class="hljs-built_in">print</span>(s1new, s2new)
-</code></pre>
-</li>
-</ul>
-<h2 id="scope-of-variables">Scope of variables</h2>
-<ul>
-<li>When you define the function, you have to know about the <em>scope</em> of variables.</li>
-<li><p>The variables defined <em>inside</em> the function cannot be used outside the function.</p>
-<pre><code class="lang-python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">hello</span>():
-  i = <span class="hljs-number">10</span>
-  <span class="hljs-built_in">print</span>(i)
-  <span class="hljs-keyword">return</span>
-
-hello()   <span class="hljs-comment"># =&gt; 10</span>
-<span class="hljs-built_in">print</span>(i)  <span class="hljs-comment"># =&gt; not defined</span>
-</code></pre>
-</li>
-<li><p>This is because <code>i</code> in the above funcion is <em>local variable</em>.</p>
-</li>
-<li><p>Instead, variables defined outside the function is <em>global variable</em> so they can be accessed even inside the function.</p>
-<pre><code class="lang-python">i = <span class="hljs-number">10</span>
-<span class="hljs-keyword">def</span> <span class="hljs-title function_">hello</span>():
-    <span class="hljs-built_in">print</span>(i)
-    <span class="hljs-keyword">return</span>
-
-hello()
-</code></pre>
-</li>
-<li><p>Note that the same variable name is used for both local and global variables, the global variable is used.</p>
-<pre><code class="lang-python">a = <span class="hljs-number">10</span>
-
-<span class="hljs-keyword">def</span> <span class="hljs-title function_">hello</span>():
-    a = <span class="hljs-number">20</span>
-    <span class="hljs-keyword">return</span>
-
-hello()
-<span class="hljs-built_in">print</span>(a)
-</code></pre>
-</li>
-<li><p>It is safer to use <em>global</em> inside the function to access the global variable.</p>
-<pre><code class="lang-python">a = <span class="hljs-number">10</span>
-
-<span class="hljs-keyword">def</span> <span class="hljs-title function_">hello</span>():
-    <span class="hljs-keyword">global</span> a
-    a = <span class="hljs-number">20</span>
-    <span class="hljs-keyword">return</span>
-
-hello()
-<span class="hljs-built_in">print</span>(a)
-</code></pre>
-</li>
-</ul>
-<hr></hr>
 <h2 id="exercise">Exercise</h2>
 <ol>
-<li>Create a function that takes two numbers as arguments and returns their sum.</li>
-<li>Create a function that recieves a list (e.g. [10, 20, 30]), and then returns the new list in which each elements are doubled.
-<a href="answer.html#function2">answer</a></li>
+<li>Write a program that checks if x is greater than y.
+If x is greater, print "x is greater than y"; otherwise, print "y is greater than or equal to x".</li>
+<li>Create a list containing at least five elements (numbers or strings). Use a for loop to iterate through the list and print each element.</li>
 </ol>
+<p><a href="answer.html#control">answer</a></p>
 
                                 
                                 </section>
@@ -626,8 +524,12 @@ hello()
 
             
                 
+                <a href="if_for.html" class="navigation navigation-prev " aria-label="Previous page: If, for and while statement">
+                    <i class="fa fa-angle-left"></i>
+                </a>
                 
-                <a href="class.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Class">
+                
+                <a href="file.html" class="navigation navigation-next " aria-label="Next page: File usage in Python">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -638,7 +540,7 @@ hello()
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Functions","level":"1.3.1","depth":2,"next":{"title":"Class","level":"1.3.2","depth":2,"path":"markdown/class.md","ref":"./markdown/class.md","articles":[]},"previous":{"title":"Day 2: Functions and Class","level":"1.3","depth":1,"ref":"","articles":[{"title":"Functions","level":"1.3.1","depth":2,"path":"markdown/function.md","ref":"./markdown/function.md","articles":[]},{"title":"Class","level":"1.3.2","depth":2,"path":"markdown/class.md","ref":"./markdown/class.md","articles":[]},{"title":"Numpy & Scipy","level":"1.3.3","depth":2,"path":"markdown/numpy.md","ref":"./markdown/numpy.md","articles":[]},{"title":"Pandas","level":"1.3.4","depth":2,"path":"markdown/pandas.md","ref":"./markdown/pandas.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["katex","back-to-top-button","hide-published-with"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"katex":{},"back-to-top-button":{},"hide-published-with":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Python Introductino","gitbook":"*","description":"Description"},"file":{"path":"markdown/function.md","mtime":"2024-12-10T11:21:34.506Z","type":"markdown"},"gitbook":{"version":"6.0.2","time":"2025-02-24T15:19:22.084Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Print function","level":"1.2.5","depth":2,"next":{"title":"File usage in Python","level":"1.2.6","depth":2,"path":"markdown/file.md","ref":"./markdown/file.md","articles":[]},"previous":{"title":"If, for and while statement","level":"1.2.4","depth":2,"path":"markdown/if_for.md","ref":"./markdown/if_for.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","back-to-top-button","hide-published-with"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"katex":{},"back-to-top-button":{},"hide-published-with":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Python Introductino","gitbook":"*","description":"Description"},"file":{"path":"markdown/print.md","mtime":"2025-02-24T15:16:09.139Z","type":"markdown"},"gitbook":{"version":"6.0.2","time":"2025-02-24T15:19:22.084Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
